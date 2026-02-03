@@ -35,7 +35,7 @@ export default function AboutSection({ darkMode = false }: AboutSectionProps) {
         {/* About Section */}
         <section id="about" className="py-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className={`${darkMode ? 'bg-gray-900/30' : 'bg-white/30'} backdrop-blur-2xl rounded-[2.5rem] border ${darkMode ? 'border-purple-500/20 shadow-2xl shadow-purple-500/10' : 'border-purple-200/30 shadow-2xl shadow-purple-200/20'} p-10 md:p-16`}
+            <div className={`${darkMode ? 'bg-gray-900/30' : 'bg-white/30'} backdrop-blur-2xl rounded-[2rem] sm:rounded-[2.5rem] border ${darkMode ? 'border-purple-500/20 shadow-2xl shadow-purple-500/10' : 'border-purple-200/30 shadow-2xl shadow-purple-200/20'} p-6 sm:p-10 md:p-16`}
               style={{
                 backdropFilter: 'blur(40px) saturate(180%)',
                 WebkitBackdropFilter: 'blur(40px) saturate(180%)'
@@ -48,7 +48,7 @@ export default function AboutSection({ darkMode = false }: AboutSectionProps) {
                       Tentang Kami
                     </span>
                   </div>
-                  <h2 className={`text-5xl md:text-6xl font-bold mb-8 ${darkMode ? 'text-white' : 'text-gray-900'} leading-tight`}>
+                  <h2 className={`text-4xl sm:text-5xl md:text-6xl font-bold mb-8 ${darkMode ? 'text-white' : 'text-gray-900'} leading-tight`}>
                     Mitra Terpercaya untuk <span className={`bg-gradient-to-r ${darkMode ? 'from-purple-400 to-violet-400' : 'from-purple-600 to-violet-600'} bg-clip-text text-transparent`}>Transformasi Digital</span>
                   </h2>
                   <p className={`text-lg mb-6 ${darkMode ? 'text-gray-300' : 'text-gray-600'} leading-relaxed`}>
@@ -58,7 +58,7 @@ export default function AboutSection({ darkMode = false }: AboutSectionProps) {
                     Kami menggunakan teknologi terkini dan mengikuti standar industri terbaik untuk memastikan website Anda tidak hanya indah dipandang, tetapi juga cepat, aman, dan mudah dikelola.
                   </p>
 
-                  <div className="grid grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                     {whyChooseUs.map((item, index) => (
                       <div key={index} className={`${darkMode ? 'bg-purple-500/10 hover:bg-purple-500/15' : 'bg-purple-50 hover:bg-purple-100'} rounded-2xl p-5 text-center transition-all hover:scale-105 hover:shadow-xl border ${darkMode ? 'border-purple-400/10' : 'border-purple-200/30'}`}>
                         <div className={`${darkMode ? 'text-purple-400' : 'text-purple-600'} flex justify-center mb-3`}>
@@ -71,38 +71,38 @@ export default function AboutSection({ darkMode = false }: AboutSectionProps) {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-6">
-                  <div className={`${darkMode ? 'bg-gradient-to-br from-purple-500/20 to-purple-700/20 hover:from-purple-500/30 hover:to-purple-700/30' : 'bg-gradient-to-br from-purple-100 to-purple-200 hover:from-purple-200 hover:to-purple-300'} backdrop-blur-xl rounded-3xl p-10 border ${darkMode ? 'border-purple-400/20' : 'border-purple-300/30'} shadow-2xl hover:shadow-purple-500/20 hover:scale-105 transition-all duration-300`}
+                <div className="grid grid-cols-2 gap-4 sm:gap-6">
+                  <div className={`${darkMode ? 'bg-gradient-to-br from-purple-500/20 to-purple-700/20 hover:from-purple-500/30 hover:to-purple-700/30' : 'bg-gradient-to-br from-purple-100 to-purple-200 hover:from-purple-200 hover:to-purple-300'} backdrop-blur-xl rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-10 border ${darkMode ? 'border-purple-400/20' : 'border-purple-300/30'} shadow-2xl hover:shadow-purple-500/20 hover:scale-105 transition-all duration-300`}
                     style={{
                       backdropFilter: 'blur(20px) saturate(180%)',
                       WebkitBackdropFilter: 'blur(20px) saturate(180%)'
                     }}>
-                    <h3 className={`text-6xl font-bold ${darkMode ? 'text-purple-300' : 'text-purple-600'} mb-3`}>200+</h3>
-                    <p className={`text-base font-semibold ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>Project Selesai</p>
+                    <h3 className={`text-4xl sm:text-5xl md:text-6xl font-bold ${darkMode ? 'text-purple-300' : 'text-purple-600'} mb-2 sm:mb-3`}>200+</h3>
+                    <p className={`text-sm sm:text-base font-semibold ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>Project Selesai</p>
                   </div>
-                  <div className={`${darkMode ? 'bg-gradient-to-br from-purple-500/20 to-purple-700/20 hover:from-purple-500/30 hover:to-purple-700/30' : 'bg-gradient-to-br from-purple-100 to-purple-200 hover:from-purple-200 hover:to-purple-300'} backdrop-blur-xl rounded-3xl p-10 border ${darkMode ? 'border-purple-400/20' : 'border-purple-300/30'} shadow-2xl hover:shadow-purple-500/20 hover:scale-105 transition-all duration-300`}
+                  <div className={`${darkMode ? 'bg-gradient-to-br from-purple-500/20 to-purple-700/20 hover:from-purple-500/30 hover:to-purple-700/30' : 'bg-gradient-to-br from-purple-100 to-purple-200 hover:from-purple-200 hover:to-purple-300'} backdrop-blur-xl rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-10 border ${darkMode ? 'border-purple-400/20' : 'border-purple-300/30'} shadow-2xl hover:shadow-purple-500/20 hover:scale-105 transition-all duration-300`}
                     style={{
                       backdropFilter: 'blur(20px) saturate(180%)',
                       WebkitBackdropFilter: 'blur(20px) saturate(180%)'
                     }}>
-                    <h3 className={`text-6xl font-bold ${darkMode ? 'text-purple-300' : 'text-purple-600'} mb-3`}>150+</h3>
-                    <p className={`text-base font-semibold ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>Klien Puas</p>
+                    <h3 className={`text-4xl sm:text-5xl md:text-6xl font-bold ${darkMode ? 'text-purple-300' : 'text-purple-600'} mb-2 sm:mb-3`}>150+</h3>
+                    <p className={`text-sm sm:text-base font-semibold ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>Klien Puas</p>
                   </div>
-                  <div className={`${darkMode ? 'bg-gradient-to-br from-purple-500/20 to-purple-700/20 hover:from-purple-500/30 hover:to-purple-700/30' : 'bg-gradient-to-br from-purple-100 to-purple-200 hover:from-purple-200 hover:to-purple-300'} backdrop-blur-xl rounded-3xl p-10 border ${darkMode ? 'border-purple-400/20' : 'border-purple-300/30'} shadow-2xl hover:shadow-purple-500/20 hover:scale-105 transition-all duration-300`}
+                  <div className={`${darkMode ? 'bg-gradient-to-br from-purple-500/20 to-purple-700/20 hover:from-purple-500/30 hover:to-purple-700/30' : 'bg-gradient-to-br from-purple-100 to-purple-200 hover:from-purple-200 hover:to-purple-300'} backdrop-blur-xl rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-10 border ${darkMode ? 'border-purple-400/20' : 'border-purple-300/30'} shadow-2xl hover:shadow-purple-500/20 hover:scale-105 transition-all duration-300`}
                     style={{
                       backdropFilter: 'blur(20px) saturate(180%)',
                       WebkitBackdropFilter: 'blur(20px) saturate(180%)'
                     }}>
-                    <h3 className={`text-6xl font-bold ${darkMode ? 'text-purple-300' : 'text-purple-600'} mb-3`}>5+</h3>
-                    <p className={`text-base font-semibold ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>Tahun Pengalaman</p>
+                    <h3 className={`text-4xl sm:text-5xl md:text-6xl font-bold ${darkMode ? 'text-purple-300' : 'text-purple-600'} mb-2 sm:mb-3`}>5+</h3>
+                    <p className={`text-sm sm:text-base font-semibold ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>Tahun Pengalaman</p>
                   </div>
-                  <div className={`${darkMode ? 'bg-gradient-to-br from-purple-500/20 to-purple-700/20 hover:from-purple-500/30 hover:to-purple-700/30' : 'bg-gradient-to-br from-purple-100 to-purple-200 hover:from-purple-200 hover:to-purple-300'} backdrop-blur-xl rounded-3xl p-10 border ${darkMode ? 'border-purple-400/20' : 'border-purple-300/30'} shadow-2xl hover:shadow-purple-500/20 hover:scale-105 transition-all duration-300`}
+                  <div className={`${darkMode ? 'bg-gradient-to-br from-purple-500/20 to-purple-700/20 hover:from-purple-500/30 hover:to-purple-700/30' : 'bg-gradient-to-br from-purple-100 to-purple-200 hover:from-purple-200 hover:to-purple-300'} backdrop-blur-xl rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-10 border ${darkMode ? 'border-purple-400/20' : 'border-purple-300/30'} shadow-2xl hover:shadow-purple-500/20 hover:scale-105 transition-all duration-300`}
                     style={{
                       backdropFilter: 'blur(20px) saturate(180%)',
                       WebkitBackdropFilter: 'blur(20px) saturate(180%)'
                     }}>
-                    <h3 className={`text-6xl font-bold ${darkMode ? 'text-purple-300' : 'text-purple-600'} mb-3`}>24/7</h3>
-                    <p className={`text-base font-semibold ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>Support</p>
+                    <h3 className={`text-4xl sm:text-5xl md:text-6xl font-bold ${darkMode ? 'text-purple-300' : 'text-purple-600'} mb-2 sm:mb-3`}>24/7</h3>
+                    <p className={`text-sm sm:text-base font-semibold ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>Support</p>
                   </div>
                 </div>
               </div>
