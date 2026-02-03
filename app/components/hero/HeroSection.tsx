@@ -115,7 +115,7 @@ export default function HeroSection() {
                                     >
                                     </div>
                                     {/* Floating Card 1 */}
-                                    <div className="absolute top-1/4 -right-10 bg-white p-4 rounded-xl shadow-xl border border-gray-100 w-48 animate-float-slow">
+                                    <div className="absolute top-1/4 right-0 sm:-right-10 bg-white p-4 rounded-xl shadow-xl border border-gray-100 w-48 animate-float-slow transform scale-90 sm:scale-100 z-20">
                                         <div className="flex items-center gap-3 mb-2">
                                             <div className="w-8 h-8 rounded-full bg-[#7f13ec]/20 flex items-center justify-center text-[#7f13ec]">
                                                 <BarChart3 className="w-3.5 h-3.5" />
@@ -131,7 +131,7 @@ export default function HeroSection() {
                                         </div>
                                     </div>
                                     {/* Floating Card 2 */}
-                                    <div className="absolute bottom-1/4 -left-6 bg-white p-3 rounded-xl shadow-xl border border-gray-100 w-40 animate-float-delayed">
+                                    <div className="absolute bottom-1/4 left-0 sm:-left-6 bg-white p-3 rounded-xl shadow-xl border border-gray-100 w-40 animate-float-delayed transform scale-90 sm:scale-100 z-20">
                                         <div className="flex justify-between items-center mb-2">
                                             <span className="text-xs font-bold text-gray-500">Tasks</span>
                                             <CheckCircle2 className="w-3.5 h-3.5 text-green-500" />
@@ -152,8 +152,8 @@ export default function HeroSection() {
                         </div>
                     </div>
                     {/* Decorative Blob behind image */}
-                    <div className="absolute -top-10 -right-10 w-40 h-40 bg-purple-300 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob"></div>
-                    <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-[#7f13ec] rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob animation-delay-2000"></div>
+                    <div className="absolute -top-10 right-0 lg:-right-10 w-40 h-40 bg-purple-300 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob"></div>
+                    <div className="absolute -bottom-10 left-0 lg:-left-10 w-40 h-40 bg-[#7f13ec] rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob animation-delay-2000"></div>
                 </div>
             </div>
         </section>

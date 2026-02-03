@@ -35,10 +35,10 @@ export default function Navbar() {
                     {/* Right: Actions */}
                     <div className="flex items-center gap-4">
                         {/* Login Button */}
-                      
+
                         {/* Get Started CTA */}
                         {/* Vibrant purple-to-indigo gradient */}
-                        <button className="relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-[#7f13ec] to-indigo-600 px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-[#7f13ec]/25 transition-all duration-300 hover:shadow-[#7f13ec]/40 hover:scale-[1.02] active:scale-[0.98]">
+                        <button className="hidden md:inline-flex relative items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-[#7f13ec] to-indigo-600 px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-[#7f13ec]/25 transition-all duration-300 hover:shadow-[#7f13ec]/40 hover:scale-[1.02] active:scale-[0.98]">
                             <span className="relative flex items-center gap-2">
                                 Get Started
                                 {/* Arrow Icon */}
