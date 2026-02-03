@@ -1,114 +1,127 @@
 'use client';
 
 import React from 'react';
-import { Code2, Rocket, Palette, Check } from 'lucide-react';
+import {
+    Building2,
+    ArrowRight,
+    CheckCircle2,
+    LayoutTemplate,
+    ShieldCheck,
+    TrendingUp
+} from 'lucide-react';
 
 interface ServiceSectionProps {
     darkMode?: boolean;
 }
 
 export default function ServiceSection({ darkMode = false }: ServiceSectionProps) {
-    const services = [
-        {
-            title: "Website Company Profile",
-            description: "Buat kesan profesional dengan website company profile yang elegan dan informatif untuk meningkatkan kredibilitas perusahaan",
-            icon: <Code2 className="w-12 h-12" />,
-            features: ["Desain Custom", "Responsive", "SEO Friendly"],
-            gradient: "from-purple-500 to-purple-700"
-        },
-        {
-            title: "E-Commerce",
-            description: "Tingkatkan penjualan online dengan toko digital yang user-friendly, aman, dan terintegrasi dengan payment gateway",
-            icon: (
-                <svg className="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <circle cx="9" cy="21" r="1" />
-                    <circle cx="20" cy="21" r="1" />
-                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
-                </svg>
-            ),
-            features: ["Payment Gateway", "Admin Panel", "Mobile App"],
-            gradient: "from-purple-600 to-purple-800"
-        },
-        {
-            title: "Landing Page",
-            description: "Konversi pengunjung menjadi customer dengan landing page yang menarik dan fokus pada call-to-action",
-            icon: <Rocket className="w-12 h-12" />,
-            features: ["High Conversion", "Fast Loading", "A/B Testing"],
-            gradient: "from-purple-500 to-violet-700"
-        },
-        {
-            title: "Web Application",
-            description: "Solusi custom untuk kebutuhan bisnis dengan aplikasi web yang powerful, scalable, dan mudah digunakan",
-            icon: <Palette className="w-12 h-12" />,
-            features: ["Custom Feature", "Scalable", "Cloud Ready"],
-            gradient: "from-purple-600 to-violet-800"
-        }
-    ];
-
     return (
-        <section id="services" className="py-24 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto">
-                <div className="text-center mb-20">
-                    <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/10 to-violet-500/10 backdrop-blur-xl border border-purple-300/20">
-                        <div className="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></div>
-                        <span className={`${darkMode ? 'text-purple-300' : 'text-purple-600'} text-sm font-semibold`}>
-                            Layanan Kami
-                        </span>
-                    </div>
-                    <h2 className={`text-5xl md:text-6xl font-bold mb-6 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-                        Solusi Website untuk <span className={`bg-gradient-to-r ${darkMode ? 'from-purple-400 to-violet-400' : 'from-purple-600 to-violet-600'} bg-clip-text text-transparent`}>Setiap Kebutuhan</span>
-                    </h2>
-                    <p className={`text-xl ${darkMode ? 'text-gray-300' : 'text-gray-600'} max-w-3xl mx-auto leading-relaxed`}>
-                        Dari company profile hingga e-commerce kompleks, kami siap mewujudkan website impian Anda
+        <section id="services" className={`py-12 px-6 lg:px-40 flex justify-center font-sans ${darkMode ? 'dark' : ''}`}>
+            <div className="layout-content-container flex flex-col max-w-[1200px] w-full">
+                <div className="mb-10 text-center lg:text-left">
+                    <span className="text-[#7f13ec] font-bold text-sm uppercase tracking-widest bg-[#7f13ec]/10 px-3 py-1 rounded-full">Our Expertise</span>
+                    <h1 className="text-black text-4xl lg:text-5xl font-extrabold leading-tight mt-4 tracking-[-0.02em]">
+                        Tailored Digital Solutions for <br className="hidden lg:block" /> <span className="text-[#7f13ec]">Modern Brands</span>.
+                    </h1>
+                    <p className="text-[#734c9a] dark:text-[#a686c5] mt-4 text-lg max-w-2xl leading-relaxed">
+                        Elevate your digital presence with our specialized services designed for growth, performance, and long-term sustainability.
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-8">
-                    {services.map((service, index) => (
-                        <div
-                            key={index}
-                            className={`group relative ${darkMode ? 'bg-gray-900/30 hover:bg-gray-900/50' : 'bg-white/30 hover:bg-white/50'} backdrop-blur-2xl rounded-3xl border ${darkMode ? 'border-purple-500/20' : 'border-purple-200/30'} shadow-2xl p-10 transition-all duration-500 hover:scale-[1.02] hover:shadow-purple-500/20`}
-                            style={{
-                                backdropFilter: 'blur(40px) saturate(180%)',
-                                WebkitBackdropFilter: 'blur(40px) saturate(180%)',
-                                transform: 'perspective(1000px) rotateX(0deg)',
-                            }}
-                            onMouseMove={(e) => {
-                                const rect = e.currentTarget.getBoundingClientRect();
-                                const x = e.clientX - rect.left;
-                                const y = e.clientY - rect.top;
-                                const centerX = rect.width / 2;
-                                const centerY = rect.height / 2;
-                                const rotateX = (y - centerY) / 20;
-                                const rotateY = (centerX - x) / 20;
-                                e.currentTarget.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
-                            }}
-                            onMouseLeave={(e) => {
-                                e.currentTarget.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
-                            }}
-                        >
-                            <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 rounded-3xl transition-opacity duration-500`} />
-
-                            <div className={`w-24 h-24 rounded-3xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-8 text-white group-hover:scale-110 transition-all duration-300 shadow-2xl shadow-purple-500/30`}>
-                                {service.icon}
+                <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-3 gap-4 lg:gap-6 min-h-[750px]">
+                    {/* Item 1: Company Profile */}
+                    <div className="md:col-span-2 md:row-span-3 flex flex-col justify-between rounded-3xl border-none bg-[#f8f5ff] dark:bg-[#1f1629] p-10 hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden">
+                        <div className="absolute top-0 right-0 p-0 opacity-[0.03] pointer-events-none">
+                            <Building2 className="w-[400px] h-[400px] text-[#7f13ec]" strokeWidth={0.5} />
+                        </div>
+                        <div className="relative z-10">
+                            <div className="bg-[#7f13ec] text-white w-16 h-16 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-[#7f13ec]/30">
+                                <Building2 className="w-8 h-8" />
                             </div>
-                            <h3 className={`text-3xl font-bold mb-5 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-                                {service.title}
-                            </h3>
-                            <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} mb-8 leading-relaxed text-lg`}>
-                                {service.description}
+                            <h3 className="text-3xl font-extrabold text-[#140d1b] dark:text-white mb-6">Company Profile</h3>
+                            <p className="text-[#734c9a] dark:text-[#a686c5] text-lg leading-relaxed mb-10 max-w-md">
+                                Establish a powerful corporate identity with a bespoke digital company profile. We craft narratives that resonate with stakeholders and showcase your brand&apos;s authority.
                             </p>
-                            <div className="flex flex-wrap gap-3">
-                                {service.features.map((feature, idx) => (
-                                    <span key={idx} className={`px-4 py-2 rounded-xl ${darkMode ? 'bg-purple-500/20 text-purple-300 border-purple-400/20' : 'bg-purple-50 text-purple-600 border-purple-200/50'} text-sm font-semibold flex items-center gap-2 border`}>
-                                        <Check className="w-4 h-4" />
-                                        {feature}
-                                    </span>
-                                ))}
+                            <ul className="space-y-5 mb-12">
+                                <li className="flex items-center gap-4 text-base font-bold text-[#140d1b] dark:text-[#faf8fc]">
+                                    <div className="w-6 h-6 rounded-full bg-[#7f13ec] flex items-center justify-center flex-shrink-0">
+                                        <CheckCircle2 className="w-4 h-4 text-white" />
+                                    </div>
+                                    Brand Storytelling Architecture
+                                </li>
+                                <li className="flex items-center gap-4 text-base font-bold text-[#140d1b] dark:text-[#faf8fc]">
+                                    <div className="w-6 h-6 rounded-full bg-[#7f13ec] flex items-center justify-center flex-shrink-0">
+                                        <CheckCircle2 className="w-4 h-4 text-white" />
+                                    </div>
+                                    Interactive Investor Relations
+                                </li>
+                                <li className="flex items-center gap-4 text-base font-bold text-[#140d1b] dark:text-[#faf8fc]">
+                                    <div className="w-6 h-6 rounded-full bg-[#7f13ec] flex items-center justify-center flex-shrink-0">
+                                        <CheckCircle2 className="w-4 h-4 text-white" />
+                                    </div>
+                                    Cross-Platform Consistency
+                                </li>
+                            </ul>
+                        </div>
+                        <button className="w-full lg:w-fit flex items-center justify-center gap-2 rounded-xl h-14 px-8 bg-[#7f13ec] text-white font-bold transition-all hover:bg-[#690fd0] hover:shadow-lg relative z-10 cursor-pointer">
+                            View Case Studies
+                            <ArrowRight className="w-5 h-5" />
+                        </button>
+                    </div>
+
+                    {/* Item 2: Landing Page */}
+                    <div className="md:col-span-2 md:row-span-1 flex items-center gap-8 rounded-3xl border border-[#ede7f3] dark:border-[#2d1b40] bg-white dark:bg-[#1f1629] p-10 hover:border-[#7f13ec] hover:-translate-y-1 hover:shadow-lg transition-all duration-300 group">
+                        <div className="flex-shrink-0 bg-[#f3e8ff] p-6 rounded-2xl text-[#7f13ec] transition-transform group-hover:scale-110">
+                            <LayoutTemplate className="w-10 h-10" />
+                        </div>
+                        <div>
+                            <h3 className="text-xl font-extrabold text-[#140d1b] dark:text-white mb-2">Landing Page</h3>
+                            <p className="text-[#734c9a] dark:text-[#a686c5] text-base leading-relaxed">
+                                Conversion-optimized pages designed to turn visitors into loyal customers with high-speed performance.
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Item 3: Website Custom */}
+                    <div className="md:col-span-2 md:row-span-1 flex flex-col justify-center rounded-3xl relative overflow-hidden transition-all duration-300 group shadow-lg p-10 bg-gradient-to-br from-[#7f13ec] via-[#9b4de0] to-[#5e0eb1]">
+                        <div className="absolute top-1/2 right-10 -translate-y-1/2 opacity-20 transition-transform group-hover:translate-x-2">
+                            <div className="flex gap-1">
+                                <span className="text-6xl text-white font-mono">&lt;</span>
+                                <span className="text-6xl text-white font-mono">/&gt;</span>
                             </div>
                         </div>
-                    ))}
+                        <div className="relative z-10 max-w-[70%]">
+                            <h3 className="text-2xl font-extrabold text-white mb-3">Website Custom</h3>
+                            <p className="text-white/90 text-base leading-relaxed">
+                                Fully bespoke web applications and unique digital experiences tailored specifically to your complex business requirements.
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Item 4: Maintenance */}
+                    <div className="md:col-span-1 md:row-span-1 flex flex-col justify-between rounded-3xl border border-[#ede7f3] dark:border-[#2d1b40] bg-white dark:bg-[#1f1629] p-8 hover:border-[#7f13ec] hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+                        <div className="text-[#7f13ec] mb-4">
+                            <ShieldCheck className="w-8 h-8" />
+                        </div>
+                        <div>
+                            <h3 className="text-lg font-bold text-[#140d1b] dark:text-white">Maintenance Tahunan</h3>
+                            <p className="text-[#734c9a] dark:text-[#a686c5] text-xs leading-relaxed mt-2">24/7 Monitoring & Regular Updates</p>
+                        </div>
+                    </div>
+
+                    {/* Item 5: SEO */}
+                    <div className="md:col-span-1 md:row-span-1 flex flex-col justify-between rounded-3xl border border-[#ede7f3] dark:border-[#2d1b40] bg-[#f9f5ff] dark:bg-[#1f1629] p-8 hover:border-[#7f13ec] hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+                        <div className="text-[#7f13ec] mb-4">
+                            <TrendingUp className="w-8 h-8" />
+                        </div>
+                        <div>
+                            <h3 className="text-lg font-bold text-[#140d1b] dark:text-white">SEO Optimization</h3>
+                            <p className="text-[#734c9a] dark:text-[#a686c5] text-xs leading-relaxed mt-2">Rank higher and drive organic growth.</p>
+                        </div>
+                    </div>
                 </div>
+
+
             </div>
         </section>
     );
