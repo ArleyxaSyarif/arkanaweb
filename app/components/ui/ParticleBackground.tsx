@@ -9,6 +9,7 @@ export default function ParticleBackground() {
     useEffect(() => {
         // Check system preference for dark mode
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            // eslint-disable-next-line react-hooks/set-state-in-effect
             setDarkMode(true);
         }
     }, []);
@@ -126,10 +127,10 @@ export default function ParticleBackground() {
             window.removeEventListener('resize', handleResize);
             cancelAnimationFrame(animationId);
         };
-    }, [darkMode]);
+    },);
 
     return (
-        <div className={`fixed inset-0 transition-colors duration-500 pointer-events-none -z-10 ${darkMode ? 'bg-gray-950' : 'bg-white'}`}>
+        <div className={`fixed inset-0 transition-colors duration-500 pointer-events-none -z-10`}>
             <canvas
                 ref={canvasRef}
                 className="absolute inset-0 w-full h-full"
