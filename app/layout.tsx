@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import ParticleBackground from "./components/ui/ParticleBackground";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -31,7 +30,6 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
       >
         <Navbar />
-        <ParticleBackground />
         {children}
         <Footer />
       </body>
