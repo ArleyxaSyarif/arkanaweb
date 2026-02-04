@@ -24,7 +24,7 @@ export default function TeamSection() {
                 {/* Section Header */}
                 <div className="text-center space-y-4">
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
-                        Meet the Minds
+                        Tim Kami
                     </h2>
                     <p className="max-w-2xl mx-auto text-lg text-slate-600">
                         The creative force driving digital transformation. Click a profile to explore their journey.
@@ -128,11 +128,7 @@ export default function TeamSection() {
                                             </a>
                                         </div>
 
-                                        {/* Primary Action */}
-                                        <button className="w-full sm:w-auto flex items-center justify-center gap-2 h-14 px-8 rounded-full bg-[#7f13ec] hover:bg-[#7f13ec]/90 text-white font-bold text-base shadow-xl shadow-[#7f13ec]/25 transition-all hover:translate-y-[-2px] active:translate-y-[0px]">
-                                            <span>View Recent Projects</span>
-                                            <ArrowRight className="w-4 h-4" />
-                                        </button>
+
                                     </div>
                                 </div>
                             </div>
