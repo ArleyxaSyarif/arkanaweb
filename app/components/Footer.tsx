@@ -2,51 +2,11 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Mail, Globe, ChevronDown, Github, Linkedin, Twitter, Dribbble, Hexagon } from 'lucide-react';
+import { Globe, ChevronDown, Github, Linkedin, Twitter, Dribbble, Hexagon } from 'lucide-react';
 
 export default function Footer() {
     return (
         <footer className="w-full bg-white border-t border-[#e0d4f0] font-sans">
-            {/* Newsletter Section */}
-            <div className="w-full bg-[#f3ebfc]/50 py-16 px-6 sm:px-12 lg:px-24">
-                <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
-                    {/* Text Content */}
-                    <div className="flex flex-col gap-3 max-w-xl text-center md:text-left">
-                        <div className="flex items-center justify-center md:justify-start gap-2 text-[#7f13ec] font-bold tracking-wide uppercase text-sm mb-1">
-                            <Mail className="w-5 h-5" />
-                            <span>Newsletter</span>
-                        </div>
-                        <h2 className="text-3xl md:text-4xl font-extrabold text-[#140d1b] leading-tight">
-                            Stay ahead of the curve
-                        </h2>
-                        <p className="text-lg text-[#6b5e7c]">
-                            Join 40,000+ designers and developers. Get the latest updates and resources directly in your inbox.
-                        </p>
-                    </div>
-                    {/* Input Form */}
-                    <div className="w-full max-w-md">
-                        <form className="flex flex-col sm:flex-row gap-3">
-                            <div className="relative flex-grow">
-                                <input
-                                    className="w-full h-12 px-4 py-3 rounded-lg border border-[#e0d4f0] bg-white text-[#140d1b] placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#7f13ec] focus:border-transparent transition-all"
-                                    placeholder="Enter your email address"
-                                    required
-                                    type="email"
-                                />
-                            </div>
-                            <button
-                                className="h-12 px-6 rounded-lg bg-[#7f13ec] hover:bg-[#7f13ec]/90 text-white font-bold transition-colors shadow-lg shadow-[#7f13ec]/20 flex items-center justify-center gap-2 whitespace-nowrap"
-                                type="submit"
-                            >
-                                Subscribe
-                            </button>
-                        </form>
-                        <p className="mt-3 text-xs text-[#6b5e7c] text-center md:text-left">
-                            By subscribing, you agree to our <Link className="underline hover:text-[#7f13ec]" href="#">Privacy Policy</Link>.
-                        </p>
-                    </div>
-                </div>
-            </div>
 
             {/* Main Navigation Grid */}
             <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-24 py-16 lg:py-20">
