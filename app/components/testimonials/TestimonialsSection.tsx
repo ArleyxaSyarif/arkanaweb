@@ -27,15 +27,18 @@ export default function TestimonialsSection() {
 
         if (diff === 0) {
             // Active card
-            return "z-20 scale-100 opacity-100 translate-y-0";
+            return "z-20 scale-100 opacity-100 translate-x-0";
         } else if (diff === 1) {
-            // Behind card 1
-            return "z-10 scale-[0.92] opacity-70 translate-y-6";
+            // Behind card 1 (Right)
+            return "z-10 scale-[0.95] opacity-70 translate-x-4";
         } else if (diff === 2) {
-            // Behind card 2
-            return "z-0 scale-[0.85] opacity-40 translate-y-12";
+            // Behind card 2 (Right)
+            return "z-0 scale-[0.90] opacity-40 translate-x-8";
+        } else if (diff === TESTIMONIALS.length - 1) {
+            // Exiting card (Left) - Sliding out
+            return "z-0 scale-100 opacity-0 -translate-x-[100%]";
         } else {
-            // Hidden cards (optional: could also stack them all at the back if needed, but hiding them is cleaner)
+            // Hidden cards
             return "hidden pointer-events-none opacity-0";
         }
     };
@@ -66,7 +69,7 @@ export default function TestimonialsSection() {
                 </div>
 
                 {/* The Stack Container */}
-                <div className="relative w-full max-w-2xl h-[450px] flex items-center justify-center group">
+                <div className="relative w-full h-[450px] flex items-center justify-center group">
 
                     {TESTIMONIALS.map((t, i) => (
                         <div
