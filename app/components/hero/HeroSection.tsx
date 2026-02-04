@@ -4,7 +4,7 @@ import { ArrowRight, Rocket, PlayCircle, BarChart3, CheckCircle2 } from 'lucide-
 
 export default function HeroSection() {
     return (
-        <section className="relative w-full overflow-hidden bg-white text-[#140d1b] font-sans pb-20 pt-4 lg:pt-10">
+        <section className="relative w-full overflow-hidden bg-white text-[#140d1b] font-sans pb-10">
             {/* Custom Styles for Animations & Background Pattern */}
             <style jsx>{`
                 .bg-pattern {
@@ -44,31 +44,31 @@ export default function HeroSection() {
                 <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#7f13ec]/5 rounded-full blur-[80px] translate-y-1/3 -translate-x-1/4"></div>
             </div>
 
-            <div className="relative max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div className="relative max-w-7xl mx-auto px-6 pb-20 pt-8 lg:pb-32 lg:pt-12 w-full grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                 <div className="flex flex-col gap-8 max-w-2xl mx-auto lg:mx-0 text-center lg:text-left z-10">
                     <div className="inline-flex items-center gap-2 self-center lg:self-start bg-[#7f13ec]/5 border border-[#7f13ec]/10 rounded-full px-4 py-1.5 transition-colors hover:bg-[#7f13ec]/10 cursor-pointer group">
                         <span className="flex h-2 w-2 rounded-full bg-[#7f13ec] animate-pulse"></span>
-                        <span className="text-[#7f13ec] text-xs font-bold uppercase tracking-wide">Fitur Baru v2.0</span>
+                        <span className="text-[#7f13ec] text-xs font-bold uppercase tracking-wide">New Features v2.0</span>
                         <ArrowRight className="w-4 h-4 text-[#7f13ec] transition-transform group-hover:translate-x-1" />
                     </div>
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl/tight font-extrabold text-[#140d1b] tracking-tight">
-                        Transformasi Alur Kerja Anda dengan <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7f13ec] to-[#a855f7]">Desain Cerdas</span>
+                        Transform Your Workflow with <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7f13ec] to-[#a855f7]">Intelligent Design</span>
                     </h1>
                     <p className="text-lg text-[#5e5864] leading-relaxed max-w-lg mx-auto lg:mx-0">
-                        Berhenti membuang waktu pada proses manual. Platform berbasis AI kami membantu Anda membangun, mengembangkan, dan mengelola produk digital Anda lebih cepat dan lebih cerdas dari sebelumnya.
+                        Stop wasting time on manual processes. Our AI-driven platform helps you build, scale, and manage your digital products faster and smarter than ever before.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-2">
                         <button className="flex items-center justify-center gap-2 bg-[#7f13ec] hover:bg-[#6b10c6] text-white h-12 px-8 rounded-lg font-bold text-base transition-all shadow-[0_0_40px_-10px_rgba(127,19,236,0.3)] hover:shadow-lg hover:-translate-y-1">
-                            <span>Mulai Sekarang</span>
+                            <span>Get Started</span>
                             <Rocket className="w-5 h-5" />
                         </button>
                         <button className="flex items-center justify-center gap-2 bg-white border border-gray-200 text-[#140d1b] h-12 px-8 rounded-lg font-bold text-base hover:bg-gray-50 transition-colors">
                             <PlayCircle className="w-5 h-5 text-[#7f13ec]" />
-                            <span>Tonton Demo</span>
+                            <span>Watch Demo</span>
                         </button>
                     </div>
                     <div className="pt-8 border-t border-gray-100 mt-4">
-                        <p className="text-sm font-medium text-[#5e5864] mb-4">Dipercaya oleh tim inovatif di</p>
+                        <p className="text-sm font-medium text-[#5e5864] mb-4">Trusted by innovative teams at</p>
                         <div className="flex flex-wrap justify-center lg:justify-start gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
                             <div className="h-6 w-auto text-[#7f13ec]">
                                 <svg className="h-full w-auto fill-current" viewBox="0 0 100 30" xmlns="http://www.w3.org/2000/svg"><path d="M10,15 L20,5 L30,15 L20,25 Z M40,5 H50 V25 H40 Z M60,5 H90 V10 H65 V12 H85 V17 H65 V25 H60 Z"></path></svg>
@@ -133,7 +133,7 @@ export default function HeroSection() {
                                     {/* Floating Card 2 */}
                                     <div className="absolute bottom-1/4 left-0 sm:-left-6 bg-white p-3 rounded-xl shadow-xl border border-gray-100 w-40 animate-float-delayed transform scale-90 sm:scale-100 z-20">
                                         <div className="flex justify-between items-center mb-2">
-                                            <span className="text-xs font-bold text-gray-500">Tugas</span>
+                                            <span className="text-xs font-bold text-gray-500">Tasks</span>
                                             <CheckCircle2 className="w-3.5 h-3.5 text-green-500" />
                                         </div>
                                         <div className="space-y-2">

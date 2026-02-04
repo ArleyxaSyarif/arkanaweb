@@ -134,6 +134,12 @@ export default function TeamSection() {
                             </div>
                         </div>
                     </div>
+                    <div className="flex justify-center w-full pt-4">
+                        <button className="group flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-violet-600 text-white font-bold shadow-lg shadow-violet-200 transition-all duration-300 hover:bg-violet-700 hover:shadow-violet-300 hover:px-12 hover:scale-105 active:scale-95">
+                            <span className="whitespace-nowrap">View All Team Members</span>
+                            <ArrowRight className="w-6 h-6 transition-transform group-hover:translate-x-1" />
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
