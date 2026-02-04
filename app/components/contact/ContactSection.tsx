@@ -1,9 +1,40 @@
 'use client';
 
-import React from 'react';
+import React, { useRef } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
 export default function ContactSection() {
+    const formRef = useRef<HTMLFormElement>(null);
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+
+        const formData = new FormData(e.currentTarget);
+
+        const res = await fetch('/api/contact', {
+            method: 'POST',
+            body: JSON.stringify({
+                name: formData.get('name'),
+                email: formData.get('email'),
+                subject: formData.get('subject'),
+                message: formData.get('message'),
+            }),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        })
+
+        const data = await res.json();
+
+        if (res.ok) {
+            alert('Message sent successfully!');
+            formRef.current?.reset();
+        } else {
+            alert('Failed to send message. Please try again.');
+        }
+    }
+
     return (
         <div className="bg-[#f7f6f8] text-[#140d1b] min-h-screen flex flex-col font-sans selection:bg-[#7f13ec] selection:text-white">
             <main className="flex-grow flex items-center justify-center py-12 px-6 lg:px-20 xl:px-40">
@@ -80,7 +111,7 @@ export default function ContactSection() {
 
                         <div className="relative bg-[#ffffff] rounded-2xl shadow-[0_4px_20px_-2px_rgba(127,19,236,0.1)] p-8 lg:p-10">
                             <h3 className="text-2xl font-bold mb-6 text-[#140d1b]">Send us a message</h3>
-                            <form action="#" className="space-y-6">
+                            <form onSubmit={handleSubmit} ref={formRef} className="space-y-6">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="space-y-2">
                                         <label className="text-sm font-semibold text-[#140d1b]" htmlFor="name">Full Name</label>
@@ -88,6 +119,7 @@ export default function ContactSection() {
                                             <input
                                                 className="w-full px-4 py-3 rounded-lg bg-[#f7f6f8] border border-gray-200 text-[#140d1b] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#7f13ec] focus:border-transparent transition-all"
                                                 id="name"
+                                                required
                                                 name="name"
                                                 placeholder="John Doe"
                                                 type="text"
@@ -100,6 +132,7 @@ export default function ContactSection() {
                                             <input
                                                 className="w-full px-4 py-3 rounded-lg bg-[#f7f6f8] border border-gray-200 text-[#140d1b] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#7f13ec] focus:border-transparent transition-all"
                                                 id="email"
+                                                required
                                                 name="email"
                                                 placeholder="john@example.com"
                                                 type="email"
@@ -114,6 +147,7 @@ export default function ContactSection() {
                                         <input
                                             className="w-full px-4 py-3 rounded-lg bg-[#f7f6f8] border border-gray-200 text-[#140d1b] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#7f13ec] focus:border-transparent transition-all"
                                             id="subject"
+                                            required
                                             name="subject"
                                             placeholder="How can we help?"
                                             type="text"
@@ -127,6 +161,7 @@ export default function ContactSection() {
                                         <textarea
                                             className="w-full px-4 py-3 rounded-lg bg-[#f7f6f8] border border-gray-200 text-[#140d1b] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#7f13ec] focus:border-transparent transition-all resize-none"
                                             id="message"
+                                            required
                                             name="message"
                                             placeholder="Tell us more about your project..."
                                             rows={5}
