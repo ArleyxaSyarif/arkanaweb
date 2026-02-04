@@ -1,4 +1,6 @@
 import AboutSection from "./components/about/AboutSection";
+import PartnerSection from "./components/partner/PartnerSection";
+import ChooseSection from "./components/choose/ChooseSection";
 import HeroSection from "./components/hero/HeroSection";
 import ServiceSection from "./components/service/ServiceSection";
 import TeamSection from "./components/team/TeamSection";
@@ -9,10 +11,13 @@ export default function Home() {
     <div>
       <HeroSection />
 
+      <PartnerSection />
 
       <AboutSection />
 
       <ServiceSection />
+
+      <ChooseSection />
 
       <TestimonialsSection />
 

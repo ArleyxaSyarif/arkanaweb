@@ -19,12 +19,12 @@ export default function ServiceSection({ darkMode = false }: ServiceSectionProps
         <section id="services" className={`py-12 px-6 lg:px-40 flex justify-center font-sans ${darkMode ? 'dark' : ''}`}>
             <div className="layout-content-container flex flex-col max-w-[1200px] w-full">
                 <div className="mb-10 text-center lg:text-left">
-                    <span className="text-[#7f13ec] font-bold text-sm uppercase tracking-widest bg-[#7f13ec]/10 px-3 py-1 rounded-full">Our Expertise</span>
+                    <span className="text-[#7f13ec] font-bold text-sm uppercase tracking-widest bg-[#7f13ec]/10 px-3 py-1 rounded-full">Keahlian Kami</span>
                     <h1 className="text-black text-4xl lg:text-5xl font-extrabold leading-tight mt-4 tracking-[-0.02em]">
-                        Tailored Digital Solutions for <br className="hidden lg:block" /> <span className="text-[#7f13ec]">Modern Brands</span>.
+                        Solusi Digital Terbaik untuk <br className="hidden lg:block" /> <span className="text-[#7f13ec]">Brand Modern</span>.
                     </h1>
                     <p className="text-[#734c9a] dark:text-[#a686c5] mt-4 text-lg max-w-2xl leading-relaxed">
-                        Elevate your digital presence with our specialized services designed for growth, performance, and long-term sustainability.
+                        Tingkatkan kehadiran digital Anda dengan layanan khusus kami yang dirancang untuk pertumbuhan, kinerja, dan keberlanjutan jangka panjang.
                     </p>
                 </div>
 
@@ -38,33 +38,33 @@ export default function ServiceSection({ darkMode = false }: ServiceSectionProps
                             <div className="bg-gradient-to-br from-[#9d5cff] to-[#7f13ec] text-white w-16 h-16 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-[#7f13ec]/30">
                                 <Building2 className="w-8 h-8" />
                             </div>
-                            <h3 className="text-3xl font-extrabold text-[#140d1b] mb-6">Company Profile</h3>
+                            <h3 className="text-3xl font-extrabold text-[#140d1b] mb-6">Profil Perusahaan</h3>
                             <p className="text-[#734c9a] dark:text-[#a686c5] text-lg leading-relaxed mb-10 max-w-md">
-                                Establish a powerful corporate identity with a bespoke digital company profile. We craft narratives that resonate with stakeholders and showcase your brand&apos;s authority.
+                                Bangun identitas perusahaan yang kuat dengan profil perusahaan digital yang dipesan lebih dahulu. Kami menyusun narasi yang selaras dengan pemangku kepentingan dan menunjukkan otoritas merek Anda.
                             </p>
                             <ul className="space-y-5 mb-12">
                                 <li className="flex items-center gap-4 text-base font-bold text-[#140d1b] ">
                                     <div className="w-6 h-6 rounded-full bg-[#7f13ec] flex items-center justify-center flex-shrink-0">
                                         <CheckCircle2 className="w-4 h-4 text-white" />
                                     </div>
-                                    Brand Storytelling Architecture
+                                    Arsitektur Penceritaan Brand
                                 </li>
                                 <li className="flex items-center gap-4 text-base font-bold text-[#140d1b]">
                                     <div className="w-6 h-6 rounded-full bg-[#7f13ec] flex items-center justify-center flex-shrink-0">
                                         <CheckCircle2 className="w-4 h-4 text-white" />
                                     </div>
-                                    Interactive Investor Relations
+                                    Hubungan Investor Interaktif
                                 </li>
                                 <li className="flex items-center gap-4 text-base font-bold text-[#140d1b] ">
                                     <div className="w-6 h-6 rounded-full bg-[#7f13ec] flex items-center justify-center flex-shrink-0">
                                         <CheckCircle2 className="w-4 h-4 text-white" />
                                     </div>
-                                    Cross-Platform Consistency
+                                    Konsistensi Lintas Platform
                                 </li>
                             </ul>
                         </div>
                         <button className="w-full lg:w-fit flex items-center justify-center gap-2 rounded-xl h-14 px-8 bg-[#7f13ec] text-white font-bold transition-all hover:bg-[#690fd0] hover:shadow-lg relative z-10 cursor-pointer">
-                            View Case Studies
+                            Lihat Studi Kasus
                             <ArrowRight className="w-5 h-5" />
                         </button>
                     </div>
@@ -77,7 +77,7 @@ export default function ServiceSection({ darkMode = false }: ServiceSectionProps
                         <div>
                             <h3 className="text-xl font-extrabold text-[#140d1b] mb-2">Landing Page</h3>
                             <p className="text-[#734c9a] dark:text-[#a686c5] text-base leading-relaxed">
-                                Conversion-optimized pages designed to turn visitors into loyal customers with high-speed performance.
+                                Halaman yang dioptimalkan konversi dirancang untuk mengubah pengunjung menjadi pelanggan setia dengan kinerja berkecepatan tinggi.
                             </p>
                         </div>
                     </div>
@@ -93,7 +93,7 @@ export default function ServiceSection({ darkMode = false }: ServiceSectionProps
                         <div className="relative z-10 max-w-[70%]">
                             <h3 className="text-2xl font-extrabold text-white mb-3">Website Custom</h3>
                             <p className="text-white/90 text-base leading-relaxed">
-                                Fully bespoke web applications and unique digital experiences tailored specifically to your complex business requirements.
+                                Aplikasi web yang dipesan lebih dahulu sepenuhnya dan pengalaman digital unik yang disesuaikan khusus dengan kebutuhan bisnis Anda yang kompleks.
                             </p>
                         </div>
                     </div>
@@ -115,8 +115,8 @@ export default function ServiceSection({ darkMode = false }: ServiceSectionProps
                             <TrendingUp className="w-8 h-8" />
                         </div>
                         <div>
-                            <h3 className="text-lg font-bold text-[#140d1b]">SEO Optimization</h3>
-                            <p className="text-[#734c9a] dark:text-[#a686c5] text-xs leading-relaxed mt-2">Rank higher and drive organic growth.</p>
+                            <h3 className="text-lg font-bold text-[#140d1b]">Optimasi SEO</h3>
+                            <p className="text-[#734c9a] dark:text-[#a686c5] text-xs leading-relaxed mt-2">Peringkat lebih tinggi dan dorong pertumbuhan organik.</p>
                         </div>
                     </div>
                 </div>
