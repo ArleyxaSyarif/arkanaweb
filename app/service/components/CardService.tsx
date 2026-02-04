@@ -2,13 +2,14 @@
 
 import { Laptop, TrendingUp, BadgeCheck, LayoutTemplate, PenTool } from 'lucide-react';
 import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function CardService() {
     return (
         <section className="px-4 py-10 max-w-[1200px] mx-auto font-sans">
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 auto-rows-[minmax(200px,auto)]">
                 {/* Card 1: Large Featured (Website Custom) */}
-                <div className="group md:col-span-2 lg:col-span-2 row-span-2 bg-white rounded-2xl p-8 border border-slate-100 flex flex-col justify-between overflow-hidden relative shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <Link href="/service/website-custom" className="group md:col-span-2 lg:col-span-2 row-span-2 bg-white rounded-2xl p-8 border border-slate-100 flex flex-col justify-between overflow-hidden relative shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                     <div className="absolute top-0 right-0 w-64 h-64 bg-purple-50 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
                     <div className="relative z-10">
                         <div className="w-12 h-12 bg-[#7f13ec]/10 rounded-xl flex items-center justify-center text-[#7f13ec] mb-6">
@@ -22,10 +23,10 @@ export default function CardService() {
                         <div className="w-full h-full bg-slate-100 flex items-center justify-center bg-cover bg-top" style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDDsGL6TU3wIwbXm0tuS7wrOciMZqwp_WkWhdzHvzuUjcc5Pz3gPyw8yfOHG-3R6bRy91wYSx_4DL5Z7ML1TZPzo8igw6Ka1aC0Oejstbab4ODKWqCmgPTaIq6eTZYXIZIovFB1cWd7egR2sdZcjS2W1cgisFq3OoehsjYaHgwSmOlknK6NV7EM_WIOwq0Z0dNA4LkgXoHEIyU67uwoyWezBGZSzSDORycy2j_JBUarl8KP3YaFtjBEZnXzuhcmEr-oU9RuKb8sBsM')" }}>
                         </div>
                     </div>
-                </div>
+                </Link>
 
                 {/* Card 2: SEO */}
-                <div className="md:col-span-1 lg:col-span-2 bg-slate-900 rounded-2xl p-8 flex flex-col justify-between text-white relative overflow-hidden group hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <Link href="/service/seo-optimization" className="md:col-span-1 lg:col-span-2 bg-slate-900 rounded-2xl p-8 flex flex-col justify-between text-white relative overflow-hidden group hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                     <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-800"></div>
                     <div className="absolute bottom-0 right-0 opacity-20 transform translate-x-1/4 translate-y-1/4">
                         <TrendingUp className="w-[200px] h-[200px]" />
@@ -46,10 +47,10 @@ export default function CardService() {
                             <div className="w-1/5 bg-white h-[100%] rounded-t-sm"></div>
                         </div>
                     </div>
-                </div>
+                </Link>
 
                 {/* Card 3: Company Profile */}
-                <div className="bg-white rounded-2xl p-6 border border-slate-100 flex flex-col gap-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <Link href="/service/company-profile" className="bg-white rounded-2xl p-6 border border-slate-100 flex flex-col gap-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                     <div className="flex justify-between items-start">
                         <div className="w-10 h-10 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center">
                             <BadgeCheck className="w-6 h-6" />
@@ -60,10 +61,10 @@ export default function CardService() {
                         <h3 className="text-lg font-bold text-slate-900">Profil Perusahaan</h3>
                         <p className="text-sm text-slate-500 mt-1">Identitas merek profesional</p>
                     </div>
-                </div>
+                </Link>
 
                 {/* Card 4: Landing Page */}
-                <div className="bg-white rounded-2xl p-6 border border-slate-100 flex flex-col gap-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <Link href="/service/landing-page" className="bg-white rounded-2xl p-6 border border-slate-100 flex flex-col gap-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                     <div className="w-10 h-10 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center">
                         <LayoutTemplate className="w-6 h-6" />
                     </div>
@@ -71,10 +72,10 @@ export default function CardService() {
                         <h3 className="text-lg font-bold text-slate-900">Landing Page</h3>
                         <p className="text-sm text-slate-500 mt-1">Halaman konversi tinggi</p>
                     </div>
-                </div>
+                </Link>
 
                 {/* Card 5: Maintenance */}
-                <div className="md:col-span-2 lg:col-span-2 bg-gradient-to-r from-purple-50 to-white rounded-2xl p-6 border border-slate-100 flex items-center justify-between gap-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <Link href="/service/maintenance" className="md:col-span-2 lg:col-span-2 bg-gradient-to-r from-purple-50 to-white rounded-2xl p-6 border border-slate-100 flex items-center justify-between gap-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                     <div className="flex flex-col gap-2">
                         <div className="w-10 h-10 bg-green-100 text-green-600 rounded-lg flex items-center justify-center">
                             <PenTool className="w-6 h-6" />
@@ -87,7 +88,7 @@ export default function CardService() {
                     <button className="shrink-0 w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center hover:bg-[#7f13ec] hover:text-white hover:border-[#7f13ec] transition-colors">
                         <ArrowRight className="w-5 h-5" />
                     </button>
-                </div>
+                </Link>
             </div>
         </section>
     );
