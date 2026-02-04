@@ -2,6 +2,7 @@
 
 import React from "react";
 import { ArrowRight, CheckCircle } from "lucide-react";
+import Link from "next/link";
 
 export default function ChooseSection() {
     return (
@@ -120,15 +121,19 @@ export default function ChooseSection() {
                         </div>
 
                         {/* CTA Button */}
-                        <div className="pt-4">
-                            <button className="flex items-center gap-2 rounded-full bg-[#7f13ec] px-8 py-4 text-base font-bold text-white shadow-lg shadow-[#7f13ec]/25 transition-all hover:bg-[#7f13ec]/90 hover:shadow-xl hover:shadow-[#7f13ec]/40 focus:outline-none focus:ring-2 focus:ring-[#7f13ec] focus:ring-offset-2">
-                                <span>Mulai Sekarang</span>
-                                <ArrowRight className="w-4 h-4 font-bold" />
-                            </button>
+                        <div className="pt-4 ">
+                            <Link href="/contact" >
+
+                                <button className="flex cursor-pointer items-center gap-2 rounded-full bg-[#7f13ec] px-8 py-4 text-base font-bold text-white shadow-lg shadow-[#7f13ec]/25 transition-all hover:bg-[#7f13ec]/90 hover:shadow-xl hover:shadow-[#7f13ec]/40 focus:outline-none focus:ring-2 focus:ring-[#7f13ec] focus:ring-offset-2">
+                                    <span>Hubungi Sekarang</span>
+                                    <ArrowRight className="w-4 h-4 font-bold" />
+                                </button>
+                            </Link>
                         </div>
+
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     );
 }

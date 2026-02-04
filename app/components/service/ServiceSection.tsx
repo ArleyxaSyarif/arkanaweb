@@ -9,6 +9,7 @@ import {
     ShieldCheck,
     TrendingUp
 } from 'lucide-react';
+import Link from 'next/link';
 
 interface ServiceSectionProps {
     darkMode?: boolean;
@@ -63,10 +64,16 @@ export default function ServiceSection({ darkMode = false }: ServiceSectionProps
                                 </li>
                             </ul>
                         </div>
-                        <button className="w-full lg:w-fit flex items-center justify-center gap-2 rounded-xl h-14 px-8 bg-[#7f13ec] text-white font-bold transition-all hover:bg-[#690fd0] hover:shadow-lg relative z-10 cursor-pointer">
-                            View Case Studies
-                            <ArrowRight className="w-5 h-5" />
-                        </button>
+                        <Link href="/service">
+
+                            <button className="w-full lg:w-fit flex items-center justify-center gap-2 rounded-xl h-14 px-8 bg-[#7f13ec] text-white font-bold transition-all hover:bg-[#690fd0] hover:shadow-lg relative z-10 cursor-pointer">
+                                Lihat Layanan Kami
+                                <ArrowRight className="w-5 h-5" />
+                            </button>
+
+                        </Link>
+
+
                     </div>
 
                     {/* Item 2: Landing Page */}

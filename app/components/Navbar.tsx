@@ -26,6 +26,7 @@ export default function Navbar() {
                     {/* Center: Navigation Links */}
                     <nav className="hidden md:flex items-center gap-1">
                         <Link className="px-4 py-2 text-sm font-medium text-slate-500 hover:text-[#7f13ec] transition-colors" href="/">Home</Link>
+                        <Link className="px-4 py-2 text-sm font-medium text-slate-500 hover:text-[#7f13ec] transition-colors" href="/service">Service</Link>
                         <Link className="px-4 py-2 text-sm font-medium text-slate-500 hover:text-[#7f13ec] transition-colors" href="/tools">Tools</Link>
                         <Link className="px-4 py-2 text-sm font-medium text-slate-500 hover:text-[#7f13ec] transition-colors" href="/contact">Contact</Link>
                     </nav>
@@ -63,6 +64,7 @@ export default function Navbar() {
                 <div className="md:hidden border-t border-slate-100 bg-white">
                     <div className="px-4 py-4 space-y-2 flex flex-col">
                         <Link className="px-4 py-2 text-sm font-medium text-slate-500 hover:text-[#7f13ec] transition-colors" href="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
+                        <Link className="px-4 py-2 text-sm font-medium text-slate-500 hover:text-[#7f13ec] transition-colors" href="/service" onClick={() => setIsMobileMenuOpen(false)}>Service</Link>
                         <Link className="px-4 py-2 text-sm font-medium text-slate-500 hover:text-[#7f13ec] transition-colors" href="/tools" onClick={() => setIsMobileMenuOpen(false)}>Tools</Link>
                         <Link className="px-4 py-2 text-sm font-medium text-slate-500 hover:text-[#7f13ec] transition-colors" href="/contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
                     </div>
