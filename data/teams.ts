@@ -5,8 +5,8 @@ export const TEAM_MEMBERS = [
         role: "Project Manager",
         bio: "Usman leads our projects with precision and dedication. He ensures that timelines are met, resources are managed effectively, and client expectations are exceeded.",
         extraBio: "With a strong background in agile methodologies, Usman facilitates seamless collaboration between teams. He solves problems proactively to keep projects on track.",
-        image: "/img/usman.jpg",
-        largeImage: "/img/usman.jpg"
+        image: "/img/Usman.jpg",
+        largeImage: "/img/Usman.jpg"
     },
     {
         id: 2,
