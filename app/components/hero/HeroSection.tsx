@@ -4,7 +4,7 @@ import { ArrowRight, Rocket, PlayCircle, BarChart3, CheckCircle2 } from 'lucide-
 
 export default function HeroSection() {
     return (
-        <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-white text-[#140d1b] font-sans">
+        <section className="relative w-full overflow-hidden bg-white text-[#140d1b] font-sans pb-20 pt-4 lg:pt-10">
             {/* Custom Styles for Animations & Background Pattern */}
             <style jsx>{`
                 .bg-pattern {
@@ -44,7 +44,7 @@ export default function HeroSection() {
                 <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#7f13ec]/5 rounded-full blur-[80px] translate-y-1/3 -translate-x-1/4"></div>
             </div>
 
-            <div className="relative max-w-7xl mx-auto px-6 py-20 lg:py-32 w-full grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div className="relative max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                 <div className="flex flex-col gap-8 max-w-2xl mx-auto lg:mx-0 text-center lg:text-left z-10">
                     <div className="inline-flex items-center gap-2 self-center lg:self-start bg-[#7f13ec]/5 border border-[#7f13ec]/10 rounded-full px-4 py-1.5 transition-colors hover:bg-[#7f13ec]/10 cursor-pointer group">
                         <span className="flex h-2 w-2 rounded-full bg-[#7f13ec] animate-pulse"></span>
