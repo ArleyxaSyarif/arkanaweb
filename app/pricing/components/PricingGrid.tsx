@@ -45,6 +45,11 @@ export default function PricingGrid() {
 
     return (
         <section className="px-4 sm:px-6 lg:px-8 relative z-20 pb-20">
+
+            <div className="text-center mb-16">
+                <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-4">Pilih Paket yang Tepat untuk Anda</h2>
+                <p className="text-lg text-slate-600 max-w-2xl mx-auto">Mulai dari paket gratis untuk mencoba, hingga paket enterprise untuk kebutuhan bisnis Anda.</p>
+            </div>
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
                 {plans.map((plan, index) => (
                     <div
