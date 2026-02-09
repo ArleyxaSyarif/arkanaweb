@@ -28,7 +28,7 @@ export default function Navbar() {
                         <Link className="px-4 py-2 text-sm font-medium text-slate-500 hover:text-[#7f13ec] transition-colors" href="/">Home</Link>
                         <Link className="px-4 py-2 text-sm font-medium text-slate-500 hover:text-[#7f13ec] transition-colors" href="/service">Service</Link>
                         <Link className="px-4 py-2 text-sm font-medium text-slate-500 hover:text-[#7f13ec] transition-colors" href="/tools">Tools</Link>
-                        <Link className="px-4 py-2 text-sm font-medium text-slate-500 hover:text-[#7f13ec] transition-colors" href="/contact">Contact</Link>
+                        <Link className="px-4 py-2 text-sm font-medium text-slate-500 hover:text-[#7f13ec] transition-colors" href="/pricing">Pricing</Link>
                     </nav>
 
                     {/* Right: Actions */}
@@ -66,7 +66,7 @@ export default function Navbar() {
                         <Link className="px-4 py-2 text-sm font-medium text-slate-500 hover:text-[#7f13ec] transition-colors" href="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
                         <Link className="px-4 py-2 text-sm font-medium text-slate-500 hover:text-[#7f13ec] transition-colors" href="/service" onClick={() => setIsMobileMenuOpen(false)}>Service</Link>
                         <Link className="px-4 py-2 text-sm font-medium text-slate-500 hover:text-[#7f13ec] transition-colors" href="/tools" onClick={() => setIsMobileMenuOpen(false)}>Tools</Link>
-                        <Link className="px-4 py-2 text-sm font-medium text-slate-500 hover:text-[#7f13ec] transition-colors" href="/contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
+                        <Link className="px-4 py-2 text-sm font-medium text-slate-500 hover:text-[#7f13ec] transition-colors" href="/pricing" onClick={() => setIsMobileMenuOpen(false)}>Pricing</Link>
                     </div>
                 </div>
             )}

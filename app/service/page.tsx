@@ -1,4 +1,5 @@
 
+import PartnerSection from "../components/partner/PartnerSection";
 import CardService from "./components/CardService";
 import ChooseService from "./components/ChooseService";
 import HeroService from "./components/HeroService";
@@ -12,6 +13,7 @@ export default function ServicePage() {
             <ChooseService />
 
             <RoadmapService />
+            <PartnerSection />
         </div>
     );
 }
