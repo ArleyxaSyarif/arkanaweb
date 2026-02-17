@@ -64,7 +64,7 @@ export default function ServiceSection({ darkMode = false }: ServiceSectionProps
                                 </li>
                             </ul>
                         </div>
-                        <Link href="/service">
+                        <Link href="/service/company-profile">
 
                             <button className="w-full lg:w-fit flex items-center justify-center gap-2 rounded-xl h-14 px-8 bg-[#7f13ec] text-white font-bold transition-all hover:bg-[#690fd0] hover:shadow-lg relative z-10 cursor-pointer">
                                 Lihat Layanan Kami
@@ -72,60 +72,66 @@ export default function ServiceSection({ darkMode = false }: ServiceSectionProps
                             </button>
 
                         </Link>
-
-
                     </div>
 
                     {/* Item 2: Landing Page */}
-                    <div className="md:col-span-2 md:row-span-1 flex items-center gap-8 rounded-3xl border border-[#ede7f3] bg-white p-10 hover:border-[#7f13ec] hover:-translate-y-1 hover:shadow-lg transition-all duration-300 group">
-                        <div className="flex-shrink-0 bg-[#f3e8ff] p-6 rounded-2xl text-[#7f13ec] transition-transform group-hover:scale-110">
-                            <LayoutTemplate className="w-10 h-10" />
-                        </div>
-                        <div>
-                            <h3 className="text-xl font-extrabold text-[#140d1b] mb-2">Landing Page</h3>
-                            <p className="text-[#734c9a] dark:text-[#a686c5] text-base leading-relaxed">
-                                Conversion-optimized pages designed to turn visitors into loyal customers with high-speed performance.
-                            </p>
-                        </div>
-                    </div>
-
-                    {/* Item 3: Website Custom */}
-                    <div className="md:col-span-2 md:row-span-1 flex flex-col justify-center rounded-3xl relative overflow-hidden transition-all duration-300 group shadow-lg p-10 bg-gradient-to-br from-[#7f13ec] via-[#9b4de0] to-[#5e0eb1]">
-                        <div className="absolute top-1/2 right-10 -translate-y-1/2 opacity-20 transition-transform group-hover:translate-x-2">
-                            <div className="flex gap-1">
-                                <span className="text-6xl text-white font-mono">&lt;</span>
-                                <span className="text-6xl text-white font-mono">/&gt;</span>
+                    <Link href="/service/landing-page" className="md:col-span-2 md:row-span-1">
+                        <div className="h-full flex items-center gap-8 rounded-3xl border border-[#ede7f3] bg-white p-10 hover:border-[#7f13ec] hover:-translate-y-1 hover:shadow-lg transition-all duration-300 group">
+                            <div className="flex-shrink-0 bg-[#f3e8ff] p-6 rounded-2xl text-[#7f13ec] transition-transform group-hover:scale-110">
+                                <LayoutTemplate className="w-10 h-10" />
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-extrabold text-[#140d1b] mb-2">Landing Page</h3>
+                                <p className="text-[#734c9a] dark:text-[#a686c5] text-base leading-relaxed">
+                                    Conversion-optimized pages designed to turn visitors into loyal customers with high-speed performance.
+                                </p>
                             </div>
                         </div>
-                        <div className="relative z-10 max-w-[70%]">
-                            <h3 className="text-2xl font-extrabold text-white mb-3">Website Custom</h3>
-                            <p className="text-white/90 text-base leading-relaxed">
-                                Fully bespoke web applications and unique digital experiences tailored specifically to your complex business requirements.
-                            </p>
+                    </Link>
+
+                    {/* Item 3: Website Custom */}
+                    <Link href="/service/website-custom" className="md:col-span-2 md:row-span-1">
+                        <div className="h-full flex flex-col justify-center rounded-3xl relative overflow-hidden transition-all duration-300 group shadow-lg p-10 bg-gradient-to-br from-[#7f13ec] via-[#9b4de0] to-[#5e0eb1]">
+                            <div className="absolute top-1/2 right-10 -translate-y-1/2 opacity-20 transition-transform group-hover:translate-x-2">
+                                <div className="flex gap-1">
+                                    <span className="text-6xl text-white font-mono">&lt;</span>
+                                    <span className="text-6xl text-white font-mono">/&gt;</span>
+                                </div>
+                            </div>
+                            <div className="relative z-10 max-w-[70%]">
+                                <h3 className="text-2xl font-extrabold text-white mb-3">Website Custom</h3>
+                                <p className="text-white/90 text-base leading-relaxed">
+                                    Fully bespoke web applications and unique digital experiences tailored specifically to your complex business requirements.
+                                </p>
+                            </div>
                         </div>
-                    </div>
+                    </Link>
 
                     {/* Item 4: Maintenance */}
-                    <div className="md:col-span-1 md:row-span-1 flex flex-col justify-between rounded-3xl border border-[#ede7f3] bg-white p-8 hover:border-[#7f13ec] hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
-                        <div className="text-[#7f13ec] mb-4">
-                            <ShieldCheck className="w-8 h-8" />
+                    <Link href="/service/maintenance" className="md:col-span-1 md:row-span-1">
+                        <div className="h-full flex flex-col justify-between rounded-3xl border border-[#ede7f3] bg-white p-8 hover:border-[#7f13ec] hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+                            <div className="text-[#7f13ec] mb-4">
+                                <ShieldCheck className="w-8 h-8" />
+                            </div>
+                            <div>
+                                <h3 className="text-lg font-bold text-[#140d1b]">Maintenance Tahunan</h3>
+                                <p className="text-[#734c9a] dark:text-[#a686c5] text-xs leading-relaxed mt-2">24/7 Monitoring & Regular Updates</p>
+                            </div>
                         </div>
-                        <div>
-                            <h3 className="text-lg font-bold text-[#140d1b]">Maintenance Tahunan</h3>
-                            <p className="text-[#734c9a] dark:text-[#a686c5] text-xs leading-relaxed mt-2">24/7 Monitoring & Regular Updates</p>
-                        </div>
-                    </div>
+                    </Link>
 
                     {/* Item 5: SEO */}
-                    <div className="md:col-span-1 md:row-span-1 flex flex-col justify-between rounded-3xl border border-[#ede7f3] bg-[#fcfaff] p-8 hover:border-[#7f13ec] hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
-                        <div className="text-[#7f13ec] mb-4">
-                            <TrendingUp className="w-8 h-8" />
+                    <Link href="/service/seo-optimization" className="md:col-span-1 md:row-span-1">
+                        <div className="h-full flex flex-col justify-between rounded-3xl border border-[#ede7f3] bg-[#fcfaff] p-8 hover:border-[#7f13ec] hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+                            <div className="text-[#7f13ec] mb-4">
+                                <TrendingUp className="w-8 h-8" />
+                            </div>
+                            <div>
+                                <h3 className="text-lg font-bold text-[#140d1b]">SEO Optimization</h3>
+                                <p className="text-[#734c9a] dark:text-[#a686c5] text-xs leading-relaxed mt-2">Rank higher and drive organic growth.</p>
+                            </div>
                         </div>
-                        <div>
-                            <h3 className="text-lg font-bold text-[#140d1b]">SEO Optimization</h3>
-                            <p className="text-[#734c9a] dark:text-[#a686c5] text-xs leading-relaxed mt-2">Rank higher and drive organic growth.</p>
-                        </div>
-                    </div>
+                    </Link>
                 </div>
 
 
