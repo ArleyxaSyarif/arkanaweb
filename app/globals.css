@@ -1,1 +1,111 @@
 @import "tailwindcss";
+
+@theme {
+    --color-primary: #7f0df2;
+    --color-background-light: #f7f5f8;
+    --color-background-dark: #0a0510;
+    --font-display: "Space Grotesk", sans-serif;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+    --animate-entrance: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    --animate-scroll: scroll 60s linear infinite;
+    --animate-bounce-subtle: bounce-subtle 3s infinite;
+}
+
+@layer utilities {
+    .glass {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(127, 13, 242, 0.1);
+    }
+
+    .glass-heavy {
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(127, 13, 242, 0.2);
+    }
+
+    .glow-primary {
+        box-shadow: 0 0 40px -10px rgba(127, 13, 242, 0.3);
+    }
+
+    .text-glow-sm {
+        text-shadow: 0 0 20px rgba(127, 13, 242, 0.1);
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .perspective-1000 {
+        perspective: 1000px;
+    }
+
+    .card-3d {
+        transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        transform-style: preserve-3d;
+    }
+
+    .group:hover .card-3d {
+        transform: rotateX(5deg) rotateY(-5deg) translateY(-10px);
+    }
+
+    .group\/carousel:hover .animate-scroll {
+        animation-play-state: paused;
+    }
+
+    .material-symbols-outlined {
+        font-family: 'Material Symbols Outlined';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-100% / 2));
+    }
+}
+
+@keyframes bounce-subtle {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}

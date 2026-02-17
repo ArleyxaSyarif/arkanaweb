@@ -113,4 +113,4 @@ export default function AboutSection({ darkMode = false }: AboutSectionProps) {
       </div>
     </div>
   );
-}
+} 
