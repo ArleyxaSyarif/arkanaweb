@@ -1,6 +1,6 @@
 export const projects = [
     {
-        title: "Lumina AI",
+        title: "Hotel Palem",
         description: "Next-gen neural management interface for enterprise-scale deep learning models.",
         tags: ["React", "Three.js"],
         image: "/img/hotelpalem.png",
@@ -14,21 +14,21 @@ export const projects = [
         delay: "delay-100"
     },
     {
-        title: "Orbit SaaS",
+        title: "PPDB Web",
         description: "Unified enterprise ERP solutions designed for remote-first global teams.",
         tags: ["Tailwind", "Node.js"],
         image: "/img/ppdbweb.png",
         delay: "delay-200"
     },
     {
-        title: "Orbit SaaS",
+        title: "Lumina AI",
         description: "Unified enterprise ERP solutions designed for remote-first global teams.",
         tags: ["Tailwind", "Node.js"],
         image: "/img/lumina.png",
         delay: "delay-200"
     },
     {
-        title: "Orbit SaaS",
+        title: "PMB Web",
         description: "Unified enterprise ERP solutions designed for remote-first global teams.",
         tags: ["Tailwind", "Node.js"],
         image: "/img/pmbweb.png",
