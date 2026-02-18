@@ -7,7 +7,7 @@ export const projects = [
         delay: ""
     },
     {
-        title: "VaultX Wallet",
+        title: "Web Library", 
         description: "Highly secure digital asset storage with multi-sig protocols and real-time tracking.",
         tags: ["Solidity", "Next.js"],
         image: "/img/library.png",

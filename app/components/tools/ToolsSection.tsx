@@ -1,274 +1,328 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect, useRef } from 'react';
-import { X as CloseIcon } from 'lucide-react';
+import React, { useState } from "react";
+import {
+    Database,
+    Code,
+    Atom,
+    Layers,
+    Palette,
+    Server,
+    Triangle,
+    Info,
+    ArrowRight,
+    X,
+    FileCode,
+    LucideIcon
+} from "lucide-react";
 
-interface ToolsSectionProps {
-    darkMode?: boolean;
-}
-
-interface TechStackItem {
+interface Tool {
+    id: string;
     name: string;
     category: string;
+    icon: LucideIcon;
     description: string;
-    details: string;
-    useCases: string[];
-    icon: React.ReactNode;
+    features: string[];
+    docsUrl: string;
+    githubUrl?: string;
 }
 
-export default function ToolsSection({ darkMode = false }: ToolsSectionProps) {
-    const [selectedTech, setSelectedTech] = useState<TechStackItem | null>(null);
-    const scrollContainerRef = useRef<HTMLDivElement>(null);
+const toolsData: Tool[] = [
+    {
+        id: "mongodb",
+        name: "MongoDB",
+        category: "NoSQL Database",
+        icon: Database,
+        description: "A source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas.",
+        features: ["Document-Oriented", "High Availability", "Horizontal Scalability", "Ad-hoc Queries"],
+        docsUrl: "https://www.mongodb.com/docs/",
+        githubUrl: "https://github.com/mongodb/mongo"
+    },
+    {
+        id: "typescript",
+        name: "TypeScript",
+        category: "Type Safety",
+        icon: FileCode,
+        description: "A syntactic superset of JavaScript which adds static typing. It is designed for the development of large applications and transcompiles to JavaScript.",
+        features: ["Static Type-checking", "IDE Support", "Object-oriented", "ES Next Support"],
+        docsUrl: "https://www.typescriptlang.org/docs/",
+        githubUrl: "https://github.com/microsoft/TypeScript"
+    },
+    {
+        id: "react",
+        name: "React",
+        category: "UI Library",
+        icon: Atom,
+        description: "The library for web and native user interfaces. React's component-based architecture allows us to build encapsulated components that manage their own state.",
+        features: ["Component-Based", "Virtual DOM", "Declarative UI", "Rich Ecosystem"],
+        docsUrl: "https://react.dev/",
+        githubUrl: "https://github.com/facebook/react"
+    },
+    {
+        id: "nextjs",
+        name: "Next.js",
+        category: "Framework",
+        icon: Layers,
+        description: "The React Framework for the Web. Used by some of the world's largest companies, Next.js enables you to create high-quality web applications with the power of React components.",
+        features: ["Server-Side Rendering", "Static Site Generation", "API Routes", "Built-in Optimization"],
+        docsUrl: "https://nextjs.org/docs",
+        githubUrl: "https://github.com/vercel/next.js"
+    },
+    {
+        id: "tailwindcss",
+        name: "Tailwind CSS",
+        category: "Styling",
+        icon: Palette,
+        description: "A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design, directly in your markup.",
+        features: ["Utility-First", "Responsive Design", "Component-Friendly", "Dark Mode Support"],
+        docsUrl: "https://tailwindcss.com/docs",
+        githubUrl: "https://github.com/tailwindlabs/tailwindcss"
+    },
+    {
+        id: "nodejs",
+        name: "Node.js",
+        category: "Runtime",
+        icon: Server,
+        description: "As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications.",
+        features: ["Event-Driven", "Non-Blocking I/O", "Cross-Platform", "Large Ecosystem (NPM)"],
+        docsUrl: "https://nodejs.org/en/docs/",
+        githubUrl: "https://github.com/nodejs/node"
+    },
+    {
+        id: "prisma",
+        name: "Prisma",
+        category: "ORM",
+        icon: Triangle,
+        description: "Next-generation Node.js and TypeScript ORM. Prisma unlocks a new level of developer experience when working with databases thanks to its intuitive data model and type-safe query builder.",
+        features: ["Type-Safe Queries", "Automated Migrations", "Intuitive Data Model", "Multi-Database Support"],
+        docsUrl: "https://www.prisma.io/docs",
+        githubUrl: "https://github.com/prisma/prisma"
+    }
+];
 
-    const techStack: TechStackItem[] = [
-        {
-            name: "React",
-            category: "Frontend",
-            description: "Library JavaScript untuk membangun user interface yang interaktif dan dinamis dengan component-based architecture.",
-            details: "React memungkinkan pengembangan UI yang cepat dan efisien dengan virtual DOM dan reusable components.",
-            useCases: ["Single Page Applications", "Progressive Web Apps", "Interactive Dashboards"],
-            icon: (
-                <svg className="w-24 h-24" viewBox="0 0 24 24" fill="currentColor">
-                    <circle cx="12" cy="12" r="1.5" />
-                    <ellipse cx="12" cy="12" rx="9" ry="3.5" fill="none" stroke="currentColor" strokeWidth="1" />
-                    <ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(60 12 12)" fill="none" stroke="currentColor" strokeWidth="1" />
-                    <ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(120 12 12)" fill="none" stroke="currentColor" strokeWidth="1" />
-                </svg>
-            )
-        },
-        {
-            name: "Next.js",
-            category: "Framework",
-            description: "Framework React dengan fitur server-side rendering dan static site generation untuk performa optimal.",
-            details: "Next.js menyediakan routing otomatis, optimasi gambar, dan API routes untuk full-stack development.",
-            useCases: ["E-commerce Sites", "Marketing Websites", "Enterprise Applications"],
-            icon: (
-                <svg className="w-24 h-24" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 2.18l7.5 3.45v8.42c0 4.24-2.88 8.21-7.5 9.68-4.62-1.47-7.5-5.44-7.5-9.68V7.63l7.5-3.45z" />
-                    <path d="M11 7h2v6h-2zm0 8h2v2h-2z" />
-                </svg>
-            )
-        },
-        {
-            name: "Tailwind CSS",
-            category: "Styling",
-            description: "Utility-first CSS framework untuk styling yang cepat dan konsisten dengan design system yang powerful.",
-            details: "Tailwind CSS memungkinkan pembuatan custom design tanpa meninggalkan HTML dengan utility classes.",
-            useCases: ["Rapid Prototyping", "Custom Design Systems", "Responsive Layouts"],
-            icon: (
-                <svg className="w-24 h-24" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 6c-2.67 0-4.33 1.33-5 4 1-1.33 2.17-1.83 3.5-1.5.76.19 1.31.74 1.91 1.35.98 1 2.09 2.15 4.59 2.15 2.67 0 4.33-1.33 5-4-1 1.33-2.17 1.83-3.5 1.5-.76-.19-1.3-.74-1.91-1.35C15.61 7.15 14.5 6 12 6zM7 12c-2.67 0-4.33 1.33-5 4 1-1.33 2.17-1.83 3.5-1.5.76.19 1.3.74 1.91 1.35C8.39 16.85 9.5 18 12 18c2.67 0 4.33-1.33 5-4-1 1.33-2.17 1.83-3.5 1.5-.76-.19-1.3-.74-1.91-1.35C10.61 13.15 9.5 12 7 12z" />
-                </svg>
-            )
-        },
-        {
-            name: "Node.js",
-            category: "Backend",
-            description: "JavaScript runtime untuk server-side development dengan performa tinggi dan scalability.",
-            details: "Node.js menggunakan event-driven architecture yang cocok untuk aplikasi real-time dan data-intensive.",
-            useCases: ["REST APIs", "Real-time Applications", "Microservices"],
-            icon: (
-                <svg className="w-24 h-24" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 1.85c-.27 0-.55.07-.78.2l-7.44 4.3c-.48.28-.78.8-.78 1.36v8.58c0 .56.3 1.08.78 1.36l1.95 1.12c.95.46 1.27.47 1.71.47 1.4 0 2.21-.85 2.21-2.33V8.44c0-.12-.1-.22-.22-.22H8.5c-.13 0-.23.1-.23.22v8.47c0 .66-.68 1.31-1.77.76L4.45 16.5a.26.26 0 0 1-.11-.21V7.71c0-.09.04-.17.11-.21l7.44-4.29c.06-.04.16-.04.22 0l7.44 4.29c.07.04.11.12.11.21v8.58c0 .08-.04.16-.11.21l-7.44 4.29c-.06.04-.16.04-.22 0L10 19.65c-.08-.03-.16-.02-.21.02-.53.3-.63.36-1.12.51-.12.04-.31.11.04.31l2.11 1.25c.24.13.5.2.78.2.27 0 .54-.07.77-.2l7.44-4.29c.48-.28.78-.8.78-1.36V7.71c0-.56-.3-1.08-.78-1.36l-7.44-4.3c-.23-.13-.5-.2-.77-.2z" />
-                </svg>
-            )
-        },
-        {
-            name: "MongoDB",
-            category: "Database",
-            description: "NoSQL database yang fleksibel dan scalable untuk menyimpan data dalam format document-oriented.",
-            details: "MongoDB cocok untuk aplikasi modern yang membutuhkan schema flexibility dan horizontal scaling.",
-            useCases: ["Content Management", "User Profiles", "IoT Applications"],
-            icon: (
-                <svg className="w-24 h-24" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C11.175 2 9 6.43 9 10.98c0 3.87 1.12 6.47 2.11 8.27.13.24.26.47.39.68.13-.21.26-.44.39-.68.99-1.8 2.11-4.4 2.11-8.27C14 6.43 12.825 2 12 2zm-.5 18.08c-.42.42-.5 1.34-.5 1.92 0 0-.08-1.56.5-1.92z" />
-                </svg>
-            )
-        },
-        {
-            name: "TypeScript",
-            category: "Language",
-            description: "Superset JavaScript dengan static typing untuk code yang lebih reliable dan maintainable.",
-            details: "TypeScript membantu mendeteksi error lebih awal dan meningkatkan developer experience dengan auto-completion.",
-            useCases: ["Large Scale Applications", "Team Collaboration", "API Development"],
-            icon: (
-                <svg className="w-24 h-24" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M3 3h18v18H3V3zm15.854 10.146a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L17.293 14H6.5a.5.5 0 0 1 0-1h10.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4z" />
-                </svg>
-            )
-        }
-    ];
+export default function ToolsSection() {
+    const [selectedTool, setSelectedTool] = useState<Tool | null>(null);
 
-    useEffect(() => {
-        const scrollContainer = scrollContainerRef.current;
-        if (!scrollContainer) return;
-
-        let scrollAmount = 0;
-        const scrollStep = 0.3;
-        let animationId: number;
-
-        const autoScroll = () => {
-            scrollAmount += scrollStep;
-            if (scrollAmount >= scrollContainer.scrollWidth / 2) {
-                scrollAmount = 0;
-            }
-            scrollContainer.scrollLeft = scrollAmount;
-            animationId = requestAnimationFrame(autoScroll);
-        };
-
-        animationId = requestAnimationFrame(autoScroll);
-        return () => cancelAnimationFrame(animationId);
-    }, []);
+    // Duplicate tools for infinite scroll effect
+    const infiniteTools = [...toolsData, ...toolsData];
 
     return (
-        <section id="tech" className="py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
-            <div className="max-w-7xl mx-auto">
-                <div className="text-center mb-20">
-                    <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/10 to-violet-500/10 backdrop-blur-xl border border-purple-300/20">
-                        <div className="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></div>
-                        <span className={`${darkMode ? 'text-purple-300' : 'text-purple-600'} text-sm font-semibold`}>
-                            Technology Stack
-                        </span>
-                    </div>
-                    <h2 className={`text-5xl md:text-6xl font-bold mb-6 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-                        Teknologi <span className={`bg-gradient-to-r ${darkMode ? 'from-purple-400 to-violet-400' : 'from-purple-600 to-violet-600'} bg-clip-text text-transparent`}>Modern & Powerful</span>
-                    </h2>
-                    <p className={`text-xl ${darkMode ? 'text-gray-300' : 'text-gray-600'} max-w-3xl mx-auto leading-relaxed`}>
-                        Menggunakan tools dan framework terbaik untuk hasil optimal
-                    </p>
+        <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+            {/* Hero Section */}
+            <section className="mx-auto max-w-7xl px-6 pt-20 pb-12 text-center">
+                <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 mb-6">
+                    <span className="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+                    <span className="text-xs font-bold uppercase tracking-wider text-primary">
+                        Technology Stack 2024
+                    </span>
                 </div>
+                <h2 className="mx-auto max-w-3xl text-5xl md:text-6xl font-black leading-tight tracking-tight text-[#141118]">
+                    Powered by the world's <br />
+                    <span className="bg-gradient-to-r from-primary to-[#b37df7] bg-clip-text text-transparent">
+                        most modern tech.
+                    </span>
+                </h2>
+                <p className="mx-auto mt-6 max-w-2xl text-lg text-[#756189]">
+                    A high-performance ecosystem built for speed, scalability, and developer
+                    happiness. Explore the tools that drive our innovation.
+                </p>
+            </section>
 
-                <div className="relative">
-                    <div
-                        ref={scrollContainerRef}
-                        className="flex gap-8 overflow-x-hidden py-8"
-                        style={{
-                            scrollBehavior: 'auto',
-                            maskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)'
-                        }}
-                    >
-                        {[...techStack, ...techStack].map((tech, index) => (
-                            <div
-                                key={index}
-                                onClick={() => setSelectedTech(tech)}
-                                className={`cursor-pointer flex-shrink-0 w-64 ${darkMode ? 'bg-gradient-to-br from-purple-900/40 to-purple-800/40 hover:from-purple-800/60 hover:to-purple-700/60' : 'bg-gradient-to-br from-purple-50 to-purple-100 hover:from-purple-100 hover:to-purple-200'} backdrop-blur-2xl rounded-3xl border ${darkMode ? 'border-purple-500/30 hover:border-purple-400/50' : 'border-purple-300/40 hover:border-purple-400/60'} shadow-2xl hover:shadow-purple-500/40 p-8 transition-all duration-500 group flex flex-col items-center justify-center relative overflow-hidden`}
-                                style={{
-                                    transform: 'perspective(1000px) rotateY(0deg)',
-                                    transformStyle: 'preserve-3d',
-                                    backdropFilter: 'blur(40px) saturate(180%)',
-                                    WebkitBackdropFilter: 'blur(40px) saturate(180%)'
-                                }}
-                                onMouseMove={(e) => {
-                                    const rect = e.currentTarget.getBoundingClientRect();
-                                    const x = e.clientX - rect.left;
-                                    const centerX = rect.width / 2;
-                                    const rotateY = (x - centerX) / 10;
-                                    e.currentTarget.style.transform = `perspective(1000px) rotateY(${rotateY}deg) translateZ(20px) scale(1.05)`;
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.transform = 'perspective(1000px) rotateY(0deg) translateZ(0px) scale(1)';
-                                }}
-                            >
-                                <div className={`absolute inset-0 bg-gradient-to-br from-purple-500/10 to-violet-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-
-                                <div className={`${darkMode ? 'text-purple-400' : 'text-purple-600'} mb-6 group-hover:scale-110 transition-all duration-300 drop-shadow-2xl`}
-                                    style={{ filter: 'drop-shadow(0 10px 20px rgba(168, 85, 247, 0.3))' }}>
-                                    {tech.icon}
-                                </div>
-                                <p className={`text-2xl font-bold text-center ${darkMode ? 'text-white' : 'text-gray-900'} mb-2`}>
-                                    {tech.name}
-                                </p>
-                                <p className={`text-sm text-center ${darkMode ? 'text-purple-300' : 'text-purple-600'} font-semibold px-3 py-1 rounded-full ${darkMode ? 'bg-purple-500/20' : 'bg-purple-100'}`}>
-                                    {tech.category}
-                                </p>
-
-                                <div className={`mt-4 text-center text-xs ${darkMode ? 'text-gray-400' : 'text-gray-500'} opacity-0 group-hover:opacity-100 transition-opacity`}>
-                                    Click untuk detail
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
-
-            {/* Tech Stack Popup Modal */}
-            {selectedTech && (
-                <div
-                    className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-xl"
-                    onClick={() => setSelectedTech(null)}
-                    style={{
-                        backdropFilter: 'blur(20px)',
-                        WebkitBackdropFilter: 'blur(20px)'
-                    }}
-                >
-                    <div
-                        className={`relative max-w-2xl w-full ${darkMode ? 'bg-gray-900/90' : 'bg-white/90'} backdrop-blur-2xl rounded-[2.5rem] border ${darkMode ? 'border-purple-500/30' : 'border-purple-300/40'} shadow-2xl p-10 transform transition-all duration-500 scale-100`}
-                        onClick={(e) => e.stopPropagation()}
-                        style={{
-                            backdropFilter: 'blur(40px) saturate(180%)',
-                            WebkitBackdropFilter: 'blur(40px) saturate(180%)',
-                            animation: 'modalSlideIn 0.5s ease-out'
-                        }}
-                    >
-                        <button
-                            onClick={() => setSelectedTech(null)}
-                            className={`absolute top-6 right-6 w-12 h-12 rounded-2xl ${darkMode ? 'bg-purple-500/20 hover:bg-purple-500/30' : 'bg-purple-100 hover:bg-purple-200'} flex items-center justify-center transition-all hover:scale-110`}
+            {/* Infinite Looping Slider Section */}
+            <section className="slider-container relative w-full overflow-hidden py-20 bg-gradient-to-b from-transparent via-primary/5 to-transparent">
+                <style jsx>{`
+          @keyframes scroll-custom {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(calc(-250px * 7));
+            }
+          }
+          .slider-track {
+            display: flex;
+            width: calc(250px * 14);
+            animation: scroll-custom 40s linear infinite;
+          }
+          .slider-container:hover .slider-track {
+            animation-play-state: paused;
+          }
+        `}</style>
+                <div className="slider-track gap-8 px-4">
+                    {infiniteTools.map((tool, index) => (
+                        <div
+                            key={`${tool.id}-${index}`}
+                            onClick={() => setSelectedTool(tool)}
+                            className="glass-bubble flex h-[280px] w-[220px] flex-col items-center justify-center gap-6 rounded-[2.5rem] p-6 cursor-pointer hover:scale-105 hover:-translate-y-1 transition-all duration-300 bg-white/70 backdrop-blur-md border border-white/40 shadow-lg"
                         >
-                            <CloseIcon className={`w-6 h-6 ${darkMode ? 'text-purple-300' : 'text-purple-600'}`} />
-                        </button>
-
-                        <div className="text-center mb-8">
-                            <div className={`inline-flex ${darkMode ? 'text-purple-400' : 'text-purple-600'} mb-6`}
-                                style={{ filter: 'drop-shadow(0 15px 30px rgba(168, 85, 247, 0.4))' }}>
-                                {selectedTech.icon}
+                            <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-white shadow-sm">
+                                <tool.icon className="text-4xl text-primary w-10 h-10" />
                             </div>
-                            <h3 className={`text-4xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'} mb-3`}>
-                                {selectedTech.name}
-                            </h3>
-                            <span className={`inline-block px-4 py-2 rounded-full ${darkMode ? 'bg-purple-500/20 text-purple-300' : 'bg-purple-100 text-purple-600'} text-sm font-semibold`}>
-                                {selectedTech.category}
-                            </span>
+                            <div className="text-center">
+                                <h3 className="text-lg font-bold text-[#141118]">{tool.name}</h3>
+                                <p className="text-xs font-medium text-[#756189] mt-1">
+                                    {tool.category}
+                                </p>
+                            </div>
+                            <div className="rounded-full bg-primary/10 p-2 text-primary">
+                                <Info className="text-lg w-5 h-5" />
+                            </div>
                         </div>
+                    ))}
+                </div>
+            </section>
 
-                        <div className={`${darkMode ? 'bg-purple-500/10' : 'bg-purple-50'} rounded-2xl p-6 mb-6`}>
-                            <h4 className={`text-lg font-bold ${darkMode ? 'text-white' : 'text-gray-900'} mb-3`}>Deskripsi</h4>
-                            <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} leading-relaxed`}>
-                                {selectedTech.description}
+            {/* Detailed Grid Section */}
+            <section className="mx-auto max-w-7xl px-6 py-24">
+                <div className="mb-12 flex items-end justify-between">
+                    <div>
+                        <h2 className="text-3xl font-bold tracking-tight text-[#141118]">
+                            Tool Ecosystem
+                        </h2>
+                        <p className="mt-2 text-[#756189]">
+                            Deep dive into our core architectural decisions.
+                        </p>
+                    </div>
+                    <button className="group flex items-center gap-2 text-sm font-bold text-primary">
+                        View All Tools
+                        <ArrowRight className="text-lg transition-transform group-hover:translate-x-1 w-5 h-5" />
+                    </button>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {/* Tool Card Detail for React */}
+                    <div className="flex flex-col @container items-stretch justify-start rounded-2xl bg-white shadow-sm border border-primary/5 p-6 hover:shadow-md transition-shadow">
+                        <div className="flex items-center gap-4 mb-6">
+                            <div className="h-16 w-16 flex items-center justify-center rounded-xl bg-primary/5">
+                                <Atom className="text-3xl text-primary w-8 h-8" />
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-bold text-[#141118]">React</h3>
+                                <p className="text-sm text-primary font-medium">
+                                    Core UI Library
+                                </p>
+                            </div>
+                        </div>
+                        <p className="text-[#756189] leading-relaxed mb-6">
+                            The library for web and native user interfaces. React's
+                            component-based architecture allows us to build encapsulated
+                            components that manage their own state.
+                        </p>
+                        <div className="mt-auto flex items-center justify-between pt-6 border-t border-background-light">
+                            <div className="flex -space-x-2">
+                                <div className="h-8 w-8 rounded-full border-2 border-white bg-primary/20 flex items-center justify-center text-[10px] font-bold">
+                                    V18
+                                </div>
+                                <div className="h-8 w-8 rounded-full border-2 border-white bg-[#b37df7]/20 flex items-center justify-center text-[10px] font-bold">
+                                    WEB
+                                </div>
+                            </div>
+                            <button className="flex h-9 items-center justify-center rounded-lg bg-primary px-4 text-xs font-bold text-white transition-all hover:bg-primary/90">
+                                Documentation
+                            </button>
+                        </div>
+                    </div>
+                    {/* Tool Card Detail for Next.js */}
+                    <div className="flex flex-col items-stretch justify-start rounded-2xl bg-white shadow-sm border border-primary/5 p-6 hover:shadow-md transition-shadow">
+                        <div className="flex items-center gap-4 mb-6">
+                            <div className="h-16 w-16 flex items-center justify-center rounded-xl bg-primary/5">
+                                <Layers className="text-3xl text-primary w-8 h-8" />
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-bold text-[#141118]">Next.js</h3>
+                                <p className="text-sm text-primary font-medium">
+                                    Fullstack Framework
+                                </p>
+                            </div>
+                        </div>
+                        <p className="text-[#756189] leading-relaxed mb-6">
+                            Enabling server-side rendering and static site generation for
+                            lightning-fast performance. Next.js gives us the best developer
+                            experience with all the features we need.
+                        </p>
+                        <div className="mt-auto flex items-center justify-between pt-6 border-t border-background-light">
+                            <div className="flex -space-x-2">
+                                <div className="h-8 w-8 rounded-full border-2 border-white bg-primary/20 flex items-center justify-center text-[10px] font-bold">
+                                    V14
+                                </div>
+                                <div className="h-8 w-8 rounded-full border-2 border-white bg-[#b37df7]/20 flex items-center justify-center text-[10px] font-bold">
+                                    SSR
+                                </div>
+                            </div>
+                            <button className="flex h-9 items-center justify-center rounded-lg bg-primary px-4 text-xs font-bold text-white transition-all hover:bg-primary/90">
+                                Documentation
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Tool Detail Modal */}
+            {selectedTool && (
+                <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-[rgba(25,16,34,0.4)] backdrop-blur-md">
+                    <div className="relative w-full max-w-2xl transform rounded-[2rem] bg-white p-8 shadow-2xl transition-all scale-100">
+                        <button
+                            onClick={() => setSelectedTool(null)}
+                            className="absolute top-6 right-6 flex h-10 w-10 items-center justify-center rounded-full bg-background-light text-[#756189] hover:bg-primary/10 hover:text-primary transition-colors"
+                        >
+                            <X className="w-6 h-6" />
+                        </button>
+                        <div className="flex flex-col items-center text-center">
+                            <div className="mb-6 flex h-24 w-24 items-center justify-center rounded-3xl bg-primary/5 shadow-inner">
+                                <selectedTool.icon className="text-6xl text-primary w-16 h-16" />
+                            </div>
+                            <h2 className="text-3xl font-black text-[#141118]">
+                                {selectedTool.name}
+                            </h2>
+                            <p className="mt-2 text-primary font-semibold tracking-wide uppercase text-sm">
+                                {selectedTool.category}
                             </p>
-                        </div>
-
-                        <div className={`${darkMode ? 'bg-purple-500/10' : 'bg-purple-50'} rounded-2xl p-6 mb-6`}>
-                            <h4 className={`text-lg font-bold ${darkMode ? 'text-white' : 'text-gray-900'} mb-3`}>Keunggulan</h4>
-                            <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} leading-relaxed`}>
-                                {selectedTech.details}
-                            </p>
-                        </div>
-
-                        <div>
-                            <h4 className={`text-lg font-bold ${darkMode ? 'text-white' : 'text-gray-900'} mb-4`}>Use Cases</h4>
-                            <div className="flex flex-wrap gap-3">
-                                {selectedTech.useCases.map((useCase, index) => (
-                                    <span key={index} className={`px-4 py-2 rounded-xl ${darkMode ? 'bg-purple-500/20 text-purple-300 border-purple-400/20' : 'bg-purple-50 text-purple-600 border-purple-200/50'} text-sm font-medium border`}>
-                                        {useCase}
-                                    </span>
-                                ))}
+                            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+                                <div className="rounded-2xl bg-background-light p-5 text-left">
+                                    <h4 className="text-xs font-bold text-primary uppercase mb-2">
+                                        Description
+                                    </h4>
+                                    <p className="text-sm text-[#756189] leading-relaxed">
+                                        {selectedTool.description}
+                                    </p>
+                                </div>
+                                <div className="rounded-2xl bg-background-light p-5 text-left">
+                                    <h4 className="text-xs font-bold text-primary uppercase mb-2">
+                                        Key Features
+                                    </h4>
+                                    <ul className="text-sm text-[#756189] space-y-1">
+                                        {selectedTool.features.map((feature, i) => (
+                                            <li key={i} className="flex items-center gap-2">
+                                                <span className="h-1.5 w-1.5 rounded-full bg-primary"></span>
+                                                {feature}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className="mt-10 flex w-full gap-4">
+                                <a
+                                    href={selectedTool.docsUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex-1 flex items-center justify-center h-12 rounded-xl bg-primary text-white font-bold shadow-lg shadow-primary/25 hover:scale-[1.01] transition-all"
+                                >
+                                    View Documentation
+                                </a>
+                                {selectedTool.githubUrl && (
+                                    <a
+                                        href={selectedTool.githubUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex-1 flex items-center justify-center h-12 rounded-xl border-2 border-primary/20 text-primary font-bold hover:bg-primary/5 transition-all"
+                                    >
+                                        GitHub Repository
+                                    </a>
+                                )}
                             </div>
                         </div>
                     </div>
                 </div>
             )}
-            <style jsx>{`
-        @keyframes modalSlideIn {
-          from {
-            opacity: 0;
-            transform: scale(0.9) translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: scale(1) translateY(0);
-          }
-        }
-      `}</style>
-        </section>
+        </div>
     );
 }
