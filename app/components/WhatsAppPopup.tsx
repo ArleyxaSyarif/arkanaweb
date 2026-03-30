@@ -3,7 +3,7 @@
 import { MessageCircle } from 'lucide-react';
 
 export default function WhatsAppPopup() {
-    const phoneNumber = "0895398678090"; // Ganti dengan nomor WA kamu
+    const phoneNumber = "62895398678090"; // Ganti dengan nomor WA kamu
     const message = "Halo Arkana Web, saya ingin tanya tentang progres/jasa pembuatan website.";
 
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
