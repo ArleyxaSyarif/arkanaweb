@@ -12,12 +12,12 @@ export default function AboutSection({ darkMode = false }: AboutSectionProps) {
     {
       icon: <Shield className="w-8 h-8" />,
       title: "Keamanan Terjamin",
-      description: "SSL certificate, enkripsi data, dan proteksi dari serangan cyber"
+      description: "Keamanan website terjaga agar data pengunjung tetap aman"
     },
     {
       icon: <Zap className="w-8 h-8" />,
       title: "Performa Optimal",
-      description: "Loading cepat dengan optimasi gambar dan caching"
+      description: "Website cepat, ringan, dan responsif di semua perangkat"
     },
     {
       icon: <Users className="w-8 h-8" />,
@@ -49,13 +49,14 @@ export default function AboutSection({ darkMode = false }: AboutSectionProps) {
                     </span>
                   </div>
                   <h2 className={`text-4xl sm:text-5xl md:text-6xl font-bold mb-8 ${darkMode ? 'text-white' : 'text-gray-900'} leading-tight`}>
-                    Mitra Terpercaya untuk <span className={`bg-gradient-to-r ${darkMode ? 'from-purple-400 to-violet-400' : 'from-purple-600 to-violet-600'} bg-clip-text text-transparent`}>Transformasi Digital</span>
+                    Solusi Website Profesional <span className={`bg-gradient-to-r ${darkMode ? 'from-purple-400 to-violet-400' : 'from-purple-600 to-violet-600'} bg-clip-text text-transparent`}>Untuk Bisnis Anda</span>
                   </h2>
                   <p className={`text-lg mb-6 ${darkMode ? 'text-gray-300' : 'text-gray-600'} leading-relaxed`}>
-                    Arkana Website adalah penyedia jasa pembuatan website profesional yang berfokus pada kualitas, kecepatan, dan kepuasan klien. Dengan pengalaman bertahun-tahun, kami telah membantu ratusan bisnis untuk hadir secara digital dengan tampilan yang memukau.
+                    Kami membantu bisnis, brand, dan organisasi membangun website yang modern, responsif, dan mudah digunakan. Fokus kami adalah menghadirkan solusi digital yang tidak hanya menarik secara visual, tetapi juga efektif untuk perkembangan bisnis Anda.
                   </p>
+
                   <p className={`text-lg mb-10 ${darkMode ? 'text-gray-300' : 'text-gray-600'} leading-relaxed`}>
-                    Kami menggunakan teknologi terkini dan mengikuti standar industri terbaik untuk memastikan website Anda tidak hanya indah dipandang, tetapi juga cepat, aman, dan mudah dikelola.
+                    Dengan teknologi terbaru dan proses pengembangan yang terstruktur, kami memastikan setiap website memiliki performa cepat, keamanan yang baik, dan mudah dikelola dalam jangka panjang.
                   </p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">

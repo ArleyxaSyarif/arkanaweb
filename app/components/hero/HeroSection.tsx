@@ -1,6 +1,7 @@
 'use client';
 
 import { ArrowRight, Rocket, PlayCircle, BarChart3, CheckCircle2 } from 'lucide-react';
+import Link from 'next/link';
 
 export default function HeroSection() {
     return (
@@ -48,39 +49,27 @@ export default function HeroSection() {
                 <div className="flex flex-col gap-8 max-w-2xl mx-auto lg:mx-0 text-center lg:text-left z-10">
                     <div className="inline-flex items-center gap-2 self-center lg:self-start bg-[#7f13ec]/5 border border-[#7f13ec]/10 rounded-full px-4 py-1.5 transition-colors hover:bg-[#7f13ec]/10 cursor-pointer group">
                         <span className="flex h-2 w-2 rounded-full bg-[#7f13ec] animate-pulse"></span>
-                        <span className="text-[#7f13ec] text-xs font-bold uppercase tracking-wide">New Features v2.0</span>
+                        <span className="text-[#7f13ec] text-xs font-bold uppercase tracking-wide">Solusi Digital.</span>
                         <ArrowRight className="w-4 h-4 text-[#7f13ec] transition-transform group-hover:translate-x-1" />
                     </div>
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl/tight font-extrabold text-[#140d1b] tracking-tight">
-                        Transform Your Workflow with <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7f13ec] to-[#a855f7]">Intelligent Design</span>
+                        Bangun Website Profesional dengan <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7f13ec] to-[#a855f7]">Arkana Web</span>
                     </h1>
                     <p className="text-lg text-[#5e5864] leading-relaxed max-w-lg mx-auto lg:mx-0">
-                        Stop wasting time on manual processes. Our AI-driven platform helps you build, scale, and manage your digital products faster and smarter than ever before.
+                        Arkana Web mengedepankan kejujuran dan komitmen penuh untuk Anda.
+                        Anda bisa pantau progres pembuatan website kapan saja, karena bagi kami, kepercayaan Anda adalah prioritas yang paling utama.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-2">
-                        <button className="flex items-center justify-center gap-2 bg-[#7f13ec] hover:bg-[#6b10c6] text-white h-12 px-8 rounded-lg font-bold text-base transition-all shadow-[0_0_40px_-10px_rgba(127,19,236,0.3)] hover:shadow-lg hover:-translate-y-1">
-                            <span>Get Started</span>
+                        <Link href="/contact" className="flex items-center justify-center gap-2 bg-[#7f13ec] hover:bg-[#6b10c6] text-white h-12 px-8 rounded-lg font-bold text-base transition-all shadow-[0_0_40px_-10px_rgba(127,19,236,0.3)] hover:shadow-lg hover:-translate-y-1">
+                            <span>Hubungi Kami</span>
                             <Rocket className="w-5 h-5" />
-                        </button>
-                        <button className="flex items-center justify-center gap-2 bg-white border border-gray-200 text-[#140d1b] h-12 px-8 rounded-lg font-bold text-base hover:bg-gray-50 transition-colors">
-                            <PlayCircle className="w-5 h-5 text-[#7f13ec]" />
-                            <span>Watch Demo</span>
-                        </button>
+                        </Link>
+                        <Link href="/pricing" className="flex items-center justify-center gap-2 bg-white border border-gray-200 text-[#140d1b] h-12 px-8 rounded-lg font-bold text-base hover:bg-gray-50 transition-colors">
+                            <BarChart3 className="w-5 h-5 text-[#7f13ec]" />
+                            <span>Analisis Kalkulator</span>
+                        </Link>
                     </div>
-                    <div className="pt-8 border-t border-gray-100 mt-4">
-                        <p className="text-sm font-medium text-[#5e5864] mb-4">Trusted by innovative teams at</p>
-                        <div className="flex flex-wrap justify-center lg:justify-start gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-                            <div className="h-6 w-auto text-[#7f13ec]">
-                                <svg className="h-full w-auto fill-current" viewBox="0 0 100 30" xmlns="http://www.w3.org/2000/svg"><path d="M10,15 L20,5 L30,15 L20,25 Z M40,5 H50 V25 H40 Z M60,5 H90 V10 H65 V12 H85 V17 H65 V25 H60 Z"></path></svg>
-                            </div>
-                            <div className="h-6 w-auto text-[#7f13ec]">
-                                <svg className="h-full w-auto fill-current" viewBox="0 0 100 30" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="10"></circle><rect height="20" width="20" x="35" y="5"></rect><polygon points="70,25 80,5 90,25"></polygon></svg>
-                            </div>
-                            <div className="h-6 w-auto text-[#7f13ec]">
-                                <svg className="h-full w-auto fill-current" viewBox="0 0 100 30" xmlns="http://www.w3.org/2000/svg"><path d="M10,5 Q30,25 50,5 T90,5" fill="none" stroke="currentColor" strokeWidth="5"></path></svg>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
 
                 <div className="relative z-10 mt-10 lg:mt-0 perspective-1000 group">

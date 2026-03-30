@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowRight, BadgeCheck, Rocket, ShieldCheck } from "lucide-react";
+import Link from "next/link";
 
 export default function CTASection() {
     return (
@@ -12,13 +13,12 @@ export default function CTASection() {
                 <div className="flex-1">
                     {/* Heading yang lebih kuat */}
                     <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">
-                        Wujudkan Visi Besar Anda Tanpa Batasan
+                        Siap Mewujudkan Ide Anda Menjadi Nyata?
                     </h2>
                     {/* Deskripsi yang lebih persuasif */}
                     <p className="text-slate-500 text-lg mb-8 leading-relaxed">
-                        Standar saja tidak cukup untuk kebutuhan unik Anda. Kami membangun ekosistem digital kustom yang aman, cepat, dan siap tumbuh bersama organisasi Anda.
+                        Kami nggak cuma janji. Kami berkomitmen penuh untuk mengawal ide Anda sampai jadi, dengan hasil yang benar-benar sesuai ekspektasi. Tanpa tapi, tanpa ribet.
                     </p>
-
                     <div className="flex flex-wrap gap-6">
                         <div className="flex items-center gap-3 text-sm font-semibold text-slate-700">
                             <div className="w-8 h-8 rounded-full bg-[#7f13ec]/10 flex items-center justify-center text-[#7f13ec]">
@@ -30,23 +30,23 @@ export default function CTASection() {
                             <div className="w-8 h-8 rounded-full bg-[#7f13ec]/10 flex items-center justify-center text-[#7f13ec]">
                                 <ShieldCheck className="w-5 h-5" />
                             </div>
-                            Keamanan Enterprise
+                            Hasil Teruji & Aman
                         </div>
                         <div className="flex items-center gap-3 text-sm font-semibold text-slate-700">
                             <div className="w-8 h-8 rounded-full bg-[#7f13ec]/10 flex items-center justify-center text-[#7f13ec]">
                                 <Rocket className="w-5 h-5" />
                             </div>
-                            Infrastruktur Skalabel
+                            Solusi Tepat Sasaran
                         </div>
                     </div>
                 </div>
 
                 <div className="flex-shrink-0 w-full md:w-auto">
                     {/* Button dengan teks CTA yang lebih mengundang */}
-                    <button className="w-full md:w-auto bg-[#7f13ec] hover:bg-[#6a11c9] text-white text-lg font-bold py-5 px-10 rounded-2xl shadow-lg shadow-[#7f13ec]/20 transition-all flex items-center justify-center gap-3 group">
-                        Mulai Konsultasi Eksklusif
+                    <Link href="/contact" className="w-full md:w-auto bg-[#7f13ec] hover:bg-[#6a11c9] text-white text-lg font-bold py-5 px-10 rounded-2xl shadow-lg shadow-[#7f13ec]/20 transition-all flex items-center justify-center gap-3 group">
+                        Diskusikan Proyek Anda
                         <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-                    </button>
+                    </Link>
                 </div>
             </div>
         </section>

@@ -11,25 +11,25 @@ export default function HeroService() {
             <div className="relative z-10 text-center max-w-3xl mx-auto space-y-6">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 text-[#7f13ec] text-xs font-bold uppercase tracking-wider">
                     <span className="w-2 h-2 rounded-full bg-[#7f13ec] animate-pulse"></span>
-                    Layanan Kelas Dunia
+                    Komitmen Penuh Untuk Anda
                 </div>
 
                 <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 leading-[1.1]">
-                    Solusi Premium <br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7f13ec] to-purple-400">Kami</span>
+                    Layanan Jujur <br />
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7f13ec] to-purple-400"> & Terbuka</span>
                 </h1>
 
-                <p className="text-lg md:text-xl text-slate-600 max-w-xl mx-auto leading-relaxed">
-                    Mengubah kehadiran digital Anda dengan strategi khusus kelas atas dan estetika modern yang disesuaikan untuk pertumbuhan.
+                <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+                    Arkana Web menjamin kejujuran dengan update progres rutin. Kami pastikan Anda selalu tahu setiap perkembangan proyek hingga tuntas.
                 </p>
 
                 <div className="flex flex-wrap justify-center gap-4 pt-4">
                     <button className="bg-[#7f13ec] text-white hover:bg-[#4c0b8d] transition-all px-8 py-4 rounded-full text-base font-bold shadow-[0_0_40px_-10px_rgba(127,19,236,0.3)] hover:shadow-lg flex items-center gap-2">
-                        Jelajahi Layanan
+                        Lihat Yang Kami Kerjakan
                         <ArrowDown className="w-4 h-4" />
                     </button>
                     <button className="bg-white text-slate-900 hover:bg-slate-50 transition-all border border-slate-200 px-8 py-4 rounded-full text-base font-bold">
-                        Lihat Portofolio
+                        Tanya-tanya Dulu
                     </button>
                 </div>
             </div>

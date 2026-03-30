@@ -3,7 +3,6 @@ import PartnerSection from "./components/partner/PartnerSection";
 import ChooseSection from "./components/choose/ChooseSection";
 import HeroSection from "./components/hero/HeroSection";
 import ServiceSection from "./components/service/ServiceSection";
-import TeamSection from "./components/team/TeamSection";
 import TestimonialsSection from "./components/testimonials/TestimonialsSection";
 import CTASection from "./components/cta/CTASection";
 
@@ -22,7 +21,6 @@ export default function Home() {
 
       <TestimonialsSection />
 
-      <TeamSection />
 
       <CTASection />
 

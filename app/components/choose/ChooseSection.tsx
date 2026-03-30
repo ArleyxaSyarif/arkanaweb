@@ -34,8 +34,8 @@ export default function ChooseSection() {
                                         <CheckCircle className="w-6 h-6" />
                                     </div>
                                     <div>
-                                        <p className="text-sm font-bold text-gray-900">Dipercaya oleh Para Pemimpin</p>
-                                        <p className="text-xs text-gray-500">Lebih dari 500+ perusahaan berkembang bersama kami.</p>
+                                        <p className="text-sm font-bold text-gray-900">Komitmen Hasil Maksimal</p>
+                                        <p className="text-xs text-gray-500">Dedikasi penuh untuk memastikan setiap solusi yang kami berikan benar-benar sesuai dengan ekspektasi Anda.</p>
                                     </div>
                                 </div>
                             </div>
@@ -47,13 +47,13 @@ export default function ChooseSection() {
                         {/* Header */}
                         <div className="flex flex-col gap-4">
                             <span className="w-fit rounded-full bg-[#7f13ec]/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#7f13ec]">
-                                Mengapa Memilih Kami
+                                Dedikasi & Inovasi
                             </span>
                             <h2 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:leading-tight">
-                                Membangun masa depan,<br /> <span className="text-[#7f13ec]">bersama.</span>
+                                Solusi Tepat untuk <br /> <span className="text-[#7f13ec]">Bisnis Hebat.</span>
                             </h2>
                             <p className="text-lg leading-relaxed text-gray-600 max-w-lg">
-                                Kami menggabungkan inovasi dengan keandalan untuk memberikan hasil yang berarti. Temukan mengapa para pemimpin industri mempercayai platform kami.
+                                Kami hadir untuk menjembatani ide besar Anda dengan eksekusi yang nyata. Dengan pendekatan yang personal dan teknologi terkini, kami membantu bisnis Anda melompat lebih tinggi di era digital.
                             </p>
                         </div>
 
@@ -67,9 +67,9 @@ export default function ChooseSection() {
                                     </div>
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-gray-900 mb-2">Teknologi Inovatif</h3>
+                                    <h3 className="text-xl font-bold text-gray-900 mb-2">Strategi Terukur</h3>
                                     <p className="text-base leading-relaxed text-gray-600">
-                                        Memanfaatkan teknologi terbaru untuk memastikan kecepatan dan skalabilitas bagi kebutuhan Anda yang terus berkembang.
+                                        Bukan sekadar bekerja, kami menganalisis kebutuhan spesifik Anda untuk memberikan strategi yang benar-benar berdampak pada pertumbuhan bisnis.
                                     </p>
                                 </div>
                             </div>
@@ -82,9 +82,9 @@ export default function ChooseSection() {
                                     </div>
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-gray-900 mb-2">Dukungan Khusus</h3>
+                                    <h3 className="text-xl font-bold text-gray-900 mb-2">Update Progres & Komunikasi Langsung</h3>
                                     <p className="text-base leading-relaxed text-gray-600">
-                                        Akses 24/7 ke tim ahli kami kapan pun Anda membutuhkan bantuan, memastikan tanpa downtime.
+                                        Kami percaya kejujuran adalah kunci kemitraan jangka panjang. Anda akan selalu mendapatkan update rutin mengenai progres proyek dan bisa berdiskusi langsung dengan tim yang menangani pekerjaan Anda, sehingga setiap ide atau masukan bisa segera kami eksekusi.
                                     </p>
                                 </div>
                             </div>
@@ -97,9 +97,9 @@ export default function ChooseSection() {
                                     </div>
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-gray-900 mb-2">Keamanan Teruji</h3>
+                                    <h3 className="text-xl font-bold text-gray-900 mb-2">Kualitas yang Optimal</h3>
                                     <p className="text-base leading-relaxed text-gray-600">
-                                        Enkripsi tingkat perusahaan dan protokol kepatuhan yang menjaga data sensitif Anda tetap aman.
+                                        Karena setiap klien sangat berarti bagi kami, hasil kerja kami adalah pertaruhan reputasi. Kami memastikan standar yang kami berikan jauh melampaui ekspektasi.
                                     </p>
                                 </div>
                             </div>
@@ -112,9 +112,9 @@ export default function ChooseSection() {
                                     </div>
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-gray-900 mb-2">Jangkauan Global</h3>
+                                    <h3 className="text-xl font-bold text-gray-900 mb-2">Eksekusi yang Rapi</h3>
                                     <p className="text-base leading-relaxed text-gray-600">
-                                        Infrastruktur yang dioptimalkan untuk latensi rendah di seluruh dunia, membawa Anda lebih dekat ke pengguna.
+                                        Kami tidak hanya membuat website, kami membangun sistem yang efisien. Setiap baris kode ditulis dengan rapi dan terstruktur agar website Anda berjalan lancar, cepat, dan mudah dikelola di masa depan.
                                     </p>
                                 </div>
                             </div>

@@ -23,7 +23,7 @@ export default function PartnerSection() {
                 {/* Section Header */}
                 <div className="flex flex-col items-center gap-5 mb-16 text-center">
                     <h4 className="text-[#7f13ec] text-sm font-bold tracking-[0.2em] uppercase leading-none">
-                        Dipercaya oleh Perusahaan Global
+                        Dipercaya Perusahaan
                     </h4>
                     {/* Thin decorative horizontal line */}
                     <div className="w-20 h-[1px] bg-[#7f13ec]/30"></div>

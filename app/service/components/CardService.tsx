@@ -16,7 +16,8 @@ export default function CardService() {
                             <Laptop className="w-6 h-6" />
                         </div>
                         <h3 className="text-2xl font-bold text-slate-900 mb-2">Website Custom</h3>
-                        <p className="text-slate-500 mb-6 max-w-sm">Solusi web yang sepenuhnya disesuaikan, dibangun dari awal untuk memenuhi kebutuhan bisnis unik Anda dengan presisi pixel-perfect.</p>
+                        <p className="text-slate-500 mb-6 max-w-sm">Pembuatan website custom sesuai kebutuhan bisnis Anda, dengan fitur yang dapat disesuaikan untuk berbagai jenis industri.
+                        </p>
                     </div>
                     <div className="relative w-full h-64 rounded-xl overflow-hidden mt-4 group-hover:scale-[1.02] transition-transform duration-500 shadow-xl border border-slate-100">
                         {/* Placeholder for dashboard image or use a gradient/icon composition if no image available */}
@@ -36,7 +37,7 @@ export default function CardService() {
                             <TrendingUp className="w-5 h-5" />
                         </div>
                         <h3 className="text-xl font-bold mb-1">Optimasi SEO</h3>
-                        <p className="text-slate-300 text-sm">Peringkat #1 di Google</p>
+                        <p className="text-slate-300 text-sm">Optimasi agar website Anda lebih mudah ditemukan di Google.</p>
                     </div>
                     <div className="relative z-10 mt-8">
                         <div className="flex items-end gap-2 h-24 pb-2 border-b border-white/10">
@@ -59,7 +60,7 @@ export default function CardService() {
                     </div>
                     <div>
                         <h3 className="text-lg font-bold text-slate-900">Profil Perusahaan</h3>
-                        <p className="text-sm text-slate-500 mt-1">Identitas merek profesional</p>
+                        <p className="text-sm text-slate-500 mt-1">Hadirkan profil bisnis terpercaya dengan tampilan profesional.</p>
                     </div>
                 </Link>
 
@@ -70,7 +71,7 @@ export default function CardService() {
                     </div>
                     <div>
                         <h3 className="text-lg font-bold text-slate-900">Landing Page</h3>
-                        <p className="text-sm text-slate-500 mt-1">Halaman konversi tinggi</p>
+                        <p className="text-sm text-slate-500 mt-1">Tingkatkan penjualan dengan desain yang menarik pelanggan.</p>
                     </div>
                 </Link>
 
@@ -82,7 +83,7 @@ export default function CardService() {
                         </div>
                         <div>
                             <h3 className="text-lg font-bold text-slate-900">Maintenance Tahunan</h3>
-                            <p className="text-sm text-slate-500">Pemeliharaan tahunan & pembaruan keamanan yang andal</p>
+                            <p className="text-sm text-slate-500">Monitoring dan pembaruan website secara berkala</p>
                         </div>
                     </div>
                     <button className="shrink-0 w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center hover:bg-[#7f13ec] hover:text-white hover:border-[#7f13ec] transition-colors">
