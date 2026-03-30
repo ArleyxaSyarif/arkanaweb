@@ -38,7 +38,6 @@ export default function Navbar() {
     const navLinks = [
         { name: 'Home', href: '/' },
         { name: 'Service', href: '/service' },
-        { name: 'Tools', href: '/tools' },
         { name: 'Pricing', href: '/pricing' },
         { name: 'Experience', href: '/experince' },
     ];
@@ -68,8 +67,8 @@ export default function Navbar() {
                             <Link
                                 key={link.href}
                                 className={`px-4 py-2 text-sm font-semibold transition-all duration-300 relative group ${isLinkActive(link.href)
-                                        ? 'text-[#7f13ec]'
-                                        : 'text-slate-500 hover:text-[#7f13ec]'
+                                    ? 'text-[#7f13ec]'
+                                    : 'text-slate-500 hover:text-[#7f13ec]'
                                     }`}
                                 href={link.href}
                             >
@@ -136,8 +135,8 @@ export default function Navbar() {
                                 <motion.div key={link.href} variants={itemVariants}>
                                     <Link
                                         className={`px-4 py-3 text-base font-semibold block transition-colors rounded-xl ${isLinkActive(link.href)
-                                                ? 'text-[#7f13ec] bg-[#7f13ec]/5'
-                                                : 'text-slate-600 hover:text-[#7f13ec] hover:bg-slate-50'
+                                            ? 'text-[#7f13ec] bg-[#7f13ec]/5'
+                                            : 'text-slate-600 hover:text-[#7f13ec] hover:bg-slate-50'
                                             }`}
                                         href={link.href}
                                         onClick={() => setIsMobileMenuOpen(false)}

@@ -65,37 +65,29 @@ export default function PricingCalculator() {
                 input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
             `}</style>
 
-            <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-xl border-b border-indigo-100 shadow-sm">
-                <div className="flex justify-between items-center px-8 h-20 max-w-7xl mx-auto">
-                    <div className="text-2xl font-bold tracking-tight text-indigo-900">EtherealCalc</div>
-                    <div className="hidden md:flex items-center space-x-8">
-                        <a className="text-slate-600 hover:text-[#6366f1] transition-colors font-medium" href="#">Solutions</a>
-                        <a className="text-slate-600 hover:text-[#6366f1] transition-colors font-medium" href="#">Methodology</a>
-                        <a className="text-slate-600 hover:text-[#6366f1] transition-colors font-medium" href="#">Pricing</a>
-                        <a className="text-slate-600 hover:text-[#6366f1] transition-colors font-medium" href="#">Enterprise</a>
-                    </div>
-                    <button className="bg-[#6366f1] text-[#ffffff] px-6 py-2.5 rounded-md font-semibold text-sm transition-all active:scale-95 duration-150 primary-gradient">Get Started</button>
-                </div>
-            </nav>
+            s
 
             <main className="pt-32 pb-40 px-6 max-w-7xl mx-auto">
                 <header className="mb-16 text-center md:text-left">
-                    <div className="inline-block px-4 py-1 rounded-full bg-[#6366f1]/10 text-[#6366f1] text-[10px] font-bold tracking-widest uppercase mb-4">Pricing Strategy</div>
-                    <h1 className="text-5xl md:text-7xl font-extrabold text-indigo-950 tracking-tight leading-tight mb-6 font-headline">Website Pricing Calculator</h1>
-                    <p className="text-lg text-[#474659] max-w-2xl leading-relaxed">Precision-engineered cost estimation for your next digital architecture. Select your requirements below to receive a real-time investment summary.</p>
+                    <div className="inline-block px-4 py-1 rounded-full bg-[#7f13ec]/10 text-[#7f13ec] text-[10px] font-bold tracking-widest uppercase mb-4">Pricing Strategy</div>
+                    <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-tight mb-6 font-headline"><span className="text-[#7f13ec]">Kalkulator</span> Harga Website</h1>
+                    <p className="text-lg text-[#474659] max-w-2xl leading-relaxed">
+                        Perkirakan biaya pembuatan website sesuai kebutuhan Anda.
+                        Pilih fitur yang diinginkan dan lihat estimasi harga secara langsung.
+                    </p>
                 </header>
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                     <div className="lg:col-span-7 space-y-12">
                         <section className="space-y-4">
-                            <label className="block text-xs font-bold uppercase tracking-wider text-[#6366f1]">1. Website Type</label>
+                            <label className="block text-xs font-bold uppercase tracking-wider text-[#6366f1]">1. Tipe Website</label>
                             <div className="relative">
                                 <select
                                     className="w-full bg-[#e5e4f5] border-none rounded-lg px-4 py-4 text-[#1b1b24] appearance-none focus:ring-2 focus:ring-[#6366f1]/20 transition-all cursor-pointer font-medium"
                                     value={selectedWebsiteType || ""}
                                     onChange={e => setSelectedWebsiteType(Number(e.target.value))}
                                 >
-                                    <option value="" disabled>Select Website Type</option>
+                                    <option value="" disabled>Pilih Tipe</option>
                                     {websiteTypes.map(w => (
                                         <option key={w.id} value={w.id}>
                                             {w.name} (Base: Rp {w.basePrice.toLocaleString()})
@@ -108,14 +100,14 @@ export default function PricingCalculator() {
 
                         <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div className="space-y-4">
-                                <label className="block text-xs font-bold uppercase tracking-wider text-[#6366f1]">2. Industry Focus</label>
+                                <label className="block text-xs font-bold uppercase tracking-wider text-[#6366f1]">2. Industri Website</label>
                                 <div className="relative">
                                     <select
                                         className="w-full bg-[#e5e4f5] border-none rounded-lg px-4 py-4 text-[#1b1b24] appearance-none focus:ring-2 focus:ring-[#6366f1]/20 transition-all cursor-pointer"
                                         value={selectedIndustry || ""}
                                         onChange={e => setSelectedIndustry(Number(e.target.value))}
                                     >
-                                        <option value="" disabled>Select Industry</option>
+                                        <option value="" disabled>Pilih Industri</option>
                                         {industries.map(i => (
                                             <option key={i.id} value={i.id}>
                                                 {i.name} (+Rp {i.extraPrice.toLocaleString()})
@@ -126,7 +118,7 @@ export default function PricingCalculator() {
                                 </div>
                             </div>
                             <div className="space-y-4">
-                                <label className="block text-xs font-bold uppercase tracking-wider text-[#6366f1]">4. Number of Pages</label>
+                                <label className="block text-xs font-bold uppercase tracking-wider text-[#6366f1]">4. Jumlah Halaman</label>
                                 <input
                                     className="w-full bg-[#e5e4f5] border-none rounded-lg px-4 py-4 text-[#1b1b24] focus:ring-2 focus:ring-[#6366f1]/20 transition-all font-medium"
                                     placeholder="e.g. 5"
@@ -139,7 +131,7 @@ export default function PricingCalculator() {
                         </section>
 
                         <section>
-                            <label className="block text-xs font-bold uppercase tracking-wider text-[#6366f1] mb-6">3. Advanced Features</label>
+                            <label className="block text-xs font-bold uppercase tracking-wider text-[#6366f1] mb-6">3. Jumlah Fitur</label>
                             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                                 {features.map(f => (
                                     <label key={f.id} className="relative flex items-center gap-3 p-4 bg-[#f6f5ff] rounded-lg cursor-pointer border border-transparent hover:border-[#6366f1]/20 hover:bg-[#ffffff] transition-all group">
@@ -163,7 +155,7 @@ export default function PricingCalculator() {
                             className="w-full primary-gradient text-[#ffffff] py-5 rounded-xl font-bold text-lg custom-shadow transition-all active:scale-[0.98] duration-150"
                             onClick={calculatePrice}
                         >
-                            Calculate Investment
+                            Hitung Jumlah
                         </button>
                     </div>
 
@@ -172,30 +164,30 @@ export default function PricingCalculator() {
                             <div className="absolute top-0 right-0 p-6 opacity-10">
                                 <span className="material-symbols-outlined text-[120px] text-white">receipt_long</span>
                             </div>
-                            <h2 className="text-2xl font-bold font-headline mb-8 text-[#e0e7ff]">Investment Summary</h2>
+                            <h2 className="text-2xl font-bold font-headline mb-8 text-[#e0e7ff]">Ringkasan Hasil</h2>
 
                             {totalPrice !== null ? (
                                 <>
                                     <div className="space-y-6 mb-12">
                                         <div className="flex justify-between items-center pb-4 border-b border-white/10">
-                                            <span className="text-indigo-200 font-medium">Core Architecture</span>
+                                            <span className="text-indigo-200 font-medium">Tipe Website</span>
                                             <span className="text-white font-bold">{websiteTypes.find(w => w.id === selectedWebsiteType)?.name || "-"}</span>
                                         </div>
                                         <div className="flex justify-between items-center pb-4 border-b border-white/10">
-                                            <span className="text-indigo-200 font-medium">Industry Focus</span>
+                                            <span className="text-indigo-200 font-medium">Industri Website</span>
                                             <span className="text-white font-bold">{industries.find(i => i.id === selectedIndustry)?.name || "-"}</span>
                                         </div>
                                         <div className="flex justify-between items-center pb-4 border-b border-white/10">
-                                            <span className="text-indigo-200 font-medium">Feature Expansion ({selectedFeatures.length})</span>
+                                            <span className="text-indigo-200 font-medium">Jumlah Fitur ({selectedFeatures.length})</span>
                                             <span className="text-white font-bold">Included</span>
                                         </div>
                                         <div className="flex justify-between items-center pb-4 border-b border-white/10">
-                                            <span className="text-indigo-200 font-medium">Page Indexing ({pages})</span>
+                                            <span className="text-indigo-200 font-medium">Jumlah Halaman ({pages})</span>
                                             <span className="text-white font-bold">Included</span>
                                         </div>
                                     </div>
                                     <div className="bg-[#6366f1] p-6 rounded-xl mb-8 shadow-inner shadow-black/20">
-                                        <span className="block text-[10px] font-bold uppercase tracking-[0.2em] text-indigo-100 mb-2">Total Project Value</span>
+                                        <span className="block text-[10px] font-bold uppercase tracking-[0.2em] text-indigo-100 mb-2">Total Hasil Perkiraan</span>
                                         <div className="text-4xl md:text-5xl font-extrabold text-white font-headline tracking-tighter">
                                             Rp {totalPrice.toLocaleString()}
                                         </div>
@@ -203,21 +195,13 @@ export default function PricingCalculator() {
                                 </>
                             ) : (
                                 <div className="text-indigo-200 text-center py-12">
-                                    Select your requirements and click Calculate Investment to get a quote.
+                                    Pilih kebutuhan Anda dan klik Hitung Jumlah untuk mendapatkan perkiraan harga.
                                 </div>
                             )}
 
                         </div>
 
-                        <div className="mt-8 primary-gradient p-6 rounded-2xl flex items-start gap-4 text-white shadow-lg shadow-[#6366f1]/20">
-                            <div className="bg-white/20 p-2 rounded-lg">
-                                <span className="material-symbols-outlined">verified</span>
-                            </div>
-                            <div>
-                                <h4 className="font-bold text-sm mb-1 text-white">Ethereal Assurance</h4>
-                                <p className="text-xs text-indigo-100 leading-snug">Includes 12 months of premium performance monitoring and security patches.</p>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
 
@@ -228,12 +212,11 @@ export default function PricingCalculator() {
                 <div className="fixed bottom-0 left-0 w-full glass-nav bg-white/95 border-t border-indigo-100 z-40 transform translate-y-0 transition-transform md:px-8">
                     <div className="max-w-7xl mx-auto h-24 flex items-center justify-between px-6">
                         <div className="flex flex-col">
-                            <span className="text-[10px] font-bold uppercase tracking-tighter text-[#6366f1]">Current Estimation</span>
+                            <span className="text-[10px] font-bold uppercase tracking-tighter text-[#6366f1]">Hasil Perkiraan</span>
                             <span className="text-2xl font-extrabold text-indigo-950 font-headline">Rp {totalPrice.toLocaleString()}</span>
                         </div>
                         <div className="flex items-center gap-4">
-                            <button className="hidden md:block text-[#6366f1] font-bold px-6 py-2 hover:bg-[#6366f1]/10 rounded-lg transition-all">Save Progress</button>
-                            <button className="primary-gradient text-[#ffffff] px-8 py-3 rounded-lg font-bold shadow-lg shadow-[#6366f1]/30 active:scale-95 transition-all">Contact Specialist</button>
+                            <button className="primary-gradient text-[#ffffff] px-8 py-3 rounded-lg font-bold shadow-lg shadow-[#6366f1]/30 active:scale-95 transition-all">Hubungi Tawaran</button>
                         </div>
                     </div>
                 </div>
