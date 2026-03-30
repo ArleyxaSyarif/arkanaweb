@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ClientWrapper from "./components/ClientWrapper";
+import WhatsAppPopup from "./components/WhatsAppPopup";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,6 +42,7 @@ export default function RootLayout({
           {children}
         </ClientWrapper>
         <Footer />
+        <WhatsAppPopup />
       </body>
     </html>
   );
