@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowRight, Rocket, PlayCircle, BarChart3, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Rocket, BarChart3 } from 'lucide-react';
 import Link from 'next/link';
 
 export default function HeroSection() {
@@ -72,75 +72,28 @@ export default function HeroSection() {
 
                 </div>
 
-                <div className="relative z-10 mt-10 lg:mt-0 perspective-1000 group">
-                    <div className="relative w-full aspect-square md:aspect-[4/3] lg:aspect-square bg-gradient-to-tr from-[#f3e8ff] to-white rounded-2xl border border-white/50 shadow-2xl overflow-hidden transition-transform duration-700 hover:scale-[1.02]">
-                        <div className="absolute inset-0 p-6 flex flex-col gap-4">
-                            <div className="h-12 w-full bg-white rounded-lg flex items-center px-4 gap-3 shadow-sm border border-gray-50">
-                                <div className="flex gap-1.5">
-                                    <div className="w-2.5 h-2.5 rounded-full bg-red-400"></div>
-                                    <div className="w-2.5 h-2.5 rounded-full bg-yellow-400"></div>
-                                    <div className="w-2.5 h-2.5 rounded-full bg-green-400"></div>
-                                </div>
-                                <div className="h-2 w-32 bg-gray-100 rounded-full ml-4"></div>
+                <div className="relative z-10 mt-10 lg:mt-0 group perspective-1000">
+                    <div className="relative w-full rounded-2xl border border-white/50 shadow-2xl overflow-hidden transition-transform duration-700 hover:scale-[1.02] bg-white flex flex-col">
+                        {/* Browser Header Mockup */}
+                        <div className="h-10 w-full bg-white border-b border-gray-100 flex items-center px-4 gap-3">
+                            <div className="flex gap-1.5">
+                                <div className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]"></div>
+                                <div className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]"></div>
+                                <div className="w-2.5 h-2.5 rounded-full bg-[#27c93f]"></div>
                             </div>
-                            <div className="flex-1 flex gap-4">
-                                {/* Sidebar Mockup */}
-                                <div className="hidden sm:block w-1/4 h-full bg-white rounded-lg shadow-sm border border-gray-50 p-4 flex flex-col gap-3">
-                                    <div className="h-2 w-16 bg-gray-100 rounded-full mb-2"></div>
-                                    <div className="h-8 w-full bg-[#7f13ec]/10 rounded mb-2"></div>
-                                    <div className="h-2 w-full bg-gray-50 rounded-full"></div>
-                                    <div className="h-2 w-3/4 bg-gray-50 rounded-full"></div>
-                                    <div className="h-2 w-5/6 bg-gray-50 rounded-full"></div>
-                                </div>
-                                {/* Main Content Mockup */}
-                                <div className="flex-1 h-full bg-white rounded-lg shadow-[0_10px_30px_-5px_rgba(0,0,0,0.05)] border border-gray-50 relative overflow-hidden group-hover:shadow-[0_0_40px_-10px_rgba(127,19,236,0.3)] transition-shadow duration-500">
-                                    {/* Abstract Dashboard Image */}
-                                    <div
-                                        className="absolute inset-0 bg-cover bg-center"
-                                        style={{
-                                            backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuC-_AoWqTMbdDBwsgkGAQkcCTe2B37caXBW3DjJQVd42dPOc-61pXI51JYUO81c1zbkHbzQGdkcGxbgOxubc0G3EJXDthVmw3vUmlExdF42C_umtz82qtfVB8eGcJgUU5WJSahjXym47K9n3To0KI1qmPujDkX6VLBQWCsgnIlw8AXJ7QBVUhKCY3lbeOP091w7xtHxtyGZNND3fVgkpf3ZMt6Ivu8_PLnEcIEGXjKBkFK2bRXXmulHHNHkODvNTk0gljATx0OtdvY')",
-                                            opacity: 0.9
-                                        }}
-                                    >
-                                    </div>
-                                    {/* Floating Card 1 */}
-                                    <div className="absolute top-1/4 right-0 sm:-right-10 bg-white p-4 rounded-xl shadow-xl border border-gray-100 w-48 animate-float-slow transform scale-90 sm:scale-100 z-20">
-                                        <div className="flex items-center gap-3 mb-2">
-                                            <div className="w-8 h-8 rounded-full bg-[#7f13ec]/20 flex items-center justify-center text-[#7f13ec]">
-                                                <BarChart3 className="w-3.5 h-3.5" />
-                                            </div>
-                                            <div className="h-2 w-16 bg-gray-200 rounded"></div>
-                                        </div>
-                                        <div className="h-16 w-full bg-gray-50 rounded-lg flex items-end justify-between px-2 pb-2 gap-1">
-                                            <div className="w-2 h-4 bg-[#7f13ec]/40 rounded-sm"></div>
-                                            <div className="w-2 h-8 bg-[#7f13ec]/60 rounded-sm"></div>
-                                            <div className="w-2 h-6 bg-[#7f13ec]/40 rounded-sm"></div>
-                                            <div className="w-2 h-10 bg-[#7f13ec] rounded-sm"></div>
-                                            <div className="w-2 h-5 bg-[#7f13ec]/40 rounded-sm"></div>
-                                        </div>
-                                    </div>
-                                    {/* Floating Card 2 */}
-                                    <div className="absolute bottom-1/4 left-0 sm:-left-6 bg-white p-3 rounded-xl shadow-xl border border-gray-100 w-40 animate-float-delayed transform scale-90 sm:scale-100 z-20">
-                                        <div className="flex justify-between items-center mb-2">
-                                            <span className="text-xs font-bold text-gray-500">Tasks</span>
-                                            <CheckCircle2 className="w-3.5 h-3.5 text-green-500" />
-                                        </div>
-                                        <div className="space-y-2">
-                                            <div className="flex items-center gap-2">
-                                                <div className="w-3 h-3 rounded border border-gray-300"></div>
-                                                <div className="h-1.5 w-20 bg-gray-200 rounded"></div>
-                                            </div>
-                                            <div className="flex items-center gap-2">
-                                                <div className="w-3 h-3 rounded bg-[#7f13ec] flex items-center justify-center text-[8px] text-white">✓</div>
-                                                <div className="h-1.5 w-16 bg-gray-200 rounded opacity-50"></div>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div className="flex-1 flex justify-center pr-10">
+                                <div className="h-5 w-2/3 max-w-[200px] bg-gray-50 rounded-full text-[10px] text-gray-400 flex items-center justify-center border border-gray-100/50">
+                                    arkanaweb.com
                                 </div>
                             </div>
                         </div>
+                        <img 
+                            src="/projek/hero/hero.png" 
+                            alt="Arkana Web Dashboard" 
+                            className="w-full h-auto object-cover"
+                        />
                     </div>
-                    {/* Decorative Blob behind image */}
+                    {/* Decorative Blobs */}
                     <div className="absolute -top-10 right-0 lg:-right-10 w-40 h-40 bg-purple-300 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob"></div>
                     <div className="absolute -bottom-10 left-0 lg:-left-10 w-40 h-40 bg-[#7f13ec] rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob animation-delay-2000"></div>
                 </div>

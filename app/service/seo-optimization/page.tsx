@@ -8,7 +8,7 @@ export default function SeoOptimizationPage() {
         <main className="min-h-screen bg-white font-sans">
             <HeroSeo />
             <CapabilitiesSeo />
-            <ResultsSeo />
+            {/* <ResultsSeo /> */}
             <CtaSeo />
         </main>
     );

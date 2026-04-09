@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { supabase } from "@/lib/supabase";
 
 type WebsiteType = { id: number; name: string; basePrice: number };
 type Industry = { id: number; name: string; extraPrice: number };
@@ -20,12 +21,17 @@ export default function PricingCalculator() {
 
     useEffect(() => {
         async function fetchData() {
-            const wt = await fetch("/api/websiteType").then(res => res.json());
-            const ind = await fetch("/api/industry").then(res => res.json());
-            const ft = await fetch("/api/feature").then(res => res.json());
-            setWebsiteTypes(wt);
-            setIndustries(ind);
-            setFeatures(ft);
+            const { data: wt, error: wtError } = await supabase.from('WebsiteType').select('*').order('name');
+            const { data: ind, error: indError } = await supabase.from('Industry').select('*').order('name');
+            const { data: ft, error: ftError } = await supabase.from('Feature').select('*').order('name');
+            
+            if (wtError) console.error("WebsiteType fetch error:", wtError);
+            if (indError) console.error("Industry fetch error:", indError);
+            if (ftError) console.error("Feature fetch error:", ftError);
+
+            if (wt) setWebsiteTypes(wt as WebsiteType[]);
+            if (ind) setIndustries(ind as Industry[]);
+            if (ft) setFeatures(ft as Feature[]);
         }
         fetchData();
     }, []);
@@ -33,19 +39,20 @@ export default function PricingCalculator() {
     async function calculatePrice() {
         if (!selectedWebsiteType || !selectedIndustry) return;
 
-        const res = await fetch("/api/pricing", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                websiteTypeId: selectedWebsiteType,
-                industryId: selectedIndustry,
-                featureIds: selectedFeatures,
-                pages,
-            }),
-        });
+        const websiteType = websiteTypes.find(w => w.id === selectedWebsiteType);
+        const industry = industries.find(i => i.id === selectedIndustry);
+        const selectedFeaturesData = features.filter(f => selectedFeatures.includes(f.id));
 
-        const data = await res.json();
-        if (!data.error) setTotalPrice(data.totalPrice);
+        if (!websiteType || !industry) return;
+
+        const perPagePrice = 200_000;
+        const total = 
+            websiteType.basePrice + 
+            industry.extraPrice + 
+            selectedFeaturesData.reduce((acc, f) => acc + f.price, 0) + 
+            (pages * perPagePrice);
+
+        setTotalPrice(total);
     }
 
     return (

@@ -20,7 +20,7 @@ export default function HeroCustom() {
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7f13ec] to-purple-400">Kustom</span>
                             </h1>
                             <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                                Pengalaman digital yang disesuaikan untuk skala, performa, dan dampak. Kami mengubah kebutuhan kompleks menjadi solusi web yang elegan dan berkinerja tinggi.
+                                Sebagai web company profile terkemuka, kami melayani jasa pengembangan Website Custom yang disesuaikan sepenuhnya dengan kebutuhan skala bisnis Anda. Dengan pondasi komitmen dan kejujuran, kami merubah ide kompleks menjadi solusi web yang andal dan mutakhir.
                             </p>
                         </div>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">

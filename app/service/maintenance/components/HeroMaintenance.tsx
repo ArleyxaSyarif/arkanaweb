@@ -15,7 +15,7 @@ export default function HeroMaintenance() {
                     Ketenangan Pikiran untuk <br className="hidden md:block" /> Bisnis Digital Anda
                 </h1>
                 <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
-                    Pastikan website Anda tetap aman, cepat, dan mutakhir dengan paket pemeliharaan tahunan komprehensif kami. Kami menangani detail teknis sehingga Anda dapat fokus pada pertumbuhan.
+                    Sebagai web company profile profesional, kami juga menyediakan layanan Maintenance Website komprehensif untuk memastikan situs Anda selalu aman, cepat, dan mutakhir. Mengedepankan komitmen dan kejujuran, kami akan menangani seluruh detail teknis agar Anda dapat tenang.
                 </p>
             </div>
             <div className="flex flex-wrap gap-4 justify-center mt-4">

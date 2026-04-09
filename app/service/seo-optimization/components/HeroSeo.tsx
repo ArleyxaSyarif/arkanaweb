@@ -20,7 +20,7 @@ export default function HeroSeo() {
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7f13ec] to-purple-400">Tumbuh Lebih Cepat.</span>
                         </h1>
                         <p className="text-lg text-gray-600 max-w-lg mx-auto lg:mx-0 leading-relaxed">
-                            Strategi SEO berbasis data yang disesuaikan untuk menempatkan bisnis Anda di halaman pertama. Kami membantu Anda mendominasi hasil pencarian dan mengubah trafik menjadi pendapatan.
+                            Sebagai web company profile yang berdedikasi, kami menghadirkan layanan Optimasi SEO berbasis data untuk menempatkan bisnis Anda di halaman pertama. Kami menjunjung tinggi komitmen dan kejujuran dalam membantu Anda mendominasi mesin pencari secara organik.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
                             <button className="flex items-center justify-center gap-2 h-12 px-8 rounded-lg bg-[#7f13ec] hover:bg-[#7f13ec]/90 text-white font-bold transition-all shadow-lg shadow-[#7f13ec]/25">
