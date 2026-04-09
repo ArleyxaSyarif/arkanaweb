@@ -89,14 +89,14 @@ const toolsData: Tool[] = [
         githubUrl: "https://github.com/nodejs/node"
     },
     {
-        id: "prisma",
-        name: "Prisma",
-        category: "ORM",
-        icon: Triangle,
-        description: "Next-generation Node.js and TypeScript ORM. Prisma unlocks a new level of developer experience when working with databases thanks to its intuitive data model and type-safe query builder.",
-        features: ["Type-Safe Queries", "Automated Migrations", "Intuitive Data Model", "Multi-Database Support"],
-        docsUrl: "https://www.prisma.io/docs",
-        githubUrl: "https://github.com/prisma/prisma"
+        id: "supabase",
+        name: "Supabase",
+        category: "Backend as a Service",
+        icon: Database,
+        description: "The open source Firebase alternative. Supabase provides all the backend features you need to build a product: a PostgreSQL database, authentication, instant APIs, edge functions, and more.",
+        features: ["PostgreSQL Database", "Authentication", "Edge Functions", "Realtime Subscriptions"],
+        docsUrl: "https://supabase.com/docs",
+        githubUrl: "https://github.com/supabase/supabase"
     }
 ];
 
