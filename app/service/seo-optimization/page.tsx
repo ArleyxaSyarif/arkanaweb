@@ -1,7 +1,6 @@
 import HeroSeo from "./components/HeroSeo";
 import CapabilitiesSeo from "./components/CapabilitiesSeo";
 import ResultsSeo from "./components/ResultsSeo";
-import CtaSeo from "./components/CtaSeo";
 
 export default function SeoOptimizationPage() {
     return (
@@ -9,7 +8,6 @@ export default function SeoOptimizationPage() {
             <HeroSeo />
             <CapabilitiesSeo />
             {/* <ResultsSeo /> */}
-            <CtaSeo />
         </main>
     );
 }

@@ -87,14 +87,14 @@ export default function Navbar() {
                     {/* Right: Actions */}
                     <div className="flex items-center gap-4">
                         {/* Get Started CTA */}
-                        <button className="hidden md:inline-flex relative items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-[#7f13ec] to-indigo-600 px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-[#7f13ec]/25 transition-all duration-300 hover:shadow-[#7f13ec]/40 hover:scale-[1.02] active:scale-[0.98]">
+                        <a href='/contact' className="hidden md:inline-flex relative items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-[#7f13ec] to-indigo-600 px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-[#7f13ec]/25 transition-all duration-300 hover:shadow-[#7f13ec]/40 hover:scale-[1.02] active:scale-[0.98]">
                             <span className="relative flex items-center gap-2">
                                 Kontak
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                                 </svg>
                             </span>
-                        </button>
+                        </a>
 
                         {/* Mobile Menu Button */}
                         <button

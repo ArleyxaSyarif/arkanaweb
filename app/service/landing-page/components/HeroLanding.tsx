@@ -28,7 +28,7 @@ export default function HeroLanding() {
                                 Dapatkan Audit Gratis
                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </button>
-                            <Link href="https://lamontefe.vercel.app" target="_blank">
+                            <Link href="https://preview.colorlib.com/?_gl=1*1ogn8in*_ga*MTY1ODg3NDQ2Ny4xNzc1NDUxODQw*_ga_SEKJ4E9T4H*czE3ODAxNDY2NTQkbzIkZzEkdDE3ODAxNDY3NTYkajIwJGwwJGgwJGRMYXNTQk5EVnhGcjRDSHFyNmNlU3RqeWJlX3JFcklKQVpR#calvino" target="_blank">
                                 <button className="h-12 px-8 bg-white border border-gray-200 hover:border-[#7f13ec]/50 text-[#140d1b] font-bold rounded-lg transition-all flex items-center justify-center gap-2">
                                     <PlayCircle className="w-5 h-5 text-[#7f13ec]" />
                                     Lihat Contoh
@@ -42,11 +42,11 @@ export default function HeroLanding() {
                             {/* Decorative Gradient Background */}
                             <div className="absolute inset-0 bg-gradient-to-tr from-[#7f13ec]/5 to-transparent opacity-50 z-0"></div>
 
-                            <div className="relative z-10 overflow-hidden rounded-xl">
+                            <div className="relative z-10 overflow-hidden rounded-xl aspect-[4/3] md:aspect-[16/10] lg:aspect-[4/3] max-h-[500px]">
                                 <img
-                                    src="/projek/landingpage/lp2.png"
+                                    src="/projek/landingpage/lp3.png"
                                     alt="Landing Page Showcase"
-                                    className="w-full h-auto transform transition-transform duration-700 group-hover:scale-105"
+                                    className="w-full h-full object-cover object-top transform transition-transform duration-700 group-hover:scale-105"
                                 />
                             </div>
                         </div>

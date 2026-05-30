@@ -53,7 +53,7 @@ export default function HeroCustom() {
                             <div className="absolute top-0 right-0 w-64 h-64 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
                             <div className="absolute -bottom-8 -left-8 w-64 h-64 bg-indigo-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse delay-1000"></div>
                             {/* Main Image Container */}
-                            <div className="relative h-full w-full rounded-2xl overflow-hidden shadow-2xl border border-white/20" style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDZ_HmTM5cUAV02KV9ZdqsZFvDGZjIyoWsKY6Xhi5HaTxaXM9gBSqTF6-6dLRMthLfAQ9XpcAOyk9pFppshoQw6I-6XaATf5aFErawWkbBJA1rHqGJDn-VeBXs435eBtsMfAQZu6wJiEaQHo6ruZzmmTebE8xtBDo_3XcYpaY72Pp1RF2d2NgiJslf7-uoxVud2yI3hGq2w9vaYj55vDUUZZmdFQ7psmkCmLD2zmRdOqVQxHczAWZACKwbBmsRh4bQDF_g5E1PFvVY')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                            <div className="relative h-full w-full rounded-2xl overflow-hidden shadow-2xl border border-white/20" style={{ backgroundImage: 'url("/projek/webcustom/custom3.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#f7f6f8]/20 to-transparent"></div>
                             </div>
                         </div>

@@ -28,10 +28,10 @@ export default function ContactSection() {
         const data = await res.json();
 
         if (res.ok) {
-            alert('Message sent successfully!');
+            alert('Pesan berhasil dikirim!');
             formRef.current?.reset();
         } else {
-            alert('Failed to send message. Please try again.');
+            alert('Gagal mengirim pesan. Silakan coba lagi.');
         }
     }
 
@@ -44,11 +44,11 @@ export default function ContactSection() {
                     <div className="flex flex-col space-y-8 lg:sticky lg:top-32">
                         <div className="space-y-4">
                             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
-                                Let&apos;s Start a <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7f13ec] to-purple-400">Conversation</span>
+                                Mari Mulai <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7f13ec] to-purple-400">Percakapan</span>
                             </h1>
                             <p className="text-lg text-[#6b7280] leading-relaxed max-w-md">
-                                Have a project in mind? We&apos;d love to hear from you. Fill out the form or reach us via email, phone, or visit our office.
+                                Punya proyek impian? Kami ingin mendengarnya dari Anda. Isi formulir atau hubungi kami melalui email, telepon, atau kunjungi kantor kami.
                             </p>
                         </div>
 
@@ -59,8 +59,8 @@ export default function ContactSection() {
                                     <Mail className="w-6 h-6" />
                                 </div>
                                 <div className="flex flex-col">
-                                    <span className="text-xs font-semibold uppercase tracking-wider text-[#6b7280]">Email us</span>
-                                    <a className="text-lg font-medium hover:text-[#7f13ec] transition-colors" href="mailto:hello@modernbrand.com">hello@modernbrand.com</a>
+                                    <span className="text-xs font-semibold uppercase tracking-wider text-[#6b7280]">Email kami</span>
+                                    <a className="text-lg font-medium hover:text-[#7f13ec] transition-colors" href="mailto:hello@modernbrand.com">workarleyxa@gmail.com</a>
                                 </div>
                             </div>
 
@@ -70,26 +70,15 @@ export default function ContactSection() {
                                     <Phone className="w-6 h-6" />
                                 </div>
                                 <div className="flex flex-col">
-                                    <span className="text-xs font-semibold uppercase tracking-wider text-[#6b7280]">Call us</span>
-                                    <a className="text-lg font-medium hover:text-[#7f13ec] transition-colors" href="tel:+15551234567">+1 (555) 123-4567</a>
-                                </div>
-                            </div>
-
-                            {/* Location */}
-                            <div className="flex items-center gap-4 group">
-                                <div className="flex items-center justify-center size-12 rounded-xl bg-white shadow-sm border border-gray-100 text-[#7f13ec] group-hover:scale-110 group-hover:bg-[#7f13ec] group-hover:text-white transition-all duration-300">
-                                    <MapPin className="w-6 h-6" />
-                                </div>
-                                <div className="flex flex-col">
-                                    <span className="text-xs font-semibold uppercase tracking-wider text-[#6b7280]">Visit us</span>
-                                    <span className="text-lg font-medium">123 Innovation Dr, Tech City</span>
+                                    <span className="text-xs font-semibold uppercase tracking-wider text-[#6b7280]">Telepon kami</span>
+                                    <a className="text-lg font-medium hover:text-[#7f13ec] transition-colors" href="tel:+15551234567">+62 895-3986-78090</a>
                                 </div>
                             </div>
                         </div>
 
                         {/* Social Media */}
                         <div className="pt-8">
-                            <p className="text-sm font-semibold mb-4 text-[#6b7280]">Follow us on social media</p>
+                            <p className="text-sm font-semibold mb-4 text-[#6b7280]">Ikuti kami di media sosial</p>
                             <div className="flex gap-4">
                                 <a className="size-10 flex items-center justify-center rounded-full bg-white border border-gray-200 hover:border-[#7f13ec] hover:text-[#7f13ec] transition-all shadow-sm hover:shadow-[0_4px_20px_-2px_rgba(127,19,236,0.1)]" href="#">
                                     <svg aria-hidden="true" className="size-5" fill="currentColor" viewBox="0 0 24 24"><path clipRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fillRule="evenodd"></path></svg>
@@ -110,31 +99,31 @@ export default function ContactSection() {
                         <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-purple-400/20 rounded-full blur-3xl opacity-60"></div>
 
                         <div className="relative bg-[#ffffff] rounded-2xl shadow-[0_4px_20px_-2px_rgba(127,19,236,0.1)] p-8 lg:p-10">
-                            <h3 className="text-2xl font-bold mb-6 text-[#140d1b]">Send us a message</h3>
+                            <h3 className="text-2xl font-bold mb-6 text-[#140d1b]">Kirim pesan kepada kami</h3>
                             <form onSubmit={handleSubmit} ref={formRef} className="space-y-6">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="space-y-2">
-                                        <label className="text-sm font-semibold text-[#140d1b]" htmlFor="name">Full Name</label>
+                                        <label className="text-sm font-semibold text-[#140d1b]" htmlFor="name">Nama Lengkap</label>
                                         <div className="relative">
                                             <input
                                                 className="w-full px-4 py-3 rounded-lg bg-[#f7f6f8] border border-gray-200 text-[#140d1b] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#7f13ec] focus:border-transparent transition-all"
                                                 id="name"
                                                 required
                                                 name="name"
-                                                placeholder="John Doe"
+                                                placeholder="Nama Anda"
                                                 type="text"
                                             />
                                         </div>
                                     </div>
                                     <div className="space-y-2">
-                                        <label className="text-sm font-semibold text-[#140d1b]" htmlFor="email">Email Address</label>
+                                        <label className="text-sm font-semibold text-[#140d1b]" htmlFor="email">Alamat Email</label>
                                         <div className="relative">
                                             <input
                                                 className="w-full px-4 py-3 rounded-lg bg-[#f7f6f8] border border-gray-200 text-[#140d1b] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#7f13ec] focus:border-transparent transition-all"
                                                 id="email"
                                                 required
                                                 name="email"
-                                                placeholder="john@example.com"
+                                                placeholder="email@contoh.com"
                                                 type="email"
                                             />
                                         </div>
@@ -142,28 +131,28 @@ export default function ContactSection() {
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label className="text-sm font-semibold text-[#140d1b]" htmlFor="subject">Subject</label>
+                                    <label className="text-sm font-semibold text-[#140d1b]" htmlFor="subject">Subjek</label>
                                     <div className="relative">
                                         <input
                                             className="w-full px-4 py-3 rounded-lg bg-[#f7f6f8] border border-gray-200 text-[#140d1b] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#7f13ec] focus:border-transparent transition-all"
                                             id="subject"
                                             required
                                             name="subject"
-                                            placeholder="How can we help?"
+                                            placeholder="Bagaimana kami bisa membantu Anda?"
                                             type="text"
                                         />
                                     </div>
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label className="text-sm font-semibold text-[#140d1b]" htmlFor="message">Your Message</label>
+                                    <label className="text-sm font-semibold text-[#140d1b]" htmlFor="message">Pesan Anda</label>
                                     <div className="relative">
                                         <textarea
                                             className="w-full px-4 py-3 rounded-lg bg-[#f7f6f8] border border-gray-200 text-[#140d1b] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#7f13ec] focus:border-transparent transition-all resize-none"
                                             id="message"
                                             required
                                             name="message"
-                                            placeholder="Tell us more about your project..."
+                                            placeholder="Ceritakan lebih banyak tentang proyek Anda..."
                                             rows={5}
                                         ></textarea>
                                     </div>
@@ -175,7 +164,7 @@ export default function ContactSection() {
                                 >
                                     <span className="absolute w-full h-full bg-white opacity-0 group-hover:opacity-10 transition-opacity"></span>
                                     <span className="flex items-center gap-2">
-                                        Send Message
+                                        Kirim Pesan
                                         <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                     </span>
                                 </button>

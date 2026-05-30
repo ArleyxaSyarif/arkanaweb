@@ -7,7 +7,7 @@ export default function HeroSeo() {
         <section className="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28">
             {/* Background Decoration */}
             <div className="absolute top-0 right-0 -z-10 w-[50%] h-full bg-gradient-to-l from-[#7f13ec]/5 to-transparent"></div>
-            <div className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-[1280px] mx-auto px-4 md:px-10">
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
                     {/* Text Content */}
                     <div className="flex flex-col gap-6 text-center lg:text-left">

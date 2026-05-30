@@ -22,7 +22,7 @@ export default function CapabilitiesSeo() {
                 <div className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col lg:flex-row gap-12 items-start">
                         {/* Left: Description */}
-                        <div className="lg:w-1/3 flex flex-col gap-6 sticky top-24">
+                        <div className="lg:w-1/3 flex flex-col gap-6  top-24">
                             <h3 className="text-2xl font-bold text-[#140d1b]">
                                 Strategi SEO Komprehensif
                             </h3>

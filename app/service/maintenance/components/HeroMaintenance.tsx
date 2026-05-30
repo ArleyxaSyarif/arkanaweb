@@ -12,7 +12,7 @@ export default function HeroMaintenance() {
             </div>
             <div className="max-w-3xl flex flex-col gap-4">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-[#140d1b]">
-                    Ketenangan Pikiran untuk <br className="hidden md:block" /> Bisnis Digital Anda
+                    Ketenangan Pikiran untuk <br className="hidden md:block" /> <span className='text-[#7f13ec]'>Bisnis Digital Anda</span>
                 </h1>
                 <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
                     Sebagai web company profile profesional, kami juga menyediakan layanan Maintenance Website komprehensif untuk memastikan situs Anda selalu aman, cepat, dan mutakhir. Mengedepankan komitmen dan kejujuran, kami akan menangani seluruh detail teknis agar Anda dapat tenang.
@@ -28,21 +28,20 @@ export default function HeroMaintenance() {
                 </button>
             </div>
             {/* Hero Image / Dashboard Preview */}
-            <div className="mt-12 w-full rounded-xl overflow-hidden shadow-2xl border border-[#ede7f3] bg-white">
+            {/* <div className="mt-12 w-full rounded-xl overflow-hidden shadow-2xl border border-[#ede7f3] bg-white">
                 <div className="w-full h-8 bg-gray-100 border-b border-gray-200 flex items-center px-4 gap-2">
                     <div className="size-3 rounded-full bg-red-400"></div>
                     <div className="size-3 rounded-full bg-yellow-400"></div>
                     <div className="size-3 rounded-full bg-green-400"></div>
                 </div>
                 <div className="w-full aspect-[21/9] bg-gradient-to-br from-white to-purple-50 flex items-center justify-center relative overflow-hidden">
-                    {/* Abstract Dashboard Content */}
                     <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
                     <div className="flex flex-col items-center gap-4 z-10">
                         <Activity className="text-[#7f13ec]/30 w-20 h-20" />
                         <div className="text-gray-400 font-medium">Sistem Aman & Teroptimasi</div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </section>
     );
 }

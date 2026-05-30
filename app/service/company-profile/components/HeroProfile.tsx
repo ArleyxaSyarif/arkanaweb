@@ -10,9 +10,9 @@ export default function HeroProfile() {
                     <div className="flex flex-col gap-6 @[480px]:min-w-[400px] @[480px]:gap-8 flex-1">
                         <div className="flex flex-col gap-4 text-left">
                             <h1 className="text-[#140d1b] text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[864px]:text-6xl">
-                                Elegan Bertemu Profesionalisme
+                                Elegan Bertemu <span className="text-[#7f13ec]">Profesionalisme</span>
                             </h1>
-                            <h2 className="text-[#734c9a] text-base font-normal leading-relaxed @[480px]:text-lg">
+                            <h2 className="text-[#4d4459] text-base font-normal leading-relaxed @[480px]:text-lg">
                                 Sebagai web company profile profesional, kami menyediakan layanan pembuatan Website Company Profile yang siap menceritakan kisah unik merek Anda. Kami selalu mengedepankan komitmen dan kejujuran dalam bekerja untuk membangun kepercayaan melalui desain sempurna dan pengalaman pengguna yang mulus.
                             </h2>
                         </div>
@@ -20,7 +20,7 @@ export default function HeroProfile() {
                             <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-[#7f13ec] hover:bg-[#7f13ec]/90 transition-all shadow-lg shadow-[#7f13ec]/30 text-white text-base font-bold leading-normal tracking-[0.015em]">
                                 <span className="truncate">Mulai Proyek Anda</span>
                             </button>
-                            <Link href="https://compro-lamonte.vercel.app" target="_blank" className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-[#7f13ec]/10 hover:bg-[#7f13ec]/20 transition-all text-[#7f13ec] text-base font-bold leading-normal tracking-[0.015em]">
+                            <Link href="https://preview.colorlib.com/?_gl=1*1l745qs*_ga*MTY1ODg3NDQ2Ny4xNzc1NDUxODQw*_ga_SEKJ4E9T4H*czE3ODAxNDY2NTQkbzIkZzEkdDE3ODAxNDY4NTIkajU1JGwwJGgwJGRMYXNTQk5EVnhGcjRDSHFyNmNlU3RqeWJlX3JFcklKQVpR#portech" target="_blank" className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-[#7f13ec]/10 hover:bg-[#7f13ec]/20 transition-all text-[#7f13ec] text-base font-bold leading-normal tracking-[0.015em]">
                                 <span className="truncate">Lihat Contoh</span>
                             </Link>
                         </div>
@@ -30,7 +30,7 @@ export default function HeroProfile() {
                         <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl shadow-[#7f13ec]/20 bg-white border border-gray-100 p-2 group transition-all duration-500 hover:shadow-[#7f13ec]/30">
                             <div className="relative z-10 overflow-hidden rounded-xl">
                                 <img
-                                    src="/projek/compro/compro1.png"
+                                    src="/projek/compro/compro2.png"
                                     alt="Company Profile Preview"
                                     className="w-full h-auto transform transition-transform duration-700 group-hover:scale-105"
                                 />
