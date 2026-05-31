@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function HeroProfile() {
     return (
-        <section className="w-full max-w-[1280px] px-4 md:px-10 py-10">
+        <section className="w-full max-w-[1280px] px-4 md:px-10 py-10 overflow-hidden">
             <div className="@container">
                 <div className="flex flex-col-reverse gap-6 py-10 @[480px]:gap-12 @[864px]:flex-row @[864px]:items-center">
                     <div className="flex flex-col gap-6 @[480px]:min-w-[400px] @[480px]:gap-8 flex-1">

@@ -12,12 +12,8 @@ export default function PricingPage() {
         <main className="min-h-screen bg-white font-sans">
             <PricingHero />
 
-            <div className="relative py-20 lg:py-32 px-4 sm:px-6 lg:px-8 bg-white">
-                <div className="max-w-7xl mx-auto">
 
-                    <PricingGrid />
-                </div>
-            </div>
+            <PricingGrid />
             <CTASection />
             <FaqPricing />
         </main>

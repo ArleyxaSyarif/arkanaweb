@@ -4,7 +4,7 @@ import { Verified, ArrowDown, Activity } from 'lucide-react';
 
 export default function HeroMaintenance() {
     return (
-        <section className="flex flex-col items-center justify-center text-center py-10 md:py-16 gap-6 relative">
+        <section className="flex flex-col items-center justify-center text-center py-10 md:py-16 gap-6 relative overflow-hidden">
             {/* Background decorative elements */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#7f13ec]/5 rounded-full blur-3xl -z-10"></div>
             <div className="bg-[#7f13ec]/10 p-4 rounded-full size-20 flex items-center justify-center mb-2">

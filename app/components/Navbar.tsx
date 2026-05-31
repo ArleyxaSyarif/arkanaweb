@@ -131,7 +131,7 @@ export default function Navbar() {
                         className="md:hidden border-t border-slate-100 bg-white overflow-hidden"
                     >
                         <div className="px-4 py-6 space-y-1 flex flex-col">
-                            {[...navLinks, { name: 'Contact', href: '/contact' }].map((link) => (
+                            {[...navLinks].map((link) => (
                                 <motion.div key={link.href} variants={itemVariants}>
                                     <Link
                                         className={`px-4 py-3 text-base font-semibold block transition-colors rounded-xl ${isLinkActive(link.href)
@@ -155,12 +155,12 @@ export default function Navbar() {
                                 </motion.div>
                             ))}
                             <motion.div variants={itemVariants} className="pt-4 px-2">
-                                <button className="w-full relative flex items-center justify-center gap-2 overflow-hidden rounded-xl bg-gradient-to-r from-[#7f13ec] to-indigo-600 px-6 py-4 text-base font-bold text-white shadow-lg shadow-[#7f13ec]/25 transition-all duration-300">
+                                <Link href='/contact' className="w-full relative flex items-center justify-center gap-2 overflow-hidden rounded-xl bg-gradient-to-r from-[#7f13ec] to-indigo-600 px-6 py-4 text-base font-bold text-white shadow-lg shadow-[#7f13ec]/25 transition-all duration-300">
                                     Kontak Kami
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                                     </svg>
-                                </button>
+                                </Link>
                             </motion.div>
                         </div>
                     </motion.div>

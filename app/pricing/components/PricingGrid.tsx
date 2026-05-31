@@ -7,7 +7,7 @@ export default function PricingGrid() {
     {
       name: "Paket Landing Page",
       desc: "Solusi cepat untuk profil diri atau promosi produk tunggal.",
-      price: "1.500.000",
+      price: "400.000",
       features: [
         { text: "1 Halaman Landing Page", available: true },
         { text: "Desain Mobile Responsif", available: true },
@@ -17,12 +17,12 @@ export default function PricingGrid() {
         { text: "Domain .com (1 Tahun)", available: true },
         { text: "Sistem Admin/CMS", available: false },
       ],
-      extraNote: "Tambahan Halaman/Fitur 100rb"
+      extraNote: "Tambahan Halaman/Fitur 30rb"
     },
     {
       name: "Paket Bisnis & UMKM",
       desc: "Terbaik untuk meningkatkan kredibilitas bisnis profesional.",
-      price: "3.500.000",
+      price: "800.000",
       isPopular: true,
       features: [
         { text: "Hingga 7 Halaman Utama", available: true },
@@ -38,7 +38,7 @@ export default function PricingGrid() {
     {
       name: "Paket Custom & Shop",
       desc: "Infrastruktur khusus untuk skala besar dan toko online.",
-      price: "7.500.000",
+      price: "1.000.000",
       features: [
         { text: "Halaman Tak Terbatas", available: true },
         { text: "Sistem E-Commerce Lengkap", available: true },
@@ -74,11 +74,10 @@ export default function PricingGrid() {
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`flex flex-col rounded-3xl p-8 transition-all duration-500 hover:scale-[1.02] ${
-                plan.isPopular
-                  ? 'bg-white border-2 border-[#7f13ec] shadow-2xl shadow-[#7f13ec]/20 relative z-10'
-                  : 'bg-white/80 backdrop-blur-md border border-slate-200 shadow-xl'
-              }`}
+              className={`flex flex-col rounded-3xl p-8 transition-all duration-500 hover:scale-[1.02] ${plan.isPopular
+                ? 'bg-white border-2 border-[#7f13ec] shadow-2xl shadow-[#7f13ec]/20 relative z-10'
+                : 'bg-white/80 backdrop-blur-md border border-slate-200 shadow-xl'
+                }`}
             >
               {plan.isPopular && (
                 <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-[#7f13ec] text-white text-sm font-bold px-6 py-1.5 rounded-full shadow-lg shadow-[#7f13ec]/40">
@@ -126,15 +125,16 @@ export default function PricingGrid() {
                 </span>
               </div>
 
-              <button
-                className={`w-full py-4 px-6 rounded-2xl font-bold text-base transition-all duration-300 ${
-                  plan.isPopular
-                    ? 'bg-[#7f13ec] text-white hover:bg-[#5e0eb0] hover:shadow-xl hover:shadow-[#7f13ec]/40'
-                    : 'bg-slate-900 text-white hover:bg-black'
-                }`}
+              <a href={`https://wa.me/0895398678090?text=Halo,%20saya%20tertarik%20dengan%20paket%20ini. %0A%0A ${plan.name} `}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`w-full py-4 px-6 rounded-2xl font-bold text-base transition-all duration-300 ${plan.isPopular
+                  ? 'bg-[#7f13ec] text-white hover:bg-[#5e0eb0] hover:shadow-xl hover:shadow-[#7f13ec]/40'
+                  : 'bg-slate-900 text-white hover:bg-black'
+                  }`}
               >
-                {index === 2 ? 'Konsultasi Sekarang' : 'Pesan Paket Ini'}
-              </button>
+                {index === 2 ? 'Konsultasi Sekarang' : 'Konsultasi Sekarang'}
+              </a>
             </div>
           ))}
         </div>

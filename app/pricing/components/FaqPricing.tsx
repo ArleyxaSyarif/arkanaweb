@@ -24,7 +24,7 @@ export default function PricingCalculator() {
             const { data: wt, error: wtError } = await supabase.from('WebsiteType').select('*').order('name');
             const { data: ind, error: indError } = await supabase.from('Industry').select('*').order('name');
             const { data: ft, error: ftError } = await supabase.from('Feature').select('*').order('name');
-            
+
             if (wtError) console.error("WebsiteType fetch error:", wtError);
             if (indError) console.error("Industry fetch error:", indError);
             if (ftError) console.error("Feature fetch error:", ftError);
@@ -46,10 +46,10 @@ export default function PricingCalculator() {
         if (!websiteType || !industry) return;
 
         const perPagePrice = 200_000;
-        const total = 
-            websiteType.basePrice + 
-            industry.extraPrice + 
-            selectedFeaturesData.reduce((acc, f) => acc + f.price, 0) + 
+        const total =
+            websiteType.basePrice +
+            industry.extraPrice +
+            selectedFeaturesData.reduce((acc, f) => acc + f.price, 0) +
             (pages * perPagePrice);
 
         setTotalPrice(total);
@@ -223,7 +223,15 @@ export default function PricingCalculator() {
                             <span className="text-2xl font-extrabold text-indigo-950 font-headline">Rp {totalPrice.toLocaleString()}</span>
                         </div>
                         <div className="flex items-center gap-4">
-                            <button className="primary-gradient text-[#ffffff] px-8 py-3 rounded-lg font-bold shadow-lg shadow-[#6366f1]/30 active:scale-95 transition-all">Hubungi Tawaran</button>
+                            <a
+                                href={`https://wa.me/0895398678090?text=Halo,%20saya%20tertarik%20dengan%20penawaran%20ini.%0A%0ATipe Website: ${websiteTypes.find(w => w.id === selectedWebsiteType)?.name || '-'}%0AIndustri: ${industries.find(i => i.id === selectedIndustry)?.name || '-'}%0AFitur: ${features.filter(f => selectedFeatures.includes(f.id)).map(f => f.name).join(', ') || '-'}%0AJumlah Halaman: ${pages}%0A%0APerkiraan Harga: Rp ${totalPrice.toLocaleString()}`}
+
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="primary-gradient text-[#ffffff] px-8 py-3 rounded-lg font-bold shadow-lg shadow-[#6366f1]/30 active:scale-95 transition-all text-center inline-block"
+                            >
+                                Hubungi Tawaran
+                            </a>
                         </div>
                     </div>
                 </div>
