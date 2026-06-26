@@ -64,17 +64,32 @@ export default function ContactSection() {
                                 </div>
                             </div>
 
-                            {/* Phone */}
                             <div className="flex items-center gap-4 group">
                                 <div className="flex items-center justify-center size-12 rounded-xl bg-white shadow-sm border border-gray-100 text-[#7f13ec] group-hover:scale-110 group-hover:bg-[#7f13ec] group-hover:text-white transition-all duration-300">
                                     <Phone className="w-6 h-6" />
                                 </div>
                                 <div className="flex flex-col">
-                                    <span className="text-xs font-semibold uppercase tracking-wider text-[#6b7280]">Telepon kami</span>
-                                    <a className="text-lg font-medium hover:text-[#7f13ec] transition-colors" href="tel:+15551234567">+62 895-3986-78090</a>
+                                    <span className="text-xs font-semibold uppercase tracking-wider text-[#6b7280]">Telepon Utama</span>
+                                    <a className="text-lg font-medium hover:text-[#7f13ec] transition-colors" href="tel:08561020172">+62 856-1020-172</a>
+
                                 </div>
                             </div>
+
+                            {/* Phone 1 */}
+                            <div className="flex items-center gap-4 group">
+                                <div className="flex items-center justify-center size-12 rounded-xl bg-white shadow-sm border border-gray-100 text-[#7f13ec] group-hover:scale-110 group-hover:bg-[#7f13ec] group-hover:text-white transition-all duration-300">
+                                    <Phone className="w-6 h-6" />
+                                </div>
+                                <div className="flex flex-col">
+                                    <span className="text-xs font-semibold uppercase tracking-wider text-[#6b7280]">Telepon Alternatif</span>
+                                    <a className="text-lg font-medium hover:text-[#7f13ec] transition-colors" href="tel:0895398678090">+62 895-3986-78090</a>
+                                </div>
+                            </div>
+
+                            {/* Phone 2 */}
+
                         </div>
+
 
                         {/* Social Media */}
                         <div className="pt-8">
