@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 
 export default function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -50,15 +51,21 @@ export default function Navbar() {
                 <div className="flex h-20 items-center justify-between">
                     {/* Left: Logo */}
                     <Link href="/" className="flex shrink-0 items-center gap-3 cursor-pointer group">
-                        <div className="relative flex size-10 items-center justify-center rounded-xl bg-[#7f13ec]/10 text-[#7f13ec] group-hover:bg-[#7f13ec] group-hover:text-white transition-all duration-300">
-                            {/* Geometric Logo Icon */}
-                            <svg className="size-6" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path>
-                                <path d="M2 17L12 22L22 17" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path>
-                                <path d="M2 12L12 17L22 12" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path>
-                            </svg>
+                        {/* Pembungkus Logo */}
+                        <div className="relative h-20 w-20 transition-transform duration-300 group-hover:scale-105">
+                            <Image
+                                src="/img/logo.png"
+                                alt="Logo"
+                                fill
+                                className="object-contain"
+                                priority
+                            />
                         </div>
-                        <span className="text-xl font-bold tracking-tight text-slate-900">ArkanaWeb</span>
+
+                        {/* Teks di Samping Logo */}
+                        <span className="text-xl font-bold tracking-tight text-slate-800 transition-colors duration-300 group-hover:text-[#7f13ec]">
+                            Arkana <span className="text-[#7f13ec] group-hover:text-slate-800">Web</span>
+                        </span>
                     </Link>
 
                     {/* Center: Navigation Links */}
