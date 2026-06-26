@@ -39,7 +39,7 @@ export default function Navbar() {
         { name: 'Home', href: '/' },
         { name: 'Service', href: '/service' },
         { name: 'Pricing', href: '/pricing' },
-        { name: 'Experience', href: '/experience' },
+        // { name: 'Experience', href: '/experience' },
     ];
 
     const isLinkActive = (href: string) => pathname === href;
