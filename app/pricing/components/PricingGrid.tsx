@@ -6,49 +6,58 @@ export default function PricingGrid() {
   const plans = [
     {
       name: "Paket Landing Page",
-      desc: "Solusi cepat untuk profil diri atau promosi produk tunggal.",
-      price: "400.000",
+      desc: "Cocok untuk UMKM, personal branding, event, dan promosi produk/jasa.",
+      price: "900.000",
       features: [
         { text: "1 Halaman Landing Page", available: true },
-        { text: "Desain Mobile Responsif", available: true },
-        { text: "Optimasi SEO On-Page", available: true },
+        { text: "Desain Web/Mobile Responsif", available: true },
+        { text: "Hingga 6 Section", available: true },
+        { text: "Form Kontak", available: true },
         { text: "Integrasi WhatsApp", available: true },
-        { text: "Sertifikat SSL (HTTPS)", available: true },
-        { text: "Domain .com (1 Tahun)", available: true },
-        { text: "Sistem Admin/CMS", available: false },
+        { text: "Basic SEO", available: true },
+        { text: "Optimasi Kecepatan Dasar", available: true },
+        { text: "Revisi 2x", available: true },
+        { text: "Dashboard Admin / CMS", available: false },
       ],
-      extraNote: "Tambahan Halaman/Fitur 30rb"
+      extraNote: "Belum termasuk domain & hosting."
     },
+
     {
-      name: "Paket Bisnis & UMKM",
-      desc: "Terbaik untuk meningkatkan kredibilitas bisnis profesional.",
-      price: "800.000",
+      name: "Paket Company Profile",
+      desc: "Cocok untuk perusahaan, sekolah, yayasan, dan bisnis profesional.",
+      price: "1.500.000",
       isPopular: true,
       features: [
-        { text: "Hingga 7 Halaman Utama", available: true },
-        { text: "Integrasi CMS (Edit Konten)", available: true },
-        { text: "Desain UI/UX Eksklusif", available: true },
-        { text: "Email Bisnis Profesional", available: true },
-        { text: "Kecepatan Hosting Tinggi", available: true },
-        { text: "Analitik Google & Facebook Pixel", available: true },
-        { text: "Fitur E-Commerce", available: false },
+        { text: "Hingga 6 Halaman", available: true },
+        { text: "Desain Mobile Responsif", available: true },
+        { text: "Form Kontak", available: true },
+        { text: "Integrasi WhatsApp", available: true },
+        { text: "Google Maps", available: true },
+        { text: "Galeri / Portofolio", available: true },
+        { text: "Basic SEO", available: true },
+        { text: "Revisi 3x", available: true },
+        { text: "Maintenance Berkala", available: false },
+
       ],
-      extraNote: "Tambahan Fitur 100rb"
+      extraNote: "Belum termasuk domain & hosting."
     },
+
     {
-      name: "Paket Custom & Shop",
-      desc: "Infrastruktur khusus untuk skala besar dan toko online.",
-      price: "1.000.000",
+      name: "Paket Custom Website",
+      desc: "Website atau sistem yang dibuat sesuai kebutuhan bisnis Anda.",
+      price: "3.000.000",
       features: [
-        { text: "Halaman Tak Terbatas", available: true },
-        { text: "Sistem E-Commerce Lengkap", available: true },
-        { text: "Integrasi Payment Gateway", available: true },
-        { text: "Optimasi SEO Lanjutan", available: true },
-        { text: "Manajer Proyek Khusus", available: true },
-        { text: "Maintenance 12 Bulan", available: true },
-        { text: "API Kustom / App Integration", available: true },
+        { text: "Desain Sesuai Kebutuhan", available: true },
+        { text: "Dashboard Admin", available: true },
+        { text: "Login Multi Role", available: true },
+        { text: "CRUD Data", available: true },
+        { text: "Filter & Pencarian", available: true },
+        { text: "API Integration", available: true },
+        { text: "Basic SEO", available: true },
+        { text: "Revisi Sesuai Kesepakatan", available: true },
+        { text: "Maintenance Berkala", available: false },
       ],
-      extraNote: "Biaya sesuai tingkat kerumitan"
+      extraNote: "Harga dapat berubah sesuai kompleksitas fitur. Belum termasuk domain & hosting."
     }
   ];
 

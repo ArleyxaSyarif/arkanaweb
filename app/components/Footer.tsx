@@ -3,20 +3,19 @@
 import React from 'react';
 import Link from 'next/link';
 import { Globe, ChevronDown, Github, Linkedin, Twitter, Dribbble, Hexagon } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Footer() {
     return (
         <footer className="w-full bg-white border-t border-[#e0d4f0] font-sans">
 
             {/* Main Navigation Grid */}
-            <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-24 py-16 lg:py-20">
+            <div className=" mx-auto px-6 sm:px-12 lg:px-24 py-16 lg:py-20">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-8">
                     {/* Brand Column */}
                     <div className="col-span-1 lg:col-span-2 flex flex-col gap-6">
                         <Link className="flex items-center gap-3 group" href="/">
-                            <div className="w-10 h-10 rounded-lg bg-[#7f13ec] flex items-center justify-center text-white">
-                                <Hexagon className="w-6 h-6" />
-                            </div>
+                            <Image className="w-10 h-10" src="/img/logo.png" alt="Logo" width={100} height={100} />
                             <span className="text-2xl font-bold text-[#140d1b] tracking-tight group-hover:text-[#7f13ec] transition-colors">ArkanaWeb</span>
                         </Link>
                         <p className="text-[#6b5e7c] max-w-xs leading-relaxed">
@@ -46,7 +45,6 @@ export default function Footer() {
                             <li><Link className="text-[#6b5e7c] hover:text-[#7f13ec] transition-colors font-medium" href="/">Home</Link></li>
                             <li><Link className="text-[#6b5e7c] hover:text-[#7f13ec] transition-colors font-medium" href="/service">Service</Link></li>
                             <li><Link className="text-[#6b5e7c] hover:text-[#7f13ec] transition-colors font-medium" href="/pricing">Pricing</Link></li>
-                            <li><Link className="text-[#6b5e7c] hover:text-[#7f13ec] transition-colors font-medium" href="/experience">Experience</Link></li>
                         </ul>
                     </div>
                     <div className="col-span-1 lg:col-span-1">
