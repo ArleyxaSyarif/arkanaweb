@@ -19,6 +19,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "ArkanaWeb",
   description: "ArkanaWeb",
+  icons: {
+    icon: "/img/logo.png",
+  },
 
 };
 
