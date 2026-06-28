@@ -63,4 +63,13 @@ REST API yang baik memanfaatkan metode HTTP secara semantik. Di Next.js, Anda ti
 
 Dengan menguasai pembuatan REST API di Next.js, Anda siap membangun aplikasi web yang dinamis, interaktif, dan memiliki skalabilitas tinggi.`
     },
+    {
+        title: "Tips Digital Marketing",
+        slug: "tips-digital-marketing",
+        date: "28 Juni 2026",
+        category: "bisnis",
+        description: "Cara meningkatkan penjualan.",
+        content: "..."
+    },
+
 ];
