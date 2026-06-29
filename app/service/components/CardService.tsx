@@ -27,7 +27,7 @@ export default function CardService() {
                 </Link>
 
                 {/* Card 2: SEO */}
-                <Link href="/service/seo-optimization" className="md:col-span-1 lg:col-span-2 bg-slate-900 rounded-2xl p-8 flex flex-col justify-between text-white relative overflow-hidden group hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <Link href="/service/seo-optimization" id='artikel' className="md:col-span-1 lg:col-span-2 bg-slate-900 rounded-2xl p-8 flex flex-col justify-between text-white relative overflow-hidden group hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                     <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-800"></div>
                     <div className="absolute bottom-0 right-0 opacity-20 transform translate-x-1/4 translate-y-1/4">
                         <TrendingUp className="w-[200px] h-[200px]" />

@@ -134,7 +134,7 @@ export default function PricingGrid() {
                 </span>
               </div>
 
-              <a href={`https://wa.me/0895398678090?text=Halo,%20saya%20tertarik%20dengan%20paket%20ini. %0A%0A ${plan.name} `}
+              <a href={`https://wa.me/628561020172?text=Halo,%20saya%20tertarik%20dengan%20paket%20ini. %0A%0A ${plan.name} `}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`w-full py-4 px-6 rounded-2xl font-bold text-base transition-all duration-300 ${plan.isPopular

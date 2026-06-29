@@ -1,8 +1,17 @@
 'use client';
 
 import { ArrowDown, Bolt } from 'lucide-react';
+import Link from 'next/link';
 
 export default function HeroService() {
+    const handleScrollToArtikel = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
+        const target = document.getElementById('artikel');
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    };
+
     return (
         <section className="relative pt-32 pb-20 px-4 flex flex-col items-center justify-center min-h-[60vh] overflow-hidden">
             {/* Background Glow */}
@@ -24,13 +33,17 @@ export default function HeroService() {
                 </p>
 
                 <div className="flex flex-wrap justify-center gap-4 pt-4">
-                    <button className="bg-[#7f13ec] text-white hover:bg-[#4c0b8d] transition-all px-8 py-4 rounded-full text-base font-bold shadow-[0_0_40px_-10px_rgba(127,19,236,0.3)] hover:shadow-lg flex items-center gap-2">
+                    <a
+                        href="#artikel"
+                        onClick={handleScrollToArtikel}
+                        className="bg-[#7f13ec] text-white hover:bg-[#4c0b8d] transition-all px-8 py-4 rounded-full text-base font-bold shadow-[0_0_40px_-10px_rgba(127,19,236,0.3)] hover:shadow-lg flex items-center gap-2"
+                    >
                         Lihat Yang Kami Kerjakan
                         <ArrowDown className="w-4 h-4" />
-                    </button>
-                    <button className="bg-white text-slate-900 hover:bg-slate-50 transition-all border border-slate-200 px-8 py-4 rounded-full text-base font-bold">
+                    </a>
+                    <Link href="/contact" className="bg-white text-slate-900 hover:bg-slate-50 transition-all border border-slate-200 px-8 py-4 rounded-full text-base font-bold">
                         Tanya-tanya Dulu
-                    </button>
+                    </Link>
                 </div>
             </div>
         </section>

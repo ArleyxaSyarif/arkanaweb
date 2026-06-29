@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import Link from "next/link";
 
 export default function PricingHero() {
     return (
@@ -30,14 +31,15 @@ export default function PricingHero() {
                     <div className="flex flex-wrap items-center justify-center gap-4 mt-4 w-full sm:w-auto">
                         {/* Primary CTA */}
                         <button className="group relative flex items-center justify-center gap-2 h-12 px-8 bg-gradient-to-br from-[#7f13ec] to-indigo-600 text-white text-base font-semibold rounded-lg shadow-[0_4px_20px_-2px_rgba(127,19,236,0.25)] hover:shadow-[0_0_80px_40px_rgba(127,19,236,0.15)] transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto overflow-hidden">
-                            <span className="relative z-10">Mulai Sekarang</span>
+                            <Link href="/contact" className="relative z-10">Mulai Sekarang</Link>
                             <ArrowRight className="relative z-10 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
                         </button>
 
                         {/* Secondary CTA */}
                         <button className="flex items-center justify-center gap-2 h-12 px-8 bg-transparent text-[#7f13ec] border-2 border-[#7f13ec]/20 hover:border-[#7f13ec] hover:bg-[#7f13ec]/5 text-base font-semibold rounded-lg transition-all duration-300 w-full sm:w-auto">
-                            <span>Jadwalkan Demo</span>
+                            <Link href="https://wa.me/628561020172?text=Halo,Admin%20saya%20ingin%20order%20Jasa%20Web%20" target="_blank"
+                                rel="noopener noreferrer" className="relative z-10">WhatsApp Admin</Link>
                         </button>
                     </div>
 
