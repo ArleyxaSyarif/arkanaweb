@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ClientWrapper from "./components/ClientWrapper";
 import WhatsAppPopup from "./components/WhatsAppPopup";
+import { Toaster } from "sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,6 +45,7 @@ export default function RootLayout({
         <ClientWrapper>
           {children}
         </ClientWrapper>
+        <Toaster position="top-right" richColors />
         <Footer />
         <WhatsAppPopup />
       </body>

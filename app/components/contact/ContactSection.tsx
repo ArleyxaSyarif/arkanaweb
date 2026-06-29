@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useRef } from 'react';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, Send } from 'lucide-react';
+import { toast } from 'sonner';
 
 export default function ContactSection() {
     const formRef = useRef<HTMLFormElement>(null);
@@ -28,10 +29,10 @@ export default function ContactSection() {
         const data = await res.json();
 
         if (res.ok) {
-            alert('Pesan berhasil dikirim!');
+            toast.success("Pesan Anda berhasil terkirim. Kami akan segera menghubungi Anda.");
             formRef.current?.reset();
         } else {
-            alert('Gagal mengirim pesan. Silakan coba lagi.');
+            toast.error("Pesan gagal terkirim. Silahkan coba kembali lagi.");
         }
     }
 
