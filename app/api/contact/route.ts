@@ -18,7 +18,6 @@ export async function POST(req: Request) {
     `,
   });
 
-  console.log("RESEND_API_KEY:", process.env.RESEND_API_KEY ? "ADA" : "TIDAK ADA");
 
   return Response.json({ success: true });
 }
