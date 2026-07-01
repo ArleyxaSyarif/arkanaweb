@@ -63,6 +63,7 @@ export default function PricingGrid() {
         { text: "Revisi Sesuai Kesepakatan", available: true },
         { text: "Garansi Bug 30 Hari", available: true },
         { text: "Maintenance Berkala", available: false },
+        { text: "Dashboard Admin / CMS", available: false },
       ],
       extraNote: "Harga ditentukan berdasarkan kompleksitas fitur dan kebutuhan proyek. Belum termasuk domain & hosting."
     },
