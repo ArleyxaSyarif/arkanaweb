@@ -10,14 +10,16 @@ export default function PricingGrid() {
       price: "900.000",
       features: [
         { text: "1 Halaman Landing Page", available: true },
-        { text: "Desain Web/Mobile Responsif", available: true },
+        { text: "Desain Modern & Responsif", available: true },
         { text: "Hingga 6 Section", available: true },
         { text: "Form Kontak", available: true },
         { text: "Integrasi WhatsApp", available: true },
-        { text: "Basic SEO", available: true },
-        { text: "Optimasi Kecepatan Dasar", available: true },
-        { text: "Revisi 2x", available: true },
+        { text: "Optimasi SEO Dasar", available: true },
+        { text: "Optimasi Kecepatan Website", available: true },
+        { text: "Revisi Hingga 2x", available: true },
+        { text: "Garansi Bug 14 Hari", available: true },
         { text: "Dashboard Admin / CMS", available: false },
+        { text: "Maintenance Berkala", available: false },
       ],
       extraNote: "Belum termasuk domain & hosting."
     },
@@ -28,16 +30,17 @@ export default function PricingGrid() {
       price: "1.500.000",
       isPopular: true,
       features: [
-        { text: "Hingga 6 Halaman", available: true },
-        { text: "Desain Mobile Responsif", available: true },
+        { text: "Hingga 5–8 Halaman", available: true },
+        { text: "Desain Modern & Responsif", available: true },
         { text: "Form Kontak", available: true },
         { text: "Integrasi WhatsApp", available: true },
         { text: "Google Maps", available: true },
-        { text: "Galeri / Portofolio", available: true },
-        { text: "Basic SEO", available: true },
-        { text: "Revisi 3x", available: true },
+        { text: "Optimasi SEO Dasar", available: true },
+        { text: "Optimasi Kecepatan Website", available: true },
+        { text: "Revisi Hingga 3x", available: true },
+        { text: "Garansi Bug 30 Hari", available: true },
         { text: "Maintenance Berkala", available: false },
-
+        { text: "Dashboard Admin / CMS", available: false },
       ],
       extraNote: "Belum termasuk domain & hosting."
     },
@@ -45,20 +48,24 @@ export default function PricingGrid() {
     {
       name: "Paket Custom Website",
       desc: "Website atau sistem yang dibuat sesuai kebutuhan bisnis Anda.",
-      price: "3.000.000",
+      price: "Konsultasi",
       features: [
+        { text: "Analisis Kebutuhan Gratis", available: true },
         { text: "Desain Sesuai Kebutuhan", available: true },
         { text: "Dashboard Admin", available: true },
         { text: "Login Multi Role", available: true },
         { text: "CRUD Data", available: true },
         { text: "Filter & Pencarian", available: true },
-        { text: "API Integration", available: true },
-        { text: "Basic SEO", available: true },
+        { text: "Integrasi API", available: true },
+        { text: "Optimasi SEO Dasar", available: true },
+        { text: "Keamanan SSL (HTTPS)", available: true },
+        { text: "Optimasi Kecepatan Website", available: true },
         { text: "Revisi Sesuai Kesepakatan", available: true },
+        { text: "Garansi Bug 30 Hari", available: true },
         { text: "Maintenance Berkala", available: false },
       ],
-      extraNote: "Harga dapat berubah sesuai kompleksitas fitur. Belum termasuk domain & hosting."
-    }
+      extraNote: "Harga ditentukan berdasarkan kompleksitas fitur dan kebutuhan proyek. Belum termasuk domain & hosting."
+    },
   ];
 
   return (
