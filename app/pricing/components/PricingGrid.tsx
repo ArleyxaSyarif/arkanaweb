@@ -61,7 +61,7 @@ export default function PricingGrid() {
         { text: "Maintenance Berkala", available: false },
         { text: "Dashboard Admin / CMS", available: false },
       ],
-      extraNote: "Harga dapat berubah sesuai kompleksitas fitur. Belum termasuk domain & hosting."
+      extraNote: "Harga ditentukan berdasarkan kompleksitas fitur dan kebutuhan proyek. Belum termasuk domain & hosting."
     }
   ];
 
