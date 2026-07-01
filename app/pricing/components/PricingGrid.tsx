@@ -50,23 +50,19 @@ export default function PricingGrid() {
       desc: "Website atau sistem yang dibuat sesuai kebutuhan bisnis Anda.",
       price: "Konsultasi",
       features: [
-        { text: "Analisis Kebutuhan Gratis", available: true },
         { text: "Desain Sesuai Kebutuhan", available: true },
         { text: "Dashboard Admin", available: true },
         { text: "Login Multi Role", available: true },
         { text: "CRUD Data", available: true },
         { text: "Filter & Pencarian", available: true },
-        { text: "Integrasi API", available: true },
-        { text: "Optimasi SEO Dasar", available: true },
-        { text: "Keamanan SSL (HTTPS)", available: true },
-        { text: "Optimasi Kecepatan Website", available: true },
+        { text: "API Integration", available: true },
+        { text: "Basic SEO", available: true },
         { text: "Revisi Sesuai Kesepakatan", available: true },
-        { text: "Garansi Bug 30 Hari", available: true },
         { text: "Maintenance Berkala", available: false },
         { text: "Dashboard Admin / CMS", available: false },
       ],
-      extraNote: "Harga ditentukan berdasarkan kompleksitas fitur dan kebutuhan proyek. Belum termasuk domain & hosting."
-    },
+      extraNote: "Harga dapat berubah sesuai kompleksitas fitur. Belum termasuk domain & hosting."
+    }
   ];
 
   return (
