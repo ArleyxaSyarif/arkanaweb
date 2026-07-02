@@ -61,7 +61,7 @@ export default function ContactSection() {
                                 </div>
                                 <div className="flex flex-col">
                                     <span className="text-xs font-semibold uppercase tracking-wider text-[#6b7280]">Email kami</span>
-                                    <a className="text-lg font-medium hover:text-[#7f13ec] transition-colors" href="mailto:info.arkanaweb@gmail.com">info.arkanaweb@gmail.com</a>
+                                    <a className="text-lg text-gray-500 font-medium hover:text-[#7f13ec] transition-colors" href="mailto:info.arkanaweb@gmail.com">info.arkanaweb@gmail.com</a>
                                 </div>
                             </div>
 
@@ -71,7 +71,7 @@ export default function ContactSection() {
                                 </div>
                                 <div className="flex flex-col">
                                     <span className="text-xs font-semibold uppercase tracking-wider text-[#6b7280]">Telepon Utama</span>
-                                    <a className="text-lg font-medium hover:text-[#7f13ec] transition-colors" href="tel:08561020172">+62 856-1020-172</a>
+                                    <a className="text-lg text-gray-500 font-medium hover:text-[#7f13ec] transition-colors" href="tel:08561020172">+62 856-1020-172</a>
                                 </div>
                             </div>
 
@@ -82,7 +82,7 @@ export default function ContactSection() {
                                 </div>
                                 <div className="flex flex-col">
                                     <span className="text-xs font-semibold uppercase tracking-wider text-[#6b7280]">Telepon Alternatif</span>
-                                    <a className="text-lg font-medium hover:text-[#7f13ec] transition-colors" href="tel:0895398678090">+62 895-3986-78090</a>
+                                    <a className="text-lg text-gray-500 font-medium hover:text-[#7f13ec] transition-colors" href="tel:0895398678090">+62 895-3986-78090</a>
                                 </div>
                             </div>
                         </div>
