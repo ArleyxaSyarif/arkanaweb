@@ -10,7 +10,6 @@ export default function ContactSection() {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-
         const formData = new FormData(e.currentTarget);
 
         const res = await fetch('/api/contact', {
@@ -37,7 +36,8 @@ export default function ContactSection() {
     }
 
     return (
-        <div className="bg-[#f7f6f8] text-[#140d1b] min-h-screen flex flex-col font-sans selection:bg-[#7f13ec] selection:text-white">
+        // Ditambahkan `overflow-x-hidden` di container paling luar untuk mencegah pergeseran horizontal global
+        <div className="bg-[#f7f6f8] text-[#140d1b] min-h-screen flex flex-col font-sans selection:bg-[#7f13ec] selection:text-white overflow-x-hidden">
             <main className="flex-grow flex items-center justify-center py-12 px-6 lg:px-20 xl:px-40">
                 <div className="w-full max-w-[1200px] grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
 
@@ -61,7 +61,7 @@ export default function ContactSection() {
                                 </div>
                                 <div className="flex flex-col">
                                     <span className="text-xs font-semibold uppercase tracking-wider text-[#6b7280]">Email kami</span>
-                                    <a className="text-lg font-medium hover:text-[#7f13ec] transition-colors" href="mailto:hello@modernbrand.com">workarleyxa@gmail.com</a>
+                                    <a className="text-lg font-medium hover:text-[#7f13ec] transition-colors" href="mailto:info.arkanaweb@gmail.com">info.arkanaweb@gmail.com</a>
                                 </div>
                             </div>
 
@@ -72,7 +72,6 @@ export default function ContactSection() {
                                 <div className="flex flex-col">
                                     <span className="text-xs font-semibold uppercase tracking-wider text-[#6b7280]">Telepon Utama</span>
                                     <a className="text-lg font-medium hover:text-[#7f13ec] transition-colors" href="tel:08561020172">+62 856-1020-172</a>
-
                                 </div>
                             </div>
 
@@ -86,11 +85,7 @@ export default function ContactSection() {
                                     <a className="text-lg font-medium hover:text-[#7f13ec] transition-colors" href="tel:0895398678090">+62 895-3986-78090</a>
                                 </div>
                             </div>
-
-                            {/* Phone 2 */}
-
                         </div>
-
 
                         {/* Social Media */}
                         <div className="pt-8">
@@ -110,7 +105,8 @@ export default function ContactSection() {
                     </div>
 
                     {/* Right Column: Contact Form */}
-                    <div className="relative w-full">
+                    {/* Ditambahkan `overflow-hidden` di container ini agar lingkaran blur yang keluar dari kotak form terpotong dan tidak merusak layout */}
+                    <div className="relative w-full overflow-hidden p-2">
                         <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#7f13ec]/20 rounded-full blur-3xl opacity-60"></div>
                         <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-purple-400/20 rounded-full blur-3xl opacity-60"></div>
 
@@ -189,8 +185,6 @@ export default function ContactSection() {
                     </div>
                 </div>
             </main>
-
-
         </div>
     );
 }
