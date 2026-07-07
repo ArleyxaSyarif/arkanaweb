@@ -17,9 +17,9 @@ export default function HeroProfile() {
                             </h2>
                         </div>
                         <div className="flex gap-4">
-                            <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-[#7f13ec] hover:bg-[#7f13ec]/90 transition-all shadow-lg shadow-[#7f13ec]/30 text-white text-base font-bold leading-normal tracking-[0.015em]">
+                            <Link href="/contact" className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-[#7f13ec] hover:bg-[#7f13ec]/90 transition-all shadow-lg shadow-[#7f13ec]/30 text-white text-base font-bold leading-normal tracking-[0.015em]">
                                 <span className="truncate">Mulai Proyek Anda</span>
-                            </button>
+                            </Link>
                             <Link href="https://preview.colorlib.com/?_gl=1*1l745qs*_ga*MTY1ODg3NDQ2Ny4xNzc1NDUxODQw*_ga_SEKJ4E9T4H*czE3ODAxNDY2NTQkbzIkZzEkdDE3ODAxNDY4NTIkajU1JGwwJGgwJGRMYXNTQk5EVnhGcjRDSHFyNmNlU3RqeWJlX3JFcklKQVpR#portech" target="_blank" className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-[#7f13ec]/10 hover:bg-[#7f13ec]/20 transition-all text-[#7f13ec] text-base font-bold leading-normal tracking-[0.015em]">
                                 <span className="truncate">Lihat Contoh</span>
                             </Link>
