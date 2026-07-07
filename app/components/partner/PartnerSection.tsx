@@ -37,7 +37,7 @@ export default function PartnerSection() {
                             <div key={`${partner.name}-${index}`} className="flex justify-center items-center flex-shrink-0 w-32 md:w-48">
                                 <img
                                     className="h-16 md:h-20 w-auto max-w-full object-contain filter grayscale opacity-50 transition-all duration-300 ease-in-out hover:grayscale-0 hover:opacity-100 cursor-pointer"
-                                    alt={`${partner.name} logo`}
+                                    alt={`${partner.alt} logo`}
                                     src={partner.src}
                                 />
                             </div>
