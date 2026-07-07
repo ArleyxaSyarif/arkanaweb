@@ -1,6 +1,6 @@
 import HeroExperience from "./components/HeroExperience";
 import StatsExperience from "./components/StatsExperience";
-import ProjectsExperience from "./components/ProjectsExperience";
+// import ProjectsExperience from "./components/ProjectsExperience";
 import WorkExperience from "./components/WorkExperience";
 import CtaExperience from "./components/CtaExperience";
 
@@ -10,7 +10,7 @@ export default function ExperiencePage() {
             <main className="relative pt-32 pb-20 px-4 md:px-10 max-w-7xl mx-auto overflow-hidden flex flex-col gap-y-32">
                 <HeroExperience />
                 <StatsExperience />
-                <ProjectsExperience />
+                {/* <ProjectsExperience /> */}
                 <WorkExperience />
                 <CtaExperience />
             </main>
