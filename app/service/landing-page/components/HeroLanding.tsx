@@ -24,10 +24,10 @@ export default function HeroLanding() {
                             Sebagai web company profile yang terpercaya, kami menyediakan jasa pembuatan Landing Page berkinerja tinggi untuk mengubah trafik menjadi pendapatan. Dengan berpegang teguh pada komitmen dan kejujuran, kami menghadirkan desain yang berfokus pada hasil dan pengalaman pengguna.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                            <button className="h-12 px-8 bg-[#7f13ec] hover:bg-[#630ebb] text-white font-bold rounded-lg shadow-xl shadow-[#7f13ec]/25 transition-all flex items-center justify-center gap-2 group">
+                            <Link href="/contact" className="h-12 px-8 bg-[#7f13ec] hover:bg-[#630ebb] text-white font-bold rounded-lg shadow-xl shadow-[#7f13ec]/25 transition-all flex items-center justify-center gap-2 group">
                                 Dapatkan Audit Gratis
                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                            </button>
+                            </Link>
                             <Link href="https://preview.colorlib.com/?_gl=1*1ogn8in*_ga*MTY1ODg3NDQ2Ny4xNzc1NDUxODQw*_ga_SEKJ4E9T4H*czE3ODAxNDY2NTQkbzIkZzEkdDE3ODAxNDY3NTYkajIwJGwwJGgwJGRMYXNTQk5EVnhGcjRDSHFyNmNlU3RqeWJlX3JFcklKQVpR#calvino" target="_blank">
                                 <button className="h-12 px-8 bg-white border border-gray-200 hover:border-[#7f13ec]/50 text-[#140d1b] font-bold rounded-lg transition-all flex items-center justify-center gap-2">
                                     <PlayCircle className="w-5 h-5 text-[#7f13ec]" />

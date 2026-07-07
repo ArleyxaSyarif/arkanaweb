@@ -15,9 +15,14 @@ export default function CtaLanding() {
                             Berhenti membuang uang dengan landing page di bawah standar. Dapatkan desain kustom yang mengubah pengunjung menjadi pelanggan setia.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
-                            <button className="h-14 px-10 bg-gradient-to-r from-[#7f13ec] to-[#5e3aee] hover:from-[#630ebb] hover:to-[#5e3aee] text-white text-lg font-bold rounded-lg shadow-xl shadow-[#7f13ec]/30 transition-all transform hover:scale-105">
+                            <a
+                                href="https://wa.me/62895398678090?text=Halo%20ArkanaWeb,%20saya%20tertarik%20dengan%20layanan%20landing%20page%20Anda."
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center justify-center h-14 px-10 bg-gradient-to-r from-[#7f13ec] to-[#5e3aee] hover:from-[#630ebb] hover:to-[#5e3aee] text-white text-lg font-bold rounded-lg shadow-xl shadow-[#7f13ec]/30 transition-all transform hover:scale-105"
+                            >
                                 Mulai Kampanye Anda
-                            </button>
+                            </a>
                             <button className="h-14 px-10 bg-transparent border border-gray-600 hover:bg-white/5 text-white text-lg font-bold rounded-lg transition-all">
                                 Jadwalkan Panggilan
                             </button>
